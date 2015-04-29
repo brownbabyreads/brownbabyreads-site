@@ -42,7 +42,9 @@ Run theme locally
 ----------------
 
 cd into the theme directory (`public/wp-content/themes/sprout-challenge`)
+
 run `npm install`
+
 run `grunt dev to watch changes`
 
 
