@@ -1,12 +1,22 @@
-Heroku WP
+OVERNIGHT CHALLENGE!
 =========
 
-Live: https://powerful-brushlands-6518.herokuapp.com/wp-admin/index.php
+```
+   _____                        __     _____            _       __
+  / ___/____  _________  __  __/ /_   / ___/____  _____(_)___ _/ /
+  \__ \/ __ \/ ___/ __ \/ / / / __/   \__ \/ __ \/ ___/ / __ `/ / 
+ ___/ / /_/ / /  / /_/ / /_/ / /_    ___/ / /_/ / /__/ / /_/ / /  
+/____/ .___/_/   \____/\__,_/\__/   /____/\____/\___/_/\__,_/_/   
+    /_/                                                                                                                 
+```
+
+Live Heroku app url: https://powerful-brushlands-6518.herokuapp.com/wp-admin/index.php
 
 Installation
 ------------
 
 See [SETUP_README.md](SETUP_README.md)
+
 
 Running Locally
 ---------------
@@ -27,3 +37,19 @@ If your computer goes to sleep and vagrant is suspended abruptly
 
 Sometimes after `vagrant up` from a aborted state, the vm does not start correctly and the site is not accessible. 
 * Provision the machine `vagrant provision` to force it to start back up again
+
+
+Update Composer locally
+----------------
+
+To add new plugins or upgrade versions of plugins simply update the `composer.json` file and then generate the `composer.lock` file with the following command locally:
+
+First `vagrant ssh`
+
+Then `cd /app/` on vagrant
+
+Then:
+
+```bash
+$ composer update --ignore-platform-reqs
+```
