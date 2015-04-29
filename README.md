@@ -21,22 +21,6 @@ Once Vagrant provisions the VM you will have Heroku WP running locally at `http:
 
 As a convenience both the `/public` dir and `/composer.lock` file will be monitored by the VM. Any changes to either triggers a rebuild process which will result in `/public.built` (the web root) being updated.
 
-Connecting to MySQL on Vagrant Machine
---------------------------------------
-
-In order to connect you will need to change the MySQL config to work with 0.0.0.0 IP address instead of localhost.
-* SSH into the vm `$ vagrant ssh`
-* Open the config file `$ vim /etc/mysql/my.cnf`
-* Change the IP address from 127.0.0.1 to 0.0.0.0
-
-Then you can connect using SSH with the following paramaters:
-* SSH hostname: 127.0.0.1:2222
-* SSH username: vagrant
-* SSH password: vagrant
-* MySQL hostname: 127.0.0.1
-* MySQL port: 3306
-* mysql user: root
-* mysql password: password
 
 If your computer goes to sleep and vagrant is suspended abruptly
 ----------------
