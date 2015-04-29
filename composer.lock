@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7629e1c3e8729028cd9bc1c423a41cbe",
+    "hash": "8a017fb0e8bedcbb856d485fa6a64266",
     "packages": [
         {
             "name": "WordPress/WordPress",
@@ -111,26 +111,6 @@
                 "zikula"
             ],
             "time": "2015-02-18 17:17:01"
-        },
-        {
-            "name": "wpackagist-plugin/authy-two-factor-authentication",
-            "version": "2.5.5",
-            "source": {
-                "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/authy-two-factor-authentication/",
-                "reference": "tags/2.5.5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/authy-two-factor-authentication.2.5.5.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/authy-two-factor-authentication/"
         },
         {
             "name": "wpackagist-plugin/jetpack",

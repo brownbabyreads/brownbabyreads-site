@@ -3,7 +3,7 @@
 WATCHLIST="/app/composer.lock /app/public/"
 WEBROOT="/app/public.built"
 LOCKFILE="/app/tmp/rebuild.lock"
-WORKINGDIR="/app"
+# WORKINGDIR="/app"
 
 #
 # End Configs
@@ -11,13 +11,19 @@ WORKINGDIR="/app"
 
 while true; do
     NEWFILES=`find $WATCHLIST -newer $WEBROOT`
-    if [ ! -z ${NEWFILES} ]; then
-        if [ ! -f ${LOCKFILE} ]; then
-            touch ${LOCKFILE}
-            composer --working-dir=${WORKINGDIR} install
-            rm ${LOCKFILE}
+    # echo "${NEWFILES}"
+    # if [ ! -d "${NEWFILES}" ]; then
+        if [ ! -z "${NEWFILES}" ]; then
+            # echo "dos"
+            if [ ! -f ${LOCKFILE} ]; then
+                # echo "tres"
+                # echo "dog"
+                touch ${LOCKFILE}
+                rsync --exclude themes/sprout-challenge/node_modules/ --exclude themes/sprout-challenge/bower_components/ -r /app/public/wp-content/* /app/public.built/wp-content
+                rm ${LOCKFILE}
+            fi
+        else
+            sleep 1
         fi
-    else
-        sleep 1
-    fi
+    # fi
 done

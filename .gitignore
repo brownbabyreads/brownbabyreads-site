@@ -2,3 +2,7 @@
 /public.built/
 /vendor/
 /.vagrant/
+dist
+bower_components
+node_modules
+npm-debug.log

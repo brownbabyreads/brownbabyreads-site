@@ -38,6 +38,13 @@ If your computer goes to sleep and vagrant is suspended abruptly
 Sometimes after `vagrant up` from a aborted state, the vm does not start correctly and the site is not accessible. 
 * Provision the machine `vagrant provision` to force it to start back up again
 
+Run theme locally
+----------------
+
+cd into the theme directory (`public/wp-content/themes/sprout-challenge`)
+run `npm install`
+run `grunt dev to watch changes`
+
 
 Update Composer locally
 ----------------
