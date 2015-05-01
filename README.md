@@ -1,5 +1,4 @@
-OVERNIGHT CHALLENGE!
-=========
+# OVERNIGHT CHALLENGE!
 
 ```
    _____                        __     _____            _       __
@@ -10,25 +9,58 @@ OVERNIGHT CHALLENGE!
     /_/                                                                                                                 
 ```
 
-Live Heroku app url: https://powerful-brushlands-6518.herokuapp.com/wp-admin/index.php
+Live Heroku: http://polar-cove-8788.herokuapp.com/
 
-Run WordPress Locally
----------------
+## Get started
 
-Installing WordPress Locally on Your Mac With MAMP - https://codex.wordpress.org/Installing_WordPress_Locally_on_Your_Mac_With_MAMP
+Start by cloning this repo:
+
+```bash
+  git clone git@github.com:ericcecchi/overnight-website.git
+  cd overnight-website
+```
+
+And then set up a dev branch for yourself:
+
+```bash
+  git checkout -b you-dev
+  git push -u origin you-dev
+```
+
+## Running WordPress Locally
+
+### With vagrant
+
+Make sure you have vagrant and virtualbox already installed. Then:
+
+```bash
+  vagrant plugin install vagrant-hostsupdater
+  vagrant up
+  open http://overnight.dev
+```
+
+### With MAMP
+
+Installing WordPress Locally on Your Mac With MAMP(https://codex.wordpress.org/Installing_WordPress_Locally_on_Your_Mac_With_MAMP
 
 MAMP settings: http://bluetide.pro/o1a9/53YjQuDF
 
-Setup database
----------------
+MAMP database setup:
 
 * http://localhost/phpmyadmin/
-* Create database and name it `WP`
+* Create database and name it `wordpress`
 
 
-To run theme locally
-----------------
+## Making changes to the theme
 
-* cd into the theme directory (`cd wordpress/wp-content/themes/sprout-challenge`)
-* run `npm install`
-* run `grunt dev` to watch your changes
+We're using npm to manange packages and grunt to automate the build process.
+
+```bash
+  cd wordpress/wp-content/themes/sprout-challenge`)
+  npm install
+  grunt dev
+```
+
+## Deploying
+
+Just commit and push. Everyone is working off they're own dev branch and submitting PR's to master. Master is automatically deployed to heroku.

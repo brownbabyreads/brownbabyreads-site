@@ -1,6 +1,4 @@
-/tmp/
-/public.built/
-/vendor/
+/vagrant/
 /.vagrant/
 node_modules
 npm-debug.log

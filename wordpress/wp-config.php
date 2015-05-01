@@ -21,7 +21,7 @@ if (getenv('ENVIRONMENT') == 'production') {
 }
 
 // ** MySQL settings - You can get this info from your web host ** //
-$url = parse_url(getenv('CLEARDB_DATABASE_URL') ? getenv('CLEARDB_DATABASE_URL') : 'mysql://root:root@localhost/WP');
+$url = parse_url(getenv('CLEARDB_DATABASE_URL') ? getenv('CLEARDB_DATABASE_URL') : 'mysql://wordpress:wordpress@localhost/wordpress');
 
 /** The name of the database for WordPress */
 define('DB_NAME', trim($url['path'], '/'));
