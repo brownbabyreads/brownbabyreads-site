@@ -49,14 +49,15 @@ MAMP database setup:
 
 * http://localhost/phpmyadmin/
 * Create database and name it `wordpress`
-
+* Create a user `wordpress` with password `wordpress` with access to the `wordpress` database
+* `wordpress wordpress wordpress`
 
 ## Making changes to the theme
 
 We're using npm to manange packages and grunt to automate the build process.
 
 ```bash
-  cd wordpress/wp-content/themes/sprout-challenge`)
+  cd wordpress/wp-content/themes/sprout-challenge
   npm install
   grunt dev
 ```
