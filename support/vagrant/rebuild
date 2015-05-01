@@ -23,7 +23,7 @@ while true; do
                 rm ${LOCKFILE}
             fi
         else
-            sleep 1
+            sleep 0
         fi
     # fi
 done

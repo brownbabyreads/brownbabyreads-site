@@ -31,6 +31,10 @@
 		<!--[if lt IE 9]>
 		          <script type='text/javascript' src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
 		<![endif]-->
+
+		<style>
+		body { background: blue; }
+		</style>
 	</head>
 	<body <?php body_class(); ?>>
 		<header role="banner">

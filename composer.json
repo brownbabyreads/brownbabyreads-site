@@ -38,7 +38,6 @@
             "echo 'Starting post-install-cmd...!'",
             "rsync -r vendor/WordPress/WordPress/* public.built",
             "rm -rf vendor/WordPress",
-            "rm -rf public.built/wp-content/themes/*",
             "rm -rf public.built/wp-content/plugins/hello.php",
             "rsync --exclude wp-content/themes/sprout-challenge/node_modules/ --exclude wp-content/themes/sprout-challenge/bower_components/ -r public/* public.built",
             "echo '...annnddddddd done!'"
