@@ -1,0 +1,6 @@
+/tmp/
+/public.built/
+/vendor/
+/.vagrant/
+node_modules
+npm-debug.log
