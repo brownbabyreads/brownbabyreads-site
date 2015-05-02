@@ -97,6 +97,23 @@ global $_bbr_admin;
             ]);
           ?>
         </nav>
+      </div>
     </div>
   </div>
-</div>
+<!--   <div class="hero-area">
+    <div class="page-header parallax" style="background-image:url(http://placehold.it/1400x600&amp;text=IMAGE+PLACEHOLDER)">
+      <div><div>
+        <span>Dog</span>
+      </div></div>
+    </div>
+  </div> -->
+  <!-- Breadcrumbs -->
+  <?php the_breadcrumb(); ?>
+<!--   <div class="notice-bar">
+    <div class="container">
+      <ol class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li class="active">About</li>
+      </ol>
+    </div>
+  </div> -->
