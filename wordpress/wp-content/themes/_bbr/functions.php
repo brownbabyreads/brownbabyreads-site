@@ -12,6 +12,9 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 640; /* pixels */
 }
 
+// Register Custom Navigation Walker
+require_once('inc/wp_bootstrap_navwalker.php');
+
 if ( ! function_exists( '_bbr_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -49,12 +52,10 @@ function _bbr_setup() {
 	//add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
+	register_nav_menus([
 		'primary' => __( 'Primary Menu', '_bbr' ),
-	) );
-	register_nav_menus( array(
 		'footer' => __( 'Footer Menu', '_bbr' ),
-	) );
+	]);
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
