@@ -11,4 +11,9 @@ class composer::install {
     require => Package['curl'],
   }
 
+  exec { 'generate composer.lock':
+    command => 'composer install -d /vagrant --ignore-platform-reqs',
+    environment => ['COMPOSER_HOME=/usr/local/bin'],
+    require => Exec['install composer']
+  }
 }
