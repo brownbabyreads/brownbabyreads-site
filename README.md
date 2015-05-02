@@ -31,7 +31,7 @@ git push -u origin you-dev
 
 ### With vagrant
 
-Make sure you have vagrant and virtualbox already installed. Then:
+Make sure you have [vagrant and virtualbox already installed](#vagrant-and-virtualbox). Then:
 
 ```bash
 vagrant plugin install vagrant-hostsupdater
@@ -65,3 +65,12 @@ grunt dev
 ## Deploying
 
 Just commit and push. Everyone is working off they're own dev branch and submitting PR's to master. Master is automatically deployed to heroku.
+
+## vagrant and virtualbox
+
+If you don't have vagrant and virtualbox already installed, you will after these steps:
+
+```bash
+brew tap phinze/homebrew-cask && brew install brew-cask
+brew cask install vagrant virtualbox
+```
