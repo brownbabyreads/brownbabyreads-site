@@ -23,7 +23,7 @@ function _bbr_body_classes( $classes ) {
 }
 add_filter( 'body_class', '_bbr_body_classes' );
 
-
+// Hide default WP roles
 if (!current_user_can('administrator')) {
 	function exclude_role($roles) {
 		//Hide Defualt Roles
@@ -43,6 +43,58 @@ if (!current_user_can('administrator')) {
 	}
 	add_filter('editable_roles', 'exclude_role');
 }
+
+// Add IE stylesheet
+add_action( 'wp_enqueue_scripts', 'enqueue_my_styles' );
+function enqueue_my_styles() {
+    global $wp_styles;
+    /**
+     * Load our IE specific stylesheet for a range of older versions:
+     * <!--[if lt IE 9]> ... <![endif]-->
+     * <!--[if lte IE 8]> ... <![endif]-->
+     * NOTE: You can use the 'less than' or the 'less than or equal to' syntax here interchangeably.
+     */
+    wp_enqueue_style('my-theme-old-ie', get_stylesheet_directory_uri() . "/css/ie.css", array( 'my-theme' )  );
+    $wp_styles->add_data('my-theme-old-ie', 'conditional', 'lt IE 9' );
+}
+
+// Remove WP meta nonsense
+remove_action( 'wp_head', 'wp_generator' ) ;
+remove_action( 'wp_head', 'wlwmanifest_link' ) ;
+remove_action( 'wp_head', 'rsd_link' ) ;
+remove_action( 'wp_head', 'feed_links', 2 );
+remove_action( 'wp_head', 'feed_links_extra', 3 );
+
+//  Disable HTML in WordPress comments
+add_filter( 'pre_comment_content', 'esc_html' );
+
+//  Disable WordPress Login Hints
+function no_wordpress_errors(){
+  return 'Nice try.';
+}
+add_filter( 'login_errors', 'no_wordpress_errors' );
+
+// Stop WordPress from Guessing URLs
+add_filter('redirect_canonical', 'stop_guessing');
+function stop_guessing($url) {
+	if (is_404()) {
+		return false;
+	}
+	return $url;
+}
+
+// Remove Admin bar
+add_filter('show_admin_bar', '__return_false');
+
+// Stay logged in longer
+add_filter( 'auth_cookie_expiration', 'stay_logged_in_for_1_year' );
+function stay_logged_in_for_1_year( $expire ) {
+	return 31556926; // 1 year in seconds
+}
+
+// Remove the WordPress Emojis
+remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
 
 if ( version_compare( $GLOBALS['wp_version'], '4.1', '<' ) ) :
 	/**
