@@ -1,15 +1,9 @@
 <?php
-/**
- * The template for displaying archive pages.
- *
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
- *
- * @package brownbabyreads
+/*
+Template Name: Blog
  */
 
 get_header(); ?>
-
-<?php if ( have_posts() ) : ?>
 
 <div class="hero-area">
   <div class="page-header">
@@ -37,30 +31,21 @@ get_header(); ?>
         <div class="col-md-8">
           <div class="posts-listing">
 
-            <!-- List Item -->
-            <div class="list-item blog-list-item format-standard">
-              <div class="row">
-                <div class="col-md-4 col-sm-4">
-                  <div class="post-media">
-                    <a href="blog-single.html" class="img-thumbnail"><img src="http://placehold.it/600x500&amp;text=IMAGE+PLACEHOLDER" alt="" class="post-thumb"></a>
-                  </div>
-                </div>
+            <?php query_posts('post_type=post&post_status=publish&posts_per_page=10&paged='. get_query_var('paged')); ?>
 
-                <div class="col-md-8 col-sm-8">
-                  <h3><a href="blog-single.html">Standard Post Format</a></h3>
-                  <div class="meta-data alt">
-                  <div><i class="fa fa-clock-o"></i> April 20, 2015</div>
-                  <div><i class="fa fa-archive"></i> <a href="#">Conservation</a>, <a href="#">Exhibitions</a></div>
-                  </div>
-                  <div class="list-item-excerpt">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem...</p>
-                  </div>
-                  <div class="post-actions">
-                    <a href="blog-single.html" class="btn btn-primary">Continue reading</a>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <?php if( have_posts() ): ?>
+
+              <?php while( have_posts() ): the_post(); ?>
+
+                <?php
+                  /* Include the Post-Format-specific template for the content.
+                   * If you want to override this in a child theme, then include a file
+                   * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+                   */
+                  get_template_part( 'template-parts/content', get_post_format() );
+                ?>
+
+            <?php endwhile; ?>
           </div>
 
           <ul class="pagination">
@@ -119,19 +104,6 @@ get_header(); ?>
     </div>
   </div>
 </div>
-
-<?php /* Start the Loop */ ?>
-<?php while ( have_posts() ) : the_post(); ?>
-
-  <?php
-    /* Include the Post-Format-specific template for the content.
-     * If you want to override this in a child theme, then include a file
-     * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-     */
-    get_template_part( 'template-parts/content', get_post_format() );
-  ?>
-
-<?php endwhile; ?>
 
 <?php the_posts_navigation(); ?>
 

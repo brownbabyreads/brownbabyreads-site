@@ -4,35 +4,37 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+<!-- List Item -->
+<article id="post-<?php the_ID(); ?>" class="list-item blog-list-item format-standard">
+  <div class="row">
+    <div class="col-md-4 col-sm-4">
+      <div class="post-media">
+        <a href="blog-single.html" class="img-thumbnail"><img src="http://placehold.it/600x500&amp;text=IMAGE+PLACEHOLDER" alt="" class="post-thumb"></a>
+      </div>
+    </div>
 
-		<?php if ( 'post' == get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php _bbr_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
+    <div class="col-md-8 col-sm-8">
+      <?php the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
 
-	<div class="entry-content">
-		<?php
-			/* translators: %s: Name of current post */
-			the_content( sprintf(
-				__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', '_bbr' ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			) );
-		?>
+      <div class="meta-data alt">
+        <div><i class="fa fa-clock-o"></i> <?php _bbr_posted_on(); ?></div>
+        <div><i class="fa fa-archive"></i> <a href="#">Conservation</a>, <a href="#">Exhibitions</a></div>
+      </div>
 
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', '_bbr' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
+      <div class="list-item-excerpt">
+        <?php the_content(); ?>
+      </div>
 
-	<footer class="entry-footer">
-		<?php _bbr_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-## -->
+      <div class="post-actions">
+        <a href="<?php esc_url( get_permalink() ); ?>" class="btn btn-primary">Continue reading</a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<?php
+  wp_link_pages( array(
+    'before' => '<div class="page-links">' . __( 'Pages:', '_bbr' ),
+    'after'  => '</div>',
+  ) );
+?>
