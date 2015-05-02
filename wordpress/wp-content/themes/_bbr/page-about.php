@@ -6,19 +6,6 @@ Template Name: About Page
 get_header();
 
 the_post(); ?>
-
-<div class="hero-area">
-  <div class="page-header parallax" style="background-image:url(http://placehold.it/1400x600&amp;text=IMAGE+PLACEHOLDER)"><div><div><span>About Us</span></div></div></div>
-</div>
-<!-- Notive Bar -->
-<div class="notice-bar">
-    <div class="container">
-      <ol class="breadcrumb">
-          <li><a href="#">Home</a></li>
-            <li class="active">About</li>
-        </ol>
-    </div>
-</div>
 <!-- Start Body Content -->
 <div class="main" role="main">
   <div id="content" class="content full">
