@@ -18,7 +18,7 @@ Vagrant.configure("2") do |config|
     puppet.manifests_path = "vagrant/puppet/manifests"
     puppet.module_path = "vagrant/puppet/modules"
     puppet.manifest_file  = "init.pp"
-    puppet.options="--verbose --debug"
+    # puppet.options="--verbose --debug"
   end
 
   # Fix for slow external network connections
