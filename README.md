@@ -16,15 +16,15 @@ Live Heroku: http://polar-cove-8788.herokuapp.com/
 Start by cloning this repo:
 
 ```bash
-  git clone git@github.com:ericcecchi/overnight-website.git
-  cd overnight-website
+git clone git@github.com:ericcecchi/overnight-website.git
+cd overnight-website
 ```
 
 And then set up a dev branch for yourself:
 
 ```bash
-  git checkout -b you-dev
-  git push -u origin you-dev
+git checkout -b you-dev
+git push -u origin you-dev
 ```
 
 ## Running WordPress Locally
@@ -34,18 +34,18 @@ And then set up a dev branch for yourself:
 Make sure you have vagrant and virtualbox already installed. Then:
 
 ```bash
-  vagrant plugin install vagrant-hostsupdater
-  vagrant up
-  open http://overnight.dev
+vagrant plugin install vagrant-hostsupdater
+vagrant up
+open http://overnight.dev
 ```
 
 ### With MAMP
 
-Installing WordPress Locally on Your Mac With MAMP(https://codex.wordpress.org/Installing_WordPress_Locally_on_Your_Mac_With_MAMP
+Read [Installing WordPress Locally on Your Mac With MAMP](https://codex.wordpress.org/Installing_WordPress_Locally_on_Your_Mac_With_MAMP).
 
-MAMP settings: http://bluetide.pro/o1a9/53YjQuDF
+Configure with these [MAMP settings](http://bluetide.pro/o1a9/53YjQuDF).
 
-MAMP database setup:
+Setup MAMP database:
 
 * http://localhost/phpmyadmin/
 * Create database and name it `wordpress`
@@ -57,9 +57,9 @@ MAMP database setup:
 We're using npm to manange packages and grunt to automate the build process.
 
 ```bash
-  cd wordpress/wp-content/themes/sprout-challenge
-  npm install
-  grunt dev
+cd wordpress/wp-content/themes/sprout-challenge
+npm install
+grunt dev
 ```
 
 ## Deploying
