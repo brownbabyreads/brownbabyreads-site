@@ -67,7 +67,11 @@ global $_bbr_admin;
     	<div class="container">
         	<div class="row">
             	<div class="col-md-6 col-sm-6 copyrights-left">
-                	<p>&copy;2015 Vestige Museums. All rights reserved.</p>
+                	<?php
+                		if($_bbr_admin['opt-footer-copyright-text']){
+                			echo '<p>'.$_bbr_admin['opt-footer-copyright-text'].'</p>';
+                		}
+                	?>
                 </div>
             	<div class="col-md-6 col-sm-6 copyrights-right">
                 	<ul class="pull-right social-icons-colored">
