@@ -20,6 +20,9 @@ if (getenv('ENVIRONMENT') == 'production') {
   define('DISALLOW_FILE_MODS', true);
 }
 
+define('WP_HOME',    'http://' . $_SERVER['HTTP_HOST']);
+define('WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST'] . '/wordpress');
+
 // ** MySQL settings - You can get this info from your web host ** //
 $url = parse_url(getenv('CLEARDB_DATABASE_URL') ? getenv('CLEARDB_DATABASE_URL') : 'mysql://wordpress:wordpress@localhost/wordpress');
 
