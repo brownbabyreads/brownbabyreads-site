@@ -1,0 +1,273 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Brown Baby Reads_Friends and Supporters</title>
+<meta name="keywords" content="african-american childrens books, free database, african-american children's literature, black childrens books,  African-American Children's Authors">
+<meta name="description" content="Free African-American Children's Book Database.  Search for African-American Children's Books by Title, Author, Gender, Genre, Theme, and Grade Level. Check out our online book club and see recommended book titles every month." />
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<style type="text/css"> 
+<!-- 
+body  {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	background: #7e4a02;
+	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	padding: 0;
+	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+	color: #000000;
+}
+
+/* Tips for Elastic layouts 
+1. Since the elastic layouts overall sizing is based on the user's default fonts size, they are more unpredictable. Used correctly, they are also more accessible for those that need larger fonts size since the line length remains proportionate.
+2. Sizing of divs in this layout are based on the 100% font size in the body element. If you decrease the text size overall by using a font-size: 80% on the body element or the #container, remember that the entire layout will downsize proportionately. You may want to increase the widths of the various divs to compensate for this.
+3. If font sizing is changed in differing amounts on each div instead of on the overall design (ie: #sidebar1 is given a 70% font size and #mainContent is given an 85% font size), this will proportionately change each of the divs overall size. You may want to adjust based on your final font sizing.
+*/
+.twoColElsLtHdr #container { 
+	width: 46em;  /* this width will create a container that will fit in an 800px browser window if text is left at browser default font sizes */
+	background: #ffff99;
+	margin: 0 auto; /* the auto margins (in conjunction with a width) center the page */
+	border: 1px solid #000000;
+	text-align: left; /* this overrides the text-align: center on the body element. */
+} 
+.twoColElsLtHdr #header { 
+	background: #ffff99; 
+	padding: 0 10px;  /* this padding matches the left alignment of the elements in the divs that appear beneath it. If an image is used in the #header instead of text, you may want to remove the padding. */
+} 
+.twoColElsLtHdr #header h1 {
+	margin: 0; /* zeroing the margin of the last element in the #header div will avoid margin collapse - an unexplainable space between divs. If the div has a border around it, this is not necessary as that also avoids the margin collapse */
+	padding: 10px 0; /* using padding instead of margin will allow you to keep the element away from the edges of the div */
+}
+
+/* Tips for sidebar1:
+1. Be aware that if you set a font-size value on this div, the overall width of the div will be adjusted accordingly.
+2. Since we are working in ems, it's best not to use padding on the sidebar itself. It will be added to the width for standards compliant browsers creating an unknown actual width. 
+3. Space between the side of the div and the elements within it can be created by placing a left and right margin on those elements as seen in the ".twoColElsLtHdr #sidebar1 p" rule.
+*/
+.twoColElsLtHdr #sidebar1 {
+	float: left; 
+	width: 12em; /* since this element is floated, a width must be given */
+	background: #ffff99; /* the background color will be displayed for the length of the content in the column, but no further */
+	padding: 15px 0; /* top and bottom padding create visual space within this div */
+}
+.twoColElsLtHdr #sidebar1 h3, .twoColElsLtHdr #sidebar1 p {
+	margin-left: 10px; /* the left and right margin should be given to every element that will be placed in the side columns */
+	margin-right: 10px;
+}
+
+/* Tips for mainContent:
+1. If you give this #mainContent div a font-size value different than the #sidebar1 div, the margins of the #mainContent div will be based on its font-size and the width of the #sidebar1 div will be based on its font-size. You may wish to adjust the values of these divs.
+2. The space between the mainContent and sidebar1 is created with the left margin on the mainContent div.  No matter how much content the sidebar1 div contains, the column space will remain. You can remove this left margin if you want the #mainContent div's text to fill the #sidebar1 space when the content in #sidebar1 ends.
+3. To avoid float drop, you may need to test to determine the approximate maximum image/element size since this layout is based on the user's font sizing combined with the values you set. However, if the user has their browser font size set lower than normal, less space will be available in the #mainContent div than you may see on testing.
+4. In the Internet Explorer Conditional Comment below, the zoom property is used to give the mainContent "hasLayout." This avoids several IE-specific bugs that may occur.
+*/
+.twoColElsLtHdr #mainContent {
+	margin: 0 1.5em 0 13em; /* the right margin can be given in ems or pixels. It creates the space down the right side of the page. */
+	text-align: center;
+} 
+.twoColElsLtHdr #footer { 
+	padding: 0 10px; /* this padding matches the left alignment of the elements in the divs that appear above it. */
+	background:#ffff99;
+} 
+.twoColElsLtHdr #footer p {
+	margin: 0; /* zeroing the margins of the first element in the footer will avoid the possibility of margin collapse - a space between divs */
+	padding: 10px 0; /* padding on this element will create space, just as the the margin would have, without the margin collapse issue */
+}
+
+/* Miscellaneous classes for reuse */
+.fltrt { /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class should be placed on a div or break element and should be the final element before the close of a container that should fully contain a float */
+	clear:both;
+    height:0;
+    font-size: 1px;
+    line-height: 0px;
+}
+.style2 {font-size: medium}
+.twoColElsLtHdr #container #mainContent table tr td {
+	text-align: center;
+}
+.twoColElsLtHdr #container #mainContent table {
+	text-align: center;
+}
+.twoColElsLtHdr #container #mainContent p strong {
+	text-align: center;
+}
+.twoColElsLtHdr #container #mainContent p strong {
+	text-align: center;
+}
+.twoColElsLtHdr #container #mainContent p {
+	text-align: center;
+}
+--> 
+</style><!--[if IE]>
+<style type="text/css"> 
+/* place css fixes for all versions of IE in this conditional comment */
+.twoColElsLtHdr #sidebar1 { padding-top: 30px; }
+.twoColElsLtHdr #mainContent { zoom: 1; padding-top: 15px; }
+/* the above proprietary zoom property gives IE the hasLayout it needs to avoid several bugs */
+</style>
+<![endif]-->
+<script src="../../../../evanston/Documents/brownbabyupdatedpages/Scripts/swfobject_modified.js" type="text/javascript"></script>
+</head>
+
+<body class="twoColElsLtHdr">
+
+<div id="container">
+  <div id="header">
+     <p><a href="http://www.brownbabyreads.com"><img src="http://www.brownbabyreads.com/jpgs/BBR_Logo_website.png" alt="website logo" width="720" height="113" border="0" /></a></p>
+</div>
+        <div align="center"><a href="http://www.brownbabyreads.com" title="Home Page" target="_self">Home</a> . <a href="http://www.brownbabyreads.com/aboutus.html" title="About Us" target="_self">About Us</a> . <a href="http://www.brownbabyreads.com/onlinebookclub.html" title="Online Book Club" target="_self">Online Book Club</a> . <a href="http://astore.amazon.com/brownbabyreads-20" title="BBR Store" target="_blank">BBR Store</a> . <a href="http://www.brownbabyreads.com/donations.html" title="Donations Page" target="_self">Donations</a> . <a href="http://www.brownbabyreads.com/publisherspage.html"></a><a href="http://www.brownbabyreads.com/contactus.html" title="Contact Us Page" target="_self">Contact Us</a>
+          </p>
+        </div>
+        <div id="sidebar1">
+
+          <h3 align="center" class="style2"><img src="http://www.brownbabyreads.com/friendsandsupporters/friendsandsupportersbanner.jpg" alt="banner" width="175" height="50" /></h3>
+          <p align="center">
+            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="150" height="118" id="FlashID" title="friends and supporters">
+              <param name="movie" value="http://www.brownbabyreads.com/friendsandsupporters/supporterssidemenu.swf" />
+              <param name="quality" value="high" />
+              <param name="wmode" value="opaque" />
+              <param name="swfversion" value="6.0.65.0" />
+              <!-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don’t want users to see the prompt. -->
+              <param name="expressinstall" value="Scripts/expressInstall.swf" />
+              <!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->
+              <!--[if !IE]>-->
+              <object type="application/x-shockwave-flash" data="http://www.brownbabyreads.com/friendsandsupporters/supporterssidemenu.swf" width="150" height="118">
+                <!--<![endif]-->
+                <param name="quality" value="high" />
+                <param name="wmode" value="opaque" />
+                <param name="swfversion" value="6.0.65.0" />
+                <param name="expressinstall" value="Scripts/expressInstall.swf" />
+                <!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. -->
+                <div>
+                  <h4>Content on this page requires a newer version of Adobe Flash Player.</h4>
+                  <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" width="112" height="33" /></a></p>
+                </div>
+                <!--[if !IE]>-->
+              </object>
+              <!--<![endif]-->
+            </object>
+          </p>
+          <h3 align="center">&nbsp;</h3>
+<h3 align="center">&nbsp;</h3>
+    </div>
+  <div id="mainContent">
+    <h3 align="center">
+      <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="370" height="86" id="FlashID2" title="friends and supporters">
+        <param name="movie" value="http://www.brownbabyreads.com/friendsandsupporters/friendsandsupporters.swf" />
+        <param name="quality" value="high" />
+        <param name="wmode" value="opaque" />
+        <param name="swfversion" value="9.0.45.0" />
+        <!-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don’t want users to see the prompt. -->
+        <param name="expressinstall" value="Scripts/expressInstall.swf" />
+        <!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->
+        <!--[if !IE]>-->
+        <object type="application/x-shockwave-flash" data="donorspages/friendsandsupporters.swf" width="370" height="86">
+          <!--<![endif]-->
+          <param name="quality" value="high" />
+          <param name="wmode" value="opaque" />
+          <param name="swfversion" value="9.0.45.0" />
+          <param name="expressinstall" value="Scripts/expressInstall.swf" />
+          <!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. -->
+          <div>
+            <h4>Content on this page requires a newer version of Adobe Flash Player.</h4>
+            <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" width="112" height="33" /></a></p>
+          </div>
+          <!--[if !IE]>-->
+        </object>
+        <!--<![endif]-->
+      </object>
+    </h3>
+    <p align="center"><strong> Businesses </strong></p>
+    <table width="403" border="0" align="left">
+      <tr>
+        <td width="397" align="center"><a href="http://www.brownbabyreads.com/friendsandsupporters/business_abrams.html"><img src="http://www.brownbabyreads.com/friendsandsupporters/abramstab.jpg" alt="" width="400" height="25" border="0" /></a></td>
+      </tr>
+      <tr>
+        <td align="center"><a href="http://www.brownbabyreads.com/friendsandsupporters/business_bakerpublishing.html"><img src="http://www.brownbabyreads.com/friendsandsupporters/bakertab.jpg" alt="" width="400" height="25" border="0" /></a></td>
+      </tr>
+      <tr>
+        <td align="center"><a href="http://www.brownbabyreads.com/friendsandsupporters/business_capstone.html"><img src="http://www.brownbabyreads.com/friendsandsupporters/capstonetab.jpg" alt="" width="400" height="25" border="0" /></a></td>
+      </tr>
+      <tr>
+        <td align="center"><a href="http://www.brownbabyreads.com/friendsandsupporters/business_childrensbookpress.html"><img src="http://www.brownbabyreads.com/friendsandsupporters/childrensbookpresstab.jpg" alt="children's book press" width="400" height="25" border="0" /></a></td>
+      </tr>
+      <tr>
+        <td align="center"><a href="http://www.brownbabyreads.com/friendsandsupporters/business_constantcontact.html"><img src="http://www.brownbabyreads.com/friendsandsupporters/constanttab.jpg" alt="" width="400" height="25" border="0" /></a></td>
+      </tr>
+      <tr>
+        <td align="center"><a href="http://www.brownbabyreads.com/friendsandsupporters/business_dineff.html"><img src="http://www.brownbabyreads.com/friendsandsupporters/dinefftab.jpg" alt="" width="400" height="25" border="0" /></a></td>
+      </tr>
+      <tr>
+        <td align="center"><a href="http://www.brownbabyreads.com/friendsandsupporters/business_gwsolutions.html"><img src="http://www.brownbabyreads.com/friendsandsupporters/gwtab.jpg" alt="" width="400" height="25" border="0" /></a></td>
+      </tr>
+      <tr>
+        <td align="center"><a href="http://www.brownbabyreads.com/friendsandsupporters/business_judsonpress.html"><img src="http://www.brownbabyreads.com/friendsandsupporters/judsontab.jpg" alt="" width="400" height="25" border="0" /></a></td>
+      </tr>
+      <tr>
+        <td align="center"><a href="http://www.brownbabyreads.com/friendsandsupporters/business_kickstartmarketing.html"><img src="http://www.brownbabyreads.com/friendsandsupporters/kickstarttab.jpg" alt="" width="400" height="25" border="0" /></a></td>
+      </tr>
+      <tr>
+        <td align="center"><a href="http://www.brownbabyreads.com/friendsandsupporters/business_LMH.html"><img src="http://www.brownbabyreads.com/friendsandsupporters/LMHtab.jpg" alt="lmh" width="400" height="25" border="0" /></a></td>
+      </tr>
+      <tr>
+        <td align="center"><a href="http://www.brownbabyreads.com/friendsandsupporters/business_lorenz.html"><img src="http://www.brownbabyreads.com/friendsandsupporters/lorenztab.jpg" alt="lorenz" width="400" height="25" border="0" /></a></td>
+      </tr>
+      <tr>
+        <td align="center"><a href="http://www.brownbabyreads.com/friendsandsupporters/business_marengreen.html"><img src="http://www.brownbabyreads.com/friendsandsupporters/marengreentab.jpg" alt="maren green" width="400" height="25" border="0" /></a></td>
+      </tr>
+      <tr>
+        <td align="center"><a href="http://www.brownbabyreads.com/friendsandsupporters/business_nappturality.html"><img src="http://www.brownbabyreads.com/friendsandsupporters/nappturalityttab.jpg" alt="" width="400" height="25" border="0" /></a></td>
+      </tr>
+      <tr>
+        <td align="center"><a href="http://www.brownbabyreads.com/friendsandsupporters/business_remembrancestonesphotography.html"><img src="http://www.brownbabyreads.com/friendsandsupporters/remembrancetab.jpg" alt="" width="400" height="25" border="0" /></a></td>
+      </tr>
+      <tr>
+        <td align="center"><a href="http://www.brownbabyreads.com/friendsandsupporters/organization_sisterhoodagenda.html"><img src="http://www.brownbabyreads.com/friendsandsupporters/sisterhoodtab.jpg" alt="" width="400" height="25" border="0" /></a></td>
+      </tr>
+      <tr>
+        <td align="center"><a href="http://www.brownbabyreads.com/friendsandsupporters/business_unp.html"><img src="http://www.brownbabyreads.com/friendsandsupporters/unptab.jpg" alt="" width="400" height="25" border="0" /></a></td>
+      </tr>
+      <tr>
+        <td align="center"><a href="http://www.brownbabyreads.com/friendsandsupporters/business_uprinting.html"><img src="http://www.brownbabyreads.com/friendsandsupporters/uprintingtab.jpg" alt="uprinting" width="400" height="25" border="0" /></a></td>
+      </tr>
+      <tr>
+        <td align="center">&nbsp;</td>
+    </tr></table><p align="center">&nbsp;</p>
+    <p>&nbsp;</p>
+    <p align="center">&nbsp;</p>
+    <div align="center">
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+    </div>
+    <p align="center">&nbsp;</p>
+    <p align="center">&nbsp;</p>
+    <p align="center">&nbsp;</p>
+    <p align="center">&nbsp;</p>
+    <p align="center">&nbsp;</p>
+  </div>
+  <div id="footer">
+    <p align="center">&copy; 2009-10 Brown Baby Reads&#8482; All Rights Reserved. www.brownbabyreads.com</p>
+  <!-- end #footer --></div>
+<!-- end #container --></div>
+<script type="text/javascript">
+<!--
+swfobject.registerObject("FlashID2");
+//-->
+</script>
+</body>
+</html>

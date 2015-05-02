@@ -1,0 +1,296 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>donate now</title>
+<style type="text/css"> 
+<!-- 
+body  {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	background: #7e4a02;
+	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	padding: 0;
+	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+	color: #000000;
+}
+
+.twoColFixRtHdr #container { 
+	width: 760px;  /* using 20px less than a full 800px width allows for browser chrome and avoids a horizontal scroll bar */
+	background: #ffff99;
+	margin: 0 auto; /* the auto margins (in conjunction with a width) center the page */
+	border: 1px solid #000000;
+	text-align: left; /* this overrides the text-align: center on the body element. */
+} 
+.twoColFixRtHdr #header {
+	background: #ffff99;
+	padding: 0 10px 0 5px;  /* this padding matches the left alignment of the elements in the divs that appear beneath it. If an image is used in the #header instead of text, you may want to remove the padding. */
+	
+} 
+.twoColFixRtHdr #header h1 {
+	margin: 0; /* zeroing the margin of the last element in the #header div will avoid margin collapse - an unexplainable space between divs. If the div has a border around it, this is not necessary as that also avoids the margin collapse */
+	padding: 10px 0; /* using padding instead of margin will allow you to keep the element away from the edges of the div */
+}
+.twoColFixRtHdr #sidebar1 {
+	float: right; /* since this element is floated, a width must be given */
+	width: 200px; /* the actual width of this div, in standards-compliant browsers, or standards mode in Internet Explorer will include the padding and border in addition to the width */
+	background: #ffff99; /* the background color will be displayed for the length of the content in the column, but no further */
+	padding: 5px 10px;
+}
+.twoColFixRtHdr #mainContent {
+	margin: 0 250px 0 0; /* the right margin on this div element creates the column down the right side of the page - no matter how much content the sidebar1 div contains, the column space will remain. You can remove this margin if you want the #mainContent div's text to fill the #sidebar1 space when the content in #sidebar1 ends. */
+	padding: 0 10px; /* remember that padding is the space inside the div box and margin is the space outside the div box */
+	text-align: right;
+} 
+.twoColFixRtHdr #footer { 
+	padding: 0 10px 0 20px; /* this padding matches the left alignment of the elements in the divs that appear above it. */
+	background:#fafa63; 
+} 
+.twoColFixRtHdr #footer p {
+	margin: 0; /* zeroing the margins of the first element in the footer will avoid the possibility of margin collapse - a space between divs */
+	padding: 5px 0; /* padding on this element will create space, just as the the margin would have, without the margin collapse issue */
+}
+.fltrt { /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class should be placed on a div or break element and should be the final element before the close of a container that should fully contain a float */
+	clear:both;
+    height:0;
+    font-size: 1px;
+    line-height: 0px;
+}
+.twoColFixRtHdr #container #header h5 a {
+	text-align: left;
+}
+.twoColFixRtHdr #container #header h5 a {
+	text-align: left;
+}
+.twoColFixRtHdr #container #header h5 a {
+	font-family: Arial, Helvetica, sans-serif;
+}
+#multi-level {height:30px; position:relative; z-index:100;}
+#multi-level .pad {float:center;}
+
+/* The menu styling */
+/* Remove the padding, margins and bullets from the lists */
+.menu, .menu ul {list-style-type:none; padding:0; margin:0; font-family:arial, sans-serif;}
+
+/* Set up the top level list items and float left to place inline */
+.menu li.top {display:block; float:left; position:relative;}
+
+/* Style and position the table so it takes no part in the menu function. The font size is necessary for IE5.5 */
+.menu table {border-collapse:collapse; width:0; height:0; position:absolute; top:0; left:0;}
+
+/* Default top link link styling */
+.menu li.top a.top_link {display:block; float:left; height:45px;}
+.menu li.top a span {position:absolute; left:-9999px; top:0; z-index:0; font-size:10px;} /* move the link text off screen */
+
+/* pre-load the hover images into the lists */
+.menu li.p1 {width:90px; background:url(http://www.brownbabyreads.com/buttons/home2.jpg) no-repeat;;}
+.menu li.p2 {width:130px; background:url(http://www.brownbabyreads.com/buttons/about_us.jpg) no-repeat;;}
+.menu li.p3 {width:145px; background:url(http://www.brownbabyreads.com/buttons/resources.jpg) no-repeat;;}
+.menu li.p4 {width:145px; background:url(http://www.brownbabyreads.com/buttons/how_to_help.jpg) no-repeat;;}
+.menu li.p5 {width:142px; background:url(http://www.brownbabyreads.com/buttons/news2.jpg) no-repeat;;}
+.menu li.p6 {width:90px; background:url(http://www.brownbabyreads.com/buttons/quick_login2.jpg) no-repeat;;}
+
+/* set up the normal unhovered images in the links */
+.menu li a#home {width:90px; background:url(http://www.brownbabyreads.com/buttons/home2.jpg) no-repeat;}
+.menu li a#products {width:130px; background:url(http://www.brownbabyreads.com/buttons/about_us.jpg) no-repeat;}
+.menu li a#services {width:145px; background:url(http://www.brownbabyreads.com/buttons/resources.jpg) no-repeat;}
+.menu li a#contacts {width:145px; background:url(http://www.brownbabyreads.com/buttons/how_to_help.jpg) no-repeat;}
+.menu li a#shop {width:142px; background:url(http://www.brownbabyreads.com/buttons/news2.jpg) no-repeat;}
+.menu li a#privacy {width:90px; background:url(http://www.brownbabyreads.com/buttons/quick_login2.jpg) no-repeat;}
+
+/* Style the list OR link hover. Depends on which browser is used */
+.menu a:hover {visibility:visible;} /* for IE6 */
+.menu li:hover { position:relative; z-index:200;} /* for IE7 */
+
+/* make the links transparent on hover so that the hover images in the lists show through (no flicker) */
+.menu li a#home:hover, .menu li:hover a#home,
+.menu li a#products:hover, .menu li:hover a#products,
+.menu li a#services:hover, .menu li:hover a#services,
+.menu li a#contacts:hover, .menu li:hover a#contacts,
+.menu li a#shop:hover, .menu li:hover a#shop,
+.menu li a#privacy:hover, .menu li:hover a#privacy {background:transparent;}
+
+/* keep the 'next' level invisible by placing it off screen. */
+.menu ul, 
+.menu :hover ul ul, 
+.menu :hover ul :hover ul ul,
+.menu :hover ul :hover ul :hover ul ul,
+.menu :hover ul :hover ul :hover ul :hover ul ul {position:absolute; left:-9999px; top:-9999px; width:0; height:0;}
+
+/* set up the first drop down sub level */
+.menu :hover ul.sub {left:0; top:45px; background: #fff; padding:3px 0; border:1px solid #888; white-space:nowrap; width:120px; height:auto;}
+.menu :hover ul.sub li {display:block; height:20px; position:relative; float:left; width:115px;}
+.menu :hover ul.sub li a {display:block; font-size:11px; height:20px; width:115px; line-height:20px; text-indent:5px; color:#000; text-decoration:none; border:3px solid #fff; border-width:0 0 0 3px;}
+.menu :hover ul.sub li a.fly {background:#fff url(multi_level-files/arrow.gif) 120px 7px no-repeat;}
+.menu :hover ul.sub li a:hover {background:#b98403; color:#fff;}
+.menu :hover ul.sub li a.fly:hover {background:#b98403 url(multi_level-files/arrow_over.gif) 80px 7px no-repeat; color:#fff;}
+.menu :hover ul li:hover > a.fly {background:#b98403 url(multi_level-files/arrow_over.gif) 80px 7px no-repeat; color:#fff;} 
+
+/* set up the flyout levels when hovering */
+.menu :hover ul :hover ul,
+.menu :hover ul :hover ul :hover ul,
+.menu :hover ul :hover ul :hover ul :hover ul,
+.menu :hover ul :hover ul :hover ul :hover ul :hover ul
+{left:90px; top:-4px; background: #fff; padding:3px 0; border:1px solid #888; white-space:nowrap; width:93px; z-index:200; height:auto; z-index:300;}
+.twoColFixRtHdr #container #header h5 {
+	color: #930;
+}
+
+--> 
+</style><!--[if IE 5]>
+<style type="text/css"> 
+/* place css box model fixes for IE 5* in this conditional comment */
+.twoColFixRtHdr #sidebar1 { width: 220px; }
+</style>
+<![endif]--><!--[if IE]>
+<style type="text/css"> 
+/* place css fixes for all versions of IE in this conditional comment */
+.twoColFixRtHdr #sidebar1 { padding-top: 30px; }
+.twoColFixRtHdr #mainContent { zoom: 1; }
+/* the above proprietary zoom property gives IE the hasLayout it needs to avoid several bugs */
+</style>
+<![endif]-->
+<script type="text/javascript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+</head>
+
+<body class="twoColFixRtHdr" onload="MM_preloadImages('http://www.brownbabyreads.com/buttons/sidebarbuttons/donate_now_on.png','http://www.brownbabyreads.com/buttons/sidebarbuttons/monthly_donations_on.png','http://www.brownbabyreads.com/buttons/sidebarbuttons/corporate_support_on.png','http://www.brownbabyreads.com/buttons/sidebarbuttons/make_a_pledge_on.png','http://www.brownbabyreads.com/buttons/sidebarbuttons/matching_gifts_on.png')">
+
+<div id="container">
+  <div id="header">
+    <p align="center"><a href="http://www.brownbabyreads.com"><img src="http://www.brownbabyreads.com/jpgs/BBR_Logo_websiteB.png" width="720" height="113" border="0" /></a>
+    <div id="multi-level">
+<ul class="menu">
+	<li class="top p1"><a href="http://www.brownbabyreads.com" id="home" class="top_link"><span>Home</span></a></li>
+	<li class="top p2"><a href="http://www.brownbabyreads.com/aboutus.html" id="aboutus" class="top_link"><span>About Us</span><!--[if IE 7]><!--></a><!--<![endif]-->
+		<!--[if lte IE 6]><table><tr><td><![endif]-->
+		<ul class="sub">
+			<li><a href="http://www.brownbabyreads.com/leadership.html" class="fly">Leadership<!--[if IE 7]><!--></a><!--<![endif]-->
+					<!--[if lte IE 6]><table><tr><td><![endif]-->		
+			</li>
+			<li class="mid"><a href="http://www.brownbabyreads.com/mission_corevalues.html" class="fly">Mission/Values<!--[if IE 7]><!--></a><!--<![endif]-->
+			</li>
+			<li><a href="http://www.brownbabyreads.com/history.html">History</a></li>
+			<li><a href="http://www.brownbabyreads.com/privacypolicy.html">Privacy Policy</a></li>
+		</ul>
+		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+	<li class="top p3"><a href="http://www.brownbabyreads.com/what_we_do.html" id="services" class="top_link"><span>Resources</span><!--[if IE 7]><!--></a><!--<![endif]-->
+		<!--[if lte IE 6]><table><tr><td><![endif]-->
+		<ul class="sub">
+			<li><a href="http://www.brownbabyreads.com/bookdatabase.html">Book Database</a></li>
+			<li><a href="http://www.brownbabyreads.com/blackhistorytimeline.html">History Timeline</a></li>
+			<li><a href="http://www.brownbabyreads.com/articles_research.html">Articles & Research</a></li>
+			<li><a href="http://www.brownbabyreads.com/newbooks.html">New Book Releases</a></li>
+            <li><a href="http://www.brownbabyreads.com/booklists.html">Book Lists</a></li>
+			<li><a href="http://www.brownbabyreads.com/cocoakidsread.html">Cocoa Kids Read</a></li>
+
+		</ul>
+		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+	<li class="top p4"><a href="http://www.brownbabyreads.com/how_to_help2.html" id="contacts" class="top_link"><span>How to Help</span><!--[if IE 7]><!--></a><!--<![endif]-->
+		<!--[if lte IE 6]><table><tr><td><![endif]-->
+		<ul class="sub">
+			<li><a href="http://www.brownbabyreads.com/give/donatenow.html">Donate Now</a></li>
+			<li><a href="http://www.brownbabyreads.com/give/monthlydonations.html" class="fly">Monthly Donations<!--[if IE 7]><!--></a><!--<![endif]-->
+		    </li>
+			<li><a href="http://www.brownbabyreads.com/give/corporatesupport.html">Corporate Support</a></li>
+			<li><a href="http://www.brownbabyreads.com/give/donatebymail.html">Make a Pledge</a></li>
+			<li><a href="http://www.brownbabyreads.com/give/matchinggifts.html">Matching Gifts</a></li>
+		</ul>
+		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+	<li class="top p5"><a href="http://www.brownbabyreads.com/events_news.html" id="shop" class="top_link"><span>Shop</span><!--[if IE 7]><!--></a><!--<![endif]-->
+		<!--[if lte IE 6]><table><tr><td><![endif]-->
+		<ul class="sub">
+			<li><a href="http://visitor.r20.constantcontact.com/manage/optin/ea?v=001qv8C0zYblRlBz2KWCpcudO0j_IjjK0mLhPk0L4kz47H0gWz8mECzi9i5-bqHa2AC1OqRhWJMvDO0mImHkKWhUtdi6g_uRLdu30Mav8DNAZc%3D">Sign up for Newsletter</a></li>
+			<li><a href="http://www.brownbabyreads.com/request_information.html">Request Information</a></li>
+            <li><a href="http://www.brownbabyreads.com/contactus.html">Contact Us</a></li>
+		</ul>
+		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+	<li class="top p6"><a href="http://b2.caspio.com/dp.asp?AppKey=2b1b1000e94ffee5c6de46d990ab" id="privacy" class="top_link"><span>Privacy Policy</span></a></li>
+</ul>
+
+</div>
+    <h5 align="left">&nbsp;</h5>
+    <h5 align="left">
+      <!-- end #header -->
+     <img src="http://www.brownbabyreads.com/banners/how_to_help_home_banner.png" width="760" height="30" />     <img src="http://www.brownbabyreads.com/buttons/blank.png" width="35" height="5" /><a href="http://www.brownbabyreads.com" title="Home" target="_self">Home</a> / <a href="http://www.brownbabyreads.com/how_to_help2.html" title="How to Help" target="_blank">How to Help</a> / Donate Now</h5>
+</div>
+  <div id="sidebar1">
+    <p><a href="http://www.brownbabyreads.com/give/donatenow.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('donate_now','','http://www.brownbabyreads.com/buttons/sidebarbuttons/donate_now_on.png',1)"><img src="http://www.brownbabyreads.com/buttons/sidebarbuttons/donate_now_off.png" alt="donate_now" name="donate_now" border="0" id="donate_now" /></a><a href="http://www.brownbabyreads.com/give/monthlydonations.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('monthly donations','','http://www.brownbabyreads.com/buttons/sidebarbuttons/monthly_donations_on.png',1)"><img src="http://www.brownbabyreads.com/buttons/sidebarbuttons/monthly_donations_off.png" alt="monthly donations" name="monthly donations" width="200" height="30" border="0" id="monthly donations" /></a><a href="http://www.brownbabyreads.com/give/corporatesupport.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('corporate support','','http://www.brownbabyreads.com/buttons/sidebarbuttons/corporate_support_on.png',1)"><img src="http://www.brownbabyreads.com/buttons/sidebarbuttons/corporate_support_off.png" alt="corporate support" name="corporate support" width="200" height="30" border="0" id="corporate support" /></a><a href="http://www.brownbabyreads.com/give/donatebymail.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('make a pledge','','http://www.brownbabyreads.com/buttons/sidebarbuttons/make_a_pledge_on.png',1)"><img src="http://www.brownbabyreads.com/buttons/sidebarbuttons/make_a_pledge_off.png" alt="make a pledge" name="make a pledge" width="200" height="30" border="0" id="make a pledge" /></a><a href="http://www.brownbabyreads.com/give/matchinggifts.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('matching gifts','','http://www.brownbabyreads.com/buttons/sidebarbuttons/matching_gifts_on.png',1)"><img src="http://www.brownbabyreads.com/buttons/sidebarbuttons/matching_gifts_off.png" alt="matching gifts" name="matching gifts" width="200" height="30" border="0" id="matching gifts" /></a></p>
+    <p><img src="http://www.brownbabyreads.com/buttons/sidebarbuttons/spread_the_word_sidebar_header.png" alt="" width="200" height="65" /></p>
+    <!-- SMARTADDON BEGIN -->
+            <script type="text/javascript">
+(function() {
+var s=document.createElement('script');s.type='text/javascript';s.async = true;
+s.src='http://s1.smartaddon.com/share_addon.js';
+var j =document.getElementsByTagName('script')[0];j.parentNode.insertBefore(s,j);
+})();
+          </script>
+          
+          <div id="sa_share_bar"> 
+          <a id="sa_share_facebook" layout="icon" url="http://www.brownbabyreads.com" size="24"></a> <a id="sa_share_twitter" layout="icon" url="http://www.brownbabyreads.com" size="24"></a> <a id="sa_share_googleplus" layout="icon" url="http://www.brownbabyreads.com" size="24"></a> <a id="sa_share_email" layout="icon" url="http://www.brownbabyreads.com" size="24"></a></div>
+    <p align="center"><img src="http://www.brownbabyreads.com/buttons/sidebarbuttons/articles_sidebar_header.png" width="200" height="70" /><a href="http://www.brownbabyreads.com/research/article_keepupparents.html"><img src="http://www.brownbabyreads.com/buttons/keep_up_parents_button.jpg" width="160" height="160" border="0" /></a></p>
+<p align="center"><a href="http://www.brownbabyreads.com/research/article_helping_young_people_become_readers.html"><img src="http://www.brownbabyreads.com/buttons/helping_young_people_become_readers_button.jpg" width="160" height="160" border="0" /></a></p>
+<p align="center"><a href="http://www.britannica.com/blogs/2010/11/promoting-african-american-literacy-5-questions-for-brown-baby-reads-executive-director-dawn-eddy/"><img src="http://www.brownbabyreads.com/buttons/5_question_interview_button.jpg" width="160" height="160" border="0" /></a></p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p></div>
+  <div id="mainContent">
+    <h3 align="right">&nbsp;</h3>
+
+<p align="center"><a href="http://www.brownbabyreads.com/parentregistration.html"></a><br class="clearfloat" />
+</p>
+</div>
+  <div id="footer">
+    <table width="717" border="0">
+      <tr>
+        <td width="126" height="142" align="left" valign="top"><p><img src="http://www.brownbabyreads.com/buttons/footerbuttons/Organization.png" width="125" height="20" /><a href="http://www.brownbabyreads.com/aboutus.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('aboutus','','http://www.brownbabyreads.com/buttons/footerbuttons/aboutus_off.png',1)"><img src="http://www.brownbabyreads.com/buttons/footerbuttons/aboutus_on.png" alt="about us" name="aboutus" width="125" height="20" border="0" id="aboutus" /></a><a href="http://www.brownbabyreads.com/contactus.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('contactus','','http://www.brownbabyreads.com/buttons/footerbuttons/contactus_on.png',1)"><img src="http://www.brownbabyreads.com/buttons/footerbuttons/contactus_off.png" alt="contact us" name="contactus" width="125" height="20" border="0" id="contactus" /></a><a href="http://www.brownbabyreads.com/media.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('mediarelations','','http://www.brownbabyreads.com/buttons/footerbuttons/mediarelation_on.png',1)"><img src="http://www.brownbabyreads.com/buttons/footerbuttons/mediarelation_off.png" alt="media relations" name="mediarelations" width="125" height="20" border="0" id="mediarelations" /></a><a href="http://www.brownbabyreads.com/privacypolicy.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('privacypolicy','','http://www.brownbabyreads.com/buttons/footerbuttons/privacypolicy_on.png',1)"><img src="http://www.brownbabyreads.com/buttons/footerbuttons/privacypolicy_off.png" alt="privacy policy" name="privacypolicy" width="125" height="20" border="0" id="privacypolicy" /></a><br />
+        </p></td>
+        <td width="137" align="left" valign="top"><p><img src="http://www.brownbabyreads.com/buttons/footerbuttons/resources.png" width="125" height="20" /><a href="http://www.brownbabyreads.com/bookdatabase.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('bookdatabase','','http://www.brownbabyreads.com/buttons/footerbuttons/bookdatabase_on.png',1)"><img src="http://www.brownbabyreads.com/buttons/footerbuttons/bookdatabase_off.png" alt="book database" name="bookdatabase" width="125" height="20" border="0" id="bookdatabase" /></a><a href="http://www.brownbabyreads.com/blackhistory" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('historytimeline','','http://www.brownbabyreads.com/buttons/footerbuttons/historytimeline_on.png',1)"><img src="http://www.brownbabyreads.com/buttons/footerbuttons/historytimeline_off.png" alt="history timeline" name="historytimeline" width="125" height="20" border="0" id="historytimeline" /></a><a href="http://www.brownbabyreads.com/articles_research.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('articlesresearch','','http://www.brownbabyreads.com/buttons/footerbuttons/articlesresearch_on.png',1)"><img src="http://www.brownbabyreads.com/buttons/footerbuttons/articlesresearch_off.png" alt="articles research" name="articlesresearch" width="125" height="20" border="0" id="articlesresearch" /></a><a href="http://www.brownbabyreads.com/newbooks.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('newreleases','','http://www.brownbabyreads.com/buttons/footerbuttons/newreleases_on.png',1)"><img src="http://www.brownbabyreads.com/buttons/footerbuttons/newreleases_off.png" alt="new releases" name="newreleases" width="125" height="20" border="0" id="newreleases" /></a><a href="http://www.brownbabyreads.com/cocoakidsread.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('cocoakidsread','','http://www.brownbabyreads.com/buttons/footerbuttons/cocoakidsread_on.png',1)"><img src="http://www.brownbabyreads.com/buttons/footerbuttons/cocoakidsread_off.png" alt="cocoa kids read" name="cocoakidsread" width="125" height="20" border="0" id="cocoakidsread" /></a></p></td>
+        <td width="125" align="left" valign="top"><p><img src="http://www.brownbabyreads.com/buttons/footerbuttons/engage.png" width="125" height="20" /><a href="http://www.brownbabyreads.com/registration.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('register','','http://www.brownbabyreads.com/buttons/footerbuttons/register_on.png',1)"><img src="http://www.brownbabyreads.com/buttons/footerbuttons/register_off.png" alt="register" name="register" width="125" height="20" border="0" id="register" /></a><a href="http://www.brownbabyreads.com/spreadtheword.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('spreadtheword','','http://www.brownbabyreads.com/buttons/footerbuttons/spreadtheword_on.png',1)"><img src="http://www.brownbabyreads.com/buttons/footerbuttons/spreadtheword_off.png" alt="spread the word" name="spreadtheword" width="125" height="20" border="0" id="spreadtheword" /></a><a href="http://visitor.r20.constantcontact.com/manage/optin/ea?v=001qv8C0zYblRlBz2KWCpcudO0j_IjjK0mLhPk0L4kz47H0gWz8mECzi9i5-bqHa2AC1OqRhWJMvDNFt1rFFQOU3w%3D%3D" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('getnewsletter','','http://www.brownbabyreads.com/buttons/footerbuttons/getnewsletter_on.png',1)"><img src="http://www.brownbabyreads.com/buttons/footerbuttons/getnewsletter_off.png" alt="get newsletter" name="getnewsletter" width="125" height="20" border="0" id="getnewsletter" /></a><a href="http://www.estore.brownbabyreads.com" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('shop','','http://www.brownbabyreads.com/buttons/footerbuttons/shop_on.png',1)"><img src="http://www.brownbabyreads.com/buttons/footerbuttons/shop_off.png" alt="shop" name="shop" width="125" height="20" border="0" id="shop" /></a>
+          </p>
+        </p></td>
+        <td width="136" align="left" valign="top"><p><img src="http://www.brownbabyreads.com/buttons/footerbuttons/support.png" width="125" height="20" /><a href="http://www.brownbabyreads.com/give/donatenow.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('makeadonation','','http://www.brownbabyreads.com/buttons/footerbuttons/makeadonation_on.png',1)"><img src="http://www.brownbabyreads.com/buttons/footerbuttons/makeadonation_off.png" alt="make a donation" name="makeadonation" width="125" height="20" border="0" id="makeadonation" /></a><a href="http://www.brownbabyreads.com/give/corporatesupport.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('corporatesupport','','http://www.brownbabyreads.com/buttons/footerbuttons/corporatesupport_on.png',1)"><img src="http://www.brownbabyreads.com/buttons/footerbuttons/corporatesupport_off.png" alt="corporate support" name="corporatesupport" width="125" height="20" border="0" id="corporatesupport" /></a></p></td>
+        <td width="171" align="left" valign="top"><p><img src="http://www.brownbabyreads.com/buttons/footerbuttons/connectwithus.png" width="125" height="20" /><a href="https://www.facebook.com/pages/Brown-Baby-Reads/79187997574"><img src="http://www.brownbabyreads.com/buttons/footerbuttons/facebook_icon.png" width="52" height="52" border="0" /></a><a href="https://twitter.com/BrownBabyReads"> <img src="http://www.brownbabyreads.com/buttons/footerbuttons/twitter_icon.png" width="50" height="50" border="0" /> </a><a href="https://twitter.com/BrownBabyReads"><img src="http://www.brownbabyreads.com/buttons/footerbuttons/pinterest_icon.png" width="50" height="50" border="0" /></a></p></td>
+      </tr>
+      <tr>
+        <td height="30" colspan="5" align="left" valign="middle"><h5 align="center">&copy; 2009-13 Brown Baby Reads&#8482; All Rights Reserved. www.brownbabyreads.com</h5></td>
+      </tr>
+    </table>
+    <!-- end #footer -->
+  </div>
+<!-- end #container --></div>
+</body>
+</html>

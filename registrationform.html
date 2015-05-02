@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+<!--
+body {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	background: #7e4a02;
+	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	padding: 0;
+	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+	color: #000000;
+}
+
+/* Tips for Elastic layouts 
+1. Since the elastic layouts overall sizing is based on the user's default fonts size, they are more unpredictable. Used correctly, they are also more accessible for those that need larger fonts size since the line length remains proportionate.
+2. Sizing of divs in this layout are based on the 100% font size in the body element. If you decrease the text size overall by using a font-size: 80% on the body element or the #container, remember that the entire layout will downsize proportionately. You may want to increase the widths of the various divs to compensate for this.
+3. If font sizing is changed in differing amounts on each div instead of on the overall design (ie: #sidebar1 is given a 70% font size and #mainContent is given an 85% font size), this will proportionately change each of the divs overall size. You may want to adjust based on your final font sizing.
+*/
+.oneColElsCtrHdr #container {
+	width: 46em;  /* this width will create a container that will fit in an 800px browser window if text is left at browser default font sizes */
+	background: #c1975f;
+	margin: 0 auto; /* the auto margins (in conjunction with a width) center the page */
+	border: 1px solid #000000;
+	text-align: left; /* this overrides the text-align: center on the body element. */
+}
+.oneColElsCtrHdr #header { 
+	background: #D2A482; 
+	padding: 0 10px 0 20px;  /* this padding matches the left alignment of the elements in the divs that appear beneath it. If an image is used in the #header instead of text, you may want to remove the padding. */
+} 
+.oneColElsCtrHdr #header h1 {
+	margin: 0; /* zeroing the margin of the last element in the #header div will avoid margin collapse - an unexplainable space between divs. If the div has a border around it, this is not necessary as that also avoids the margin collapse */
+	padding: 10px 0; /* using padding instead of margin will allow you to keep the element away from the edges of the div */
+}
+.oneColElsCtrHdr #mainContent {
+	padding: 0 20px; /* remember that padding is the space inside the div box and margin is the space outside the div box */
+	background: #FFFFFF;
+}
+.oneColElsCtrHdr #footer { 
+	padding: 0 10px; /* this padding matches the left alignment of the elements in the divs that appear above it. */
+	background:#D2A482;
+} 
+.oneColElsCtrHdr #footer p {
+	margin: 0; /* zeroing the margins of the first element in the footer will avoid the possibility of margin collapse - a space between divs */
+	padding: 10px 0; /* padding on this element will create space, just as the the margin would have, without the margin collapse issue */
+}
+-->
+</style></head>
+
+<body class="oneColElsCtrHdr">
+
+<div id="container">
+  <div id="header">
+    <h1 align="center"><img src="http://www.brownbabyreads.com/brownbabylogo.jpg" width="496" height="159" alt="Brown baby logo" longdesc="http://www.brownbabyreads.com/brownbabylogo.jpg" /></h1>
+  <!-- end #header --></div>
+  <div id="mainContent">
+    <p>&nbsp;</p>
+    <p>Thank you again for choosing to participate in the Brown Baby Reads! African-American Children's Book Club. We look forward to many hours of fun-filled, entertaining, and informative reading. </p>
+    <p>Please take a minute to complete your registration by creating a userid and password. You will need it to log into the website. </p>
+    <form id="form1" name="form1" method="post" action="">
+      <label>Email Address
+        <input name="email" type="text" id="email" size="60" maxlength="60" />
+      </label>
+    </form>
+    <form id="form2" name="form2" method="post" action="">
+      <h6>
+        <label>UserID         <input name="UserId" type="text" id="UserId" size="20" maxlength="20" />       </label>
+      </h6>
+    </form>
+    <form id="form3" name="form3" method="post" action="">
+      <h5>
+        <label>Password
+          <input name="Password" type="text" id="Password" size="13" maxlength="9" />
+**</label>
+        select a 6-9 character password (letters and/or numbers only)     
+      </h5>
+    </form>
+    <form id="form4" name="form4" method="post" action="">
+      <label>
+        <input type="submit" name="register" id="register" value="Submit" />
+      </label>
+    </form>
+    <p>&nbsp;</p>
+    <p>Lastly, please provide the age grouping and gender of your child(ren). Each age group and gender group has a book selected according to reading and interest levels. </p>
+    <p>&nbsp;</p>
+    <p><strong>Child 1 Information</strong></p>
+    <p>
+      <iframe src="http://www.brownbabyreads.com/childregistration.html" name="Child Registration" width="330" height="180" align="middle" scrolling="no"></iframe>
+    </p>
+    <form id="form5" name="form5" method="post" action="">
+      <label>
+        <input type="submit" name="Addmore" id="Addmore" value="Add Another Child" />
+      </label>
+      <label> 
+        <input type="submit" name="Done" id="Done" value="Done" />
+      </label>
+    </form>
+<h2>&nbsp;</h2>
+    <p>Thank you for taking the time to complete your registration. Now you can use your userid and password to enter the website. </p>
+    <p><a href="http://www.brownbabyreads.com" title="Brown Baby Reads Homepage" target="_parent">Back to Homepage</a></p>
+    <p>&nbsp;</p>
+  <!-- end #mainContent --></div>
+  <div id="footer">
+    <h5 align="center">Brown Baby Reads!&#8482; is a Subsidiary of Reality Educational Company.  &copy; 2009 Reality Educational Company. All Rights Reserved. www.realityeducationalcompany.com</h5>
+  <!-- end #footer --></div>
+<!-- end #container --></div>
+</body>
+</html>

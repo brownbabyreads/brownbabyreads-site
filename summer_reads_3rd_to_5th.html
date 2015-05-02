@@ -1,0 +1,635 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Good Summer Reads</title>
+<meta name="keywords" content="biracial children, books biracial children, books multiracial children, biracial families, celebration, transracial adoption, White Parents Black Children, interracial adoption, Books for Young Children in Black & Multiracial Families, Interracial Children's Books, Books featuring Biracial Kids and Families, books mixed race children, children books about biracial families, multiracial children's books">
+<meta name="description" content="Childrens Books that feature Biracial Children and Families" />
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<style type="text/css"> 
+<!-- 
+body  {
+	background: #7e4a02;
+	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	padding: 0;
+	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+	color: #000000;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+/* Tips for Elastic layouts 
+1. Since the elastic layouts overall sizing is based on the user's default fonts size, they are more unpredictable. Used correctly, they are also more accessible for those that need larger fonts size since the line length remains proportionate.
+2. Sizing of divs in this layout are based on the 100% font size in the body element. If you decrease the text size overall by using a font-size: 80% on the body element or the #container, remember that the entire layout will downsize proportionately. You may want to increase the widths of the various divs to compensate for this.
+3. If font sizing is changed in differing amounts on each div instead of on the overall design (ie: #sidebar1 is given a 70% font size and #mainContent is given an 85% font size), this will proportionately change each of the divs overall size. You may want to adjust based on your final font sizing.
+*/
+.twoColElsLtHdr #container {
+	width: 48em;  /* this width will create a container that will fit in an 800px browser window if text is left at browser default font sizes */
+	background: #ffff99;
+	margin: 0 auto; /* the auto margins (in conjunction with a width) center the page */
+	border: 1px solid #000000;
+	text-align: left; /* this overrides the text-align: center on the body element. */
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+} 
+.twoColElsLtHdr #header {
+	background: #ffff99;
+	padding: 0 10px;  /* this padding matches the left alignment of the elements in the divs that appear beneath it. If an image is used in the #header instead of text, you may want to remove the padding. */
+	text-align: center;
+} 
+.twoColElsLtHdr #header h1 {
+	margin: 0; /* zeroing the margin of the last element in the #header div will avoid margin collapse - an unexplainable space between divs. If the div has a border around it, this is not necessary as that also avoids the margin collapse */
+	padding: 10px 0; /* using padding instead of margin will allow you to keep the element away from the edges of the div */
+}
+
+/* Tips for sidebar1:
+1. Be aware that if you set a font-size value on this div, the overall width of the div will be adjusted accordingly.
+2. Since we are working in ems, it's best not to use padding on the sidebar itself. It will be added to the width for standards compliant browsers creating an unknown actual width. 
+3. Space between the side of the div and the elements within it can be created by placing a left and right margin on those elements as seen in the ".twoColElsLtHdr #sidebar1 p" rule.
+*/
+.twoColElsLtHdr #sidebar1 {
+	float: left; 
+	width: 12em; /* since this element is floated, a width must be given */
+	background: #ffff99; /* the background color will be displayed for the length of the content in the column, but no further */
+	padding: 15px 0; /* top and bottom padding create visual space within this div */
+}
+.twoColElsLtHdr #sidebar1 h3, .twoColElsLtHdr #sidebar1 p {
+	margin-left: 10px; /* the left and right margin should be given to every element that will be placed in the side columns */
+	margin-right: 10px;
+}
+
+/* Tips for mainContent:
+1. If you give this #mainContent div a font-size value different than the #sidebar1 div, the margins of the #mainContent div will be based on its font-size and the width of the #sidebar1 div will be based on its font-size. You may wish to adjust the values of these divs.
+2. The space between the mainContent and sidebar1 is created with the left margin on the mainContent div.  No matter how much content the sidebar1 div contains, the column space will remain. You can remove this left margin if you want the #mainContent div's text to fill the #sidebar1 space when the content in #sidebar1 ends.
+3. To avoid float drop, you may need to test to determine the approximate maximum image/element size since this layout is based on the user's font sizing combined with the values you set. However, if the user has their browser font size set lower than normal, less space will be available in the #mainContent div than you may see on testing.
+4. In the Internet Explorer Conditional Comment below, the zoom property is used to give the mainContent "hasLayout." This avoids several IE-specific bugs that may occur.
+*/
+.twoColElsLtHdr #mainContent {
+	margin: 0 1.5em 0 1em; /* the right margin can be given in ems or pixels. It creates the space down the right side of the page. */
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: x-small;
+} 
+.twoColElsLtHdr #footer { 
+	padding: 0 10px; /* this padding matches the left alignment of the elements in the divs that appear above it. */
+	background:#fafa63;
+} 
+.twoColElsLtHdr #footer p {
+	margin: 0; /* zeroing the margins of the first element in the footer will avoid the possibility of margin collapse - a space between divs */
+	padding: 10px 0; /* padding on this element will create space, just as the the margin would have, without the margin collapse issue */
+}
+
+/* Miscellaneous classes for reuse */
+.fltrt { /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class should be placed on a div or break element and should be the final element before the close of a container that should fully contain a float */
+	clear:both;
+    height:0;
+    font-size: 1px;
+    line-height: 0px;
+}
+#multi-level {height:30px; position:relative; z-index:100;}
+#multi-level .pad {float:center;}
+
+/* The menu styling */
+/* Remove the padding, margins and bullets from the lists */
+.menu, .menu ul {list-style-type:none; padding:0; margin:0; font-family:arial, sans-serif;}
+
+/* Set up the top level list items and float left to place inline */
+.menu li.top {display:block; float:left; position:relative;}
+
+/* Style and position the table so it takes no part in the menu function. The font size is necessary for IE5.5 */
+.menu table {border-collapse:collapse; width:0; height:0; position:absolute; top:0; left:0;}
+
+/* Default top link link styling */
+.menu li.top a.top_link {display:block; float:left; height:45px;}
+.menu li.top a span {position:absolute; left:-9999px; top:0; z-index:0; font-size:10px;} /* move the link text off screen */
+
+/* pre-load the hover images into the lists */
+.menu li.p1 {width:90px; background:url(http://www.brownbabyreads.com/buttons/home2.jpg) no-repeat;;}
+.menu li.p2 {width:130px; background:url(http://www.brownbabyreads.com/buttons/about_us.jpg) no-repeat;;}
+.menu li.p3 {width:145px; background:url(http://www.brownbabyreads.com/buttons/resources.jpg) no-repeat;;}
+.menu li.p4 {width:145px; background:url(http://www.brownbabyreads.com/buttons/how_to_help.jpg) no-repeat;;}
+.menu li.p5 {width:142px; background:url(http://www.brownbabyreads.com/buttons/news2.jpg) no-repeat;;}
+.menu li.p6 {width:90px; background:url(http://www.brownbabyreads.com/buttons/quick_login2.jpg) no-repeat;;}
+
+/* set up the normal unhovered images in the links */
+.menu li a#home {width:90px; background:url(http://www.brownbabyreads.com/buttons/home2.jpg) no-repeat;}
+.menu li a#products {width:130px; background:url(http://www.brownbabyreads.com/buttons/about_us.jpg) no-repeat;}
+.menu li a#services {width:145px; background:url(http://www.brownbabyreads.com/buttons/resources.jpg) no-repeat;}
+.menu li a#contacts {width:145px; background:url(http://www.brownbabyreads.com/buttons/how_to_help.jpg) no-repeat;}
+.menu li a#shop {width:142px; background:url(http://www.brownbabyreads.com/buttons/news2.jpg) no-repeat;}
+.menu li a#privacy {width:90px; background:url(http://www.brownbabyreads.com/buttons/quick_login2.jpg) no-repeat;}
+
+/* Style the list OR link hover. Depends on which browser is used */
+.menu a:hover {visibility:visible;} /* for IE6 */
+.menu li:hover { position:relative; z-index:200;} /* for IE7 */
+
+/* make the links transparent on hover so that the hover images in the lists show through (no flicker) */
+.menu li a#home:hover, .menu li:hover a#home,
+.menu li a#products:hover, .menu li:hover a#products,
+.menu li a#services:hover, .menu li:hover a#services,
+.menu li a#contacts:hover, .menu li:hover a#contacts,
+.menu li a#shop:hover, .menu li:hover a#shop,
+.menu li a#privacy:hover, .menu li:hover a#privacy {background:transparent;}
+
+/* keep the 'next' level invisible by placing it off screen. */
+.menu ul, 
+.menu :hover ul ul, 
+.menu :hover ul :hover ul ul,
+.menu :hover ul :hover ul :hover ul ul,
+.menu :hover ul :hover ul :hover ul :hover ul ul {position:absolute; left:-9999px; top:-9999px; width:0; height:0;}
+
+/* set up the first drop down sub level */
+.menu :hover ul.sub {left:0; top:45px; background: #fff; padding:3px 0; border:1px solid #888; white-space:nowrap; width:120px; height:auto;}
+.menu :hover ul.sub li {display:block; height:20px; position:relative; float:left; width:115px;}
+.menu :hover ul.sub li a {display:block; font-size:11px; height:20px; width:115px; line-height:20px; text-indent:5px; color:#000; text-decoration:none; border:3px solid #fff; border-width:0 0 0 3px;}
+.menu :hover ul.sub li a.fly {background:#fff url(multi_level-files/arrow.gif) 120px 7px no-repeat;}
+.menu :hover ul.sub li a:hover {background:#b98403; color:#fff;}
+.menu :hover ul.sub li a.fly:hover {background:#b98403 url(multi_level-files/arrow_over.gif) 80px 7px no-repeat; color:#fff;}
+.menu :hover ul li:hover > a.fly {background:#b98403 url(multi_level-files/arrow_over.gif) 80px 7px no-repeat; color:#fff;} 
+
+/* set up the flyout levels when hovering */
+.menu :hover ul :hover ul,
+.menu :hover ul :hover ul :hover ul,
+.menu :hover ul :hover ul :hover ul :hover ul,
+.menu :hover ul :hover ul :hover ul :hover ul :hover ul
+{left:90px; top:-4px; background: #fff; padding:3px 0; border:1px solid #888; white-space:nowrap; width:93px; z-index:200; height:auto; z-index:300;}
+.twoColFixRtHdr #container #header h5 {
+	color: #930;
+.twoColElsLtHdr #container #mainContent div table tr td p strong {
+	font-size: 10%;
+}
+.twoColElsLtHdr #container #mainContent div table tr td p strong {
+	font-size: x-small;
+}
+.twoColElsLtHdr #container #mainContent div table tr td p strong {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: x-small;
+}
+.twoColElsLtHdr #container #mainContent div table tr td p strong {
+	font-size: x-small;
+	font-weight: bold;
+}
+.twoColElsLtHdr #container #mainContent div table tr td p {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+.twoColElsLtHdr #container #mainContent div table tr td p {
+	font-size: small;
+}
+.twoColElsLtHdr #container #mainContent div table tr td {
+	font-size: small;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+.twoColElsLtHdr #container #mainContent div table tr td p {
+	font-size: x-small;
+}
+.twoColElsLtHdr #container #mainContent div table tr td strong {
+	font-size: x-small;
+}
+.twoColElsLtHdr #container #mainContent div table tr td {
+	font-size: x-small;
+}
+--> 
+</style><!--[if IE]>
+<style type="text/css"> 
+/* place css fixes for all versions of IE in this conditional comment */
+.twoColElsLtHdr #sidebar1 { padding-top: 30px; }
+.twoColElsLtHdr #mainContent { zoom: 1; padding-top: 15px; }
+/* the above proprietary zoom property gives IE the hasLayout it needs to avoid several bugs */
+</style>
+<![endif]-->
+</head>
+
+<body class="twoColElsLtHdr">
+
+<div id="container">
+  <div id="header">
+    <p align="center"><a href="http://www.brownbabyreads.com"><img src="http://www.brownbabyreads.com/jpgs/BBR_Logo_websiteB.png" width="720" height="113" border="0" /></a>
+    <div id="multi-level">
+      <div align="left">
+        <ul class="menu">
+          <li class="top p1"><a href="http://www.brownbabyreads.com" id="home" class="top_link"><span>Home</span></a></li>
+          <li class="top p2"><a href="http://www.brownbabyreads.com/who_we_are.html" id="aboutus" class="top_link"><span>About Us</span>
+            <!--[if IE 7]><!--></a><!--<![endif]-->
+            <!--[if lte IE 6]><table><tr><td><![endif]-->
+            <ul class="sub">
+              <li><a href="http://www.brownbabyreads.com/leadership.html" class="fly">Leadership<!--[if IE 7]><!--></a><!--<![endif]-->
+                <!--[if lte IE 6]><table><tr><td><![endif]-->		
+              </li>
+              <li class="mid"><a href="http://www.brownbabyreads.com/mission_corevalues.html" class="fly">Mission/Values<!--[if IE 7]><!--></a><!--<![endif]-->
+              </li>
+              <li><a href="http://www.brownbabyreads.com/brochures.html">Brochures</a></li>
+              <li><a href="http://www.brownbabyreads.com/privacypolicy.html">Privacy Policy</a></li>
+            </ul>
+            <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+          </li>
+          <li class="top p3"><a href="http://www.brownbabyreads.com/what_we_do.html" id="services" class="top_link"><span>Resources</span>
+            <!--[if IE 7]><!--></a><!--<![endif]-->
+            <!--[if lte IE 6]><table><tr><td><![endif]-->
+            <ul class="sub">
+              <li><a href="http://www.brownbabyreads.com/bookdatabase.html">Book Database</a></li>
+              <li><a href="http://www.brownbabyreads.com/blackhistorytimeline.html">History Timeline</a></li>
+              <li><a href="http://www.brownbabyreads.com/articles_research.html">Articles & Research</a></li>
+              <li><a href="http://www.brownbabyreads.com/newbooks.html">New Book Releases</a></li>
+              <li><a href="http://www.brownbabyreads.com/booklists.html">Book Lists</a></li>
+              <li><a href="http://www.brownbabyreads.com/cocoakidsread.html">Cocoa Kids Read</a></li>
+              
+            </ul>
+            <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+          </li>
+          <li class="top p4"><a href="http://www.brownbabyreads.com/how_to_help2.html" id="contacts" class="top_link"><span>How to Help</span>
+            <!--[if IE 7]><!--></a><!--<![endif]-->
+            <!--[if lte IE 6]><table><tr><td><![endif]-->
+            <ul class="sub">
+              <li><a href="http://www.brownbabyreads.com/give/donatenow.html">Donate Now</a></li>
+              <li><a href="http://www.brownbabyreads.com/give/monthlydonations.html" class="fly">Monthly Donations<!--[if IE 7]><!--></a><!--<![endif]-->
+              </li>
+              <li><a href="http://www.brownbabyreads.com/give/corporatesupport.html">Corporate Support</a></li>
+              <li><a href="http://www.brownbabyreads.com/give/donatebymail.html">Make a Pledge</a></li>
+              <li><a href="http://www.brownbabyreads.com/give/matchinggifts.html">Matching Gifts</a></li>
+            </ul>
+            <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+          </li>
+          <li class="top p5"><a href="http://www.brownbabyreads.com/events_news.html" id="shop" class="top_link"><span>Shop</span>
+            <!--[if IE 7]><!--></a><!--<![endif]-->
+            <!--[if lte IE 6]><table><tr><td><![endif]-->
+            <ul class="sub">
+              <li><a href="http://visitor.r20.constantcontact.com/manage/optin/ea?v=001qv8C0zYblRlBz2KWCpcudO0j_IjjK0mLhPk0L4kz47H0gWz8mECzi9i5-bqHa2AC1OqRhWJMvDO0mImHkKWhUtdi6g_uRLdu30Mav8DNAZc%3D">Sign up for Newsletter</a></li>
+              <li><a href="http://www.brownbabyreads.com/request_information.html">Request Information</a></li>
+              <li><a href="http://www.brownbabyreads.com/contactus.html">Contact Us</a></li>
+            </ul>
+            <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+          </li>
+          <li class="top p6"><a href="http://b2.caspio.com/dp.asp?AppKey=2b1b1000e94ffee5c6de46d990ab" id="privacy" class="top_link"><span>Privacy Policy</span></a></li>
+        </ul>
+        
+      </div>
+    </div>
+       <h5 align="left">&nbsp;</h5>
+    <h5 align="left">
+      <!-- end #header -->
+    <img src="http://www.brownbabyreads.com/banners/resources_home_banner.png" width="760" height="30" />     <img src="http://www.brownbabyreads.com/buttons/blank.png" width="35" height="5" /><a href="http://www.brownbabyreads.com" title="Home" target="_self">Home</a> / <a href="http://www.brownbabyreads.com/what_we_do.html" title="Resources" target="_blank">Resources</a> / <a href="http://www.brownbabyreads.com/booklists.html" title="Resources" target="_blank">Book Lists</a> /Summer Reads</h5>
+</div>
+        <div id="mainContent">
+    <h3 align="center">&nbsp;</h3>
+    <h1 align="center">Good Books to Read over the Summer</h1>
+    <h2 align="center">3rd to 5th Grade Books</h2>
+    <div align="center">
+      <table width="668" height="1116" border="1" cellpadding="3" cellspacing="3">
+        <tr>
+          <td height="24" colspan="5"><h3>Reading Level 3.0-3.9</h3></td>
+        </tr>
+        <tr>
+          <td width="126" height="167"><div align="center"><img src="http://www.brownbabyreads.com/jpgs/sassythebirthdaystormB.jpg" width="124" height="160" /></div></td>
+          <td width="120"><div align="center"><img src="http://www.brownbabyreads.com/jpgs/realslamdunk.jpg" width="118" height="160" /></div></td>
+          <td width="125"><div align="center"><img src="http://www.brownbabyreads.com/jpgs/RubyBooker2TriviaQueenB.jpg" width="110" height="160" /></div></td>
+          <td width="132"><div align="center"><img src="http://www.brownbabyreads.com/jpgs/davidmortimorebaxter_secrets.jpg" width="105" height="160" /></div></td>
+          <td width="105"><div align="center">
+<img src="http://www.brownbabyreads.com/jpgs/brokenbikeboy.jpg" width="109" height="160" /></div></td>
+        </tr>
+        <tr>
+          <td height="167" valign="top"><p><strong>Sassy: The Birthday Storm by  Sharon Draper</strong><br />
+            While  in Florida to celebrate her Grammy's birthday, nine-and-a-half-year-old Sassy  worries that an approaching hurricane will ruin not only the party, but a nest  of sea turtle eggs.<br />
+Reading Level: 3.6<br />
+         <strong><a href="http://www.amazon.com/gp/product/0545071569/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0545071569&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+          <td valign="top"><p><strong>The Real Slam Dunk by  Charisse K. Richardson</strong><br />
+            Marcus  studies hard to win the math contest prize and become the official greeter for  Jason Carter, a professional basketball player.<br />
+Reading Level: 3.6<br /> 
+          <strong><a href="http://www.amazon.com/gp/product/0142402125/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0142402125&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+          <td valign="top"><p><strong>Trivia Queen, Third-Grade  Supreme  by Derrick Barnes</strong><br />
+            When  the Hope Road Academy holds its annual animal trivia contest, Ruby represents  the third grade and competes against two of her older brothers.<br />
+Reading Level: 3.9<br />      
+          <strong><a href="http://www.amazon.com/gp/product/0545017610/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0545017610&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+          <td valign="top"><p><strong>Secrets!: The Secret Life of  David Mortimore Baxter by Karen Tayleur</strong><br />
+David  becomes famous for being good at keeping secrets. Big secrets. More and more  people confide in him, until David's ready to explode.<br />
+Reading Level: 3 <br />         
+          <strong><a href="http://www.amazon.com/gp/product/1598892096/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1598892096&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+          <td valign="top"><p><strong>The Broken Bike Boy and the  Queen of 33rd St. by Sharon Flake</strong><br />
+            Ten-year-old  Queen, a spoiled and conceited African American girl who is disliked by most of  her classmates, learns a lesson about friendship from an unlikely &quot;knight  in shining armor.&quot;<br />
+Reading Level: 3.5 <br />         
+          <strong><a href="http://www.amazon.com/gp/product/1423100328/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1423100328&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+        </tr>
+        <tr>
+          <td height="28" valign="top"><div align="center"><img src="http://www.brownbabyreads.com/jpgs/Bird_big.jpg" width="120" height="160" /></div></td>
+          <td valign="top"><div align="center"><img src="http://www.brownbabyreads.com/jpgs/willimenaclassbully.jpg" width="109" height="160" /></div></td>
+          <td valign="top"><div align="center"><img src="http://www.brownbabyreads.com/jpgs/diary_of_bb_bright.JPG" width="105" height="160" /></div></td>
+          <td valign="top"><div align="center"><img src="http://www.brownbabyreads.com/jpgs/realluckycharm.jpg" width="105" height="160" /></div></td>
+          <td valign="top"><div align="center"><img src="http://www.brownbabyreads.com/jpgs/amy_hodgepodge_playinggamesC.jpg" width="107" height="160" /></div></td>
+        </tr>
+        <tr>
+          <td height="28" valign="top"><p><strong>Bird by Zetta Elliott</strong><br />
+            Young  Mekhai, better known as Bird, loves to draw. With drawings, he can erase the  things that don't turn out right. In real life, problems aren t so easily  fixed.<br />
+          Reading Level: 3.8<br />
+          <strong><a href="http://www.amazon.com/gp/product/160060241X/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=160060241X&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></p></td>
+          <td valign="top"><p><strong>Willimena Rules: How to Face  Up to the Class Bully Valerie Wilson Wesley</strong><br />
+            It  's the first day of school, and Willimena is scared! Tina, her know-it-all big  sister, says Willimena should just smile and be nice. But a smile and  &quot;nice&quot; won't get you very far if the class bullyalso known as Mean  Irene--jumps in your face. And that's just what happened to  Willimena.<br />
+          Reading Level: 3.2<br />
+          <strong><a href="http://www.amazon.com/gp/product/0786855258/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0786855258&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></p></td>
+          <td valign="top"><p><strong>Diary Of B.B. Bright,  Possible Princess by Alice &amp; Willams Randall</strong><br />
+            Held  captive on an island, thirteen-year-old orphan Black Bee Bright must pass her  Princess Test and complete a dangerous journey to the east side of the island  where eight princesses help her discover what it truly means to be a princess.<br />
+          Reading Level: 3.0<br />
+          <strong><a href="http://www.amazon.com/gp/product/1618580159/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1618580159&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></p></td>
+          <td valign="top"><p><strong>The Real Lucky Charm by  Charisse K. Richardson</strong><br />
+            Thinking  that luck, rather than hard work, has helped her succeed on the court and at  school, ten-year-old Mia panics and turns to her twin brother for help when her  lucky gold basketball goes missing from her charm bracelet.<br />
+        	Reading Level: 3.5<br />
+          <strong><a href="http://www.amazon.com/gp/product/0142404314/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0142404314&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></p></td>
+          <td valign="top"><p><strong>Amy Hodge Podge: Playing  Games by Kim Wayans</strong><br />
+            Amy  realizes her dream of playing sports when she joins the basketball league, and  secret practices with Rusty improve her skills but her friends, believing she  still plays badly, will not pass her the ball.<br />
+            Reading Level: 3.8<br />          
+<strong><a href="http://www.amazon.com/gp/product/0606145877/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0606145877&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></p></td>
+        </tr>
+        <tr>
+          <td height="28" valign="top"><div align="center"><img src="http://www.brownbabyreads.com/jpgs/slamdunk.jpg" width="110" height="160" /></div></td>
+          <td valign="top"><div align="center"><img src="http://www.brownbabyreads.com/jpgs/libertyporter_clearedfortakeoff.jpg" width="105" height="160" /></div></td>
+          <td valign="top"><div align="center"><img src="http://www.brownbabyreads.com/jpgs/sugar_plum_ballerinas_toeshoe_troubles.jpg" width="108" height="160" /></div></td>
+          <td valign="top"><div align="center"><img src="http://www.brownbabyreads.com/jpgs/miamijacksonmakesplay.jpg" width="109" height="160" /></div></td>
+          <td valign="top"><div align="center"><img src="http://www.brownbabyreads.com/jpgs/spike_in_space.jpg" width="104" height="160" /></div></td>
+        </tr>
+        <tr>
+          <td height="28" valign="top"><p><strong>Slam Dunk! By Sharon  Robinson</strong><br />
+            At  Harlem's Langston Hughes Middle School, eleven-year-old Elijah  &quot;Jumper&quot; Breeze and his friends compete against Nia and her  girlfriends on the basketball court, in a video dance tournament, and for a  Student Council seat, and, meanwhile, several of the students face issues with  their fathers.<br />
+Reading Level: 3.6<br />     
+ <strong><a href="http://www.amazon.com/gp/product/1442000619/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1442000619&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+          <td valign="top"><p><strong>Liberty Porter: Cleared for  Takeoff by Julia DeVillers</strong><br />
+            Now  Liberty is boarding Air Force One and taking her message to the world: She’s  going with her parents to Tbilisi, Georgia. When Liberty is around, you can only  count on one thing: fun.<br />
+Reading Level: 3.7<br />          
+          <strong><a href="http://www.amazon.com/gp/product/141699131X/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=141699131X&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+          <td valign="top"><p><strong>Sugar Plum Ballerinas:  Toeshoe Trouble by Whoopi Goldberg</strong><br />
+            Brenda  tells her cousin Tiffany that she has a pair of ballet shoes autographed by the  famous ballerina, Camilla Freeman, even though she doesn't and now she'll need  the help of her Sugar Plum Sisters to get out of the mess!<br />
+Reading Level: 3.9<br /><strong><a href="http://www.amazon.com/gp/product/0786852615/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0786852615&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+          <td valign="top"><p>Miami  Jackson Makes The Play by Patricia &amp; Fred McKissack<br />
+            Miami's  enjoyment of summer baseball camp is threatened by the presence of his nemesis,  Destinee Tate, but for once he finds himself on her side.<br />
+          Reading  Level: 3.4<br />
+          <strong><a href="http://www.amazon.com/gp/product/0307265056/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0307265056&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></p></td>
+          <td valign="top"><p><strong>Spike in Space by Malaika  Rose Stanley</strong><br />
+            Spike's  adopted family are all a little green in the face—that's because they're  aliens! They're in a spaceship heading towards their planet, Aledela, and Spike  is going with them. At first Spike is excited, but the planet is strange and  he's picked on at school.<br />
+Reading Level: 3.0<br />       
+          <strong><a href="http://www.amazon.com/gp/product/184853096X/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=184853096X&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+        </tr>
+        <tr>
+          <td height="28" valign="top"><img src="http://www.brownbabyreads.com/jpgs/playingforward.jpg" width="113" height="160" /></td>
+          <td valign="top"><img src="http://www.brownbabyreads.com/jpgs/runningrivals.jpg" width="114" height="160" /></td>
+          <td valign="top"><img src="http://www.brownbabyreads.com/jpgs/halfwaytoperfect.jpg" width="113" height="160" /></td>
+          <td valign="top"><img src="http://www.brownbabyreads.com/jpgs/sugarplumballerinas_terribleterrel.jpg" width="108" height="160" /></td>
+          <td valign="top"><img src="http://www.brownbabyreads.com/jpgs/libertyporter_newgirlintown.jpg" width="105" height="160" /></td>
+        </tr>
+        <tr>
+          <td height="28" valign="top"><p><strong>Playing Forward by Eric  Stevens</strong><br />
+            Hoping  to become a forward for the Wildcats like his older brother, Isaac, who is  quite short, learns that his coach would rather have him be a point guard.<br />
+Reading Level: 3.4          
+          <br /><strong><a href="http://www.amazon.com/gp/product/1434222802/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1434222802&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+          <td valign="top"><p><strong>Running Rivals by Jake  Maddox</strong><br />
+            Amy  hurt her knee in a race, but now she is back on the team and will have to get  her confidence back in order to compete.<br />
+Reading Level: 3.4          
+          <br /><strong><a href="http://www.amazon.com/gp/product/1434207781/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1434207781&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+          <td valign="top"><p><strong>Halfway To Perfect: A  Dyamonde Daniel Book by Nikki Grimes</strong><br />
+            Typically  a normal eater (like Dyamonde), Damaris hardly has anything now. When Dyamonde  confronts her about this, at first Damaris insists that nothing’s wrong, but  Dyamonde thinks there’s more to the story<br />
+Reading Level: 3.8<br /><strong><a href="http://www.amazon.com/gp/product/0399251782/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0399251782&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+          <td valign="top"><p><strong>Sugar Plum Ballerinas:  Terrible Terrell by Whoopi Goldberg</strong><br />
+            Nine-year-old  Terrel Liu tries to sabotage her father's new relationship with the aunt of her  ballet class nemesis.<br />
+Reading Level: 3.9 <br />     
+         <strong><a href="http://www.amazon.com/gp/product/0786852631/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0786852631&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+          <td valign="top"><p><strong>Liberty Porter: New Girl in  Town by Julia DeVillers</strong><br />
+            Nine-year-old  Liberty Porter, daughter of the President of the United States, starts at a new  school and tries to be an exemplary First Daughter.<br />
+Reading Level: 3.5<strong><a href="http://www.amazon.com/gp/product/141699128X/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=141699128X&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+        </tr>
+        <tr>
+          <td height="28" valign="top"><img src="http://www.brownbabyreads.com/jpgs/sassy_dazzledisasterdinnerparty.jpg" width="117" height="160" /></td>
+          <td valign="top"><img src="http://www.brownbabyreads.com/jpgs/greg_and_the_cheat_sheets.jpg" width="113" height="160" /></td>
+          <td valign="top"><img src="http://www.brownbabyreads.com/jpgs/davidmortimorebaxter_thetruth.jpg" width="108" height="160" /></td>
+          <td valign="top"><img src="http://www.brownbabyreads.com/jpgs/no_1_car_spotter_car_thieves.jpg" width="104" height="160" /></td>
+          <td valign="top">&nbsp;</td>
+        </tr>
+        <tr>
+          <td height="28" valign="top"><p><strong>Sassy: The Dazzle Disaster  Dinner Party by Sharon Draper</strong><br />
+            Sassy  decides to host a fabulous dinner party, but things go terribly wrong the day  of the party.<br />
+Reading Level: 3.4<strong><a href="http://www.amazon.com/gp/product/B00EOALKVA/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=B00EOALKVA&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+          <td valign="top"><p>Greg  And The Cheat Sheets by Thalia Wiggins<br />
+            Greg  McNair works hard at school, at home, and in the community. He knew jumping  into sixth grade would be tough, but he didn't think he'd be failing in the  first week! Will the temptation to cheat be too much for Greg?<br />
+Reading Level: 3.6<strong><a href="http://www.amazon.com/gp/product/1616416300/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1616416300&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+          <td valign="top"><p><strong>Truth! David Mortimore  Baxter Comes Clean</strong>  by <strong>Karen  Tayleur</strong><br />
+            Caught  &quot;bending the truth&quot; again, young David Mortimore Baxter decides to  follow a strict diet of honesty which lands him in more trouble.<br />
+Reading Level: 3.5<strong><a href="http://www.amazon.com/gp/product/159889210X/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=159889210X&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+          <td valign="top"><p><strong>The No. 1 Car Spotter and  the Car Thieves by Atinuke</strong><br />
+            Oluwalase  Babatunde Benson is the number 1 car spotter in the village - maybe even the  world! Trouble is brewing in No. 1's village - cars are being stolen from  outside Mama Coca-Cola's chop house.<br />
+Reading Level: 3.4<strong><a href="http://www.amazon.com/gp/product/1406320803/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1406320803&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+          <td valign="top">&nbsp;</td>
+        </tr>
+        <tr>
+          <td height="28" colspan="5" valign="top"><h3>Reading Level: 4.0 - 4.9</h3></td>
+        </tr>
+        <tr>
+          <td height="28" valign="top"><div align="center"><img src="http://www.brownbabyreads.com/jpgs/friendshipfortoday.jpg" width="113" height="160" /></div></td>
+          <td valign="top"><div align="center"><img src="http://www.brownbabyreads.com/jpgs/technicalfoul.jpg" width="108" height="160" /></div></td>
+          <td valign="top"><div align="center"><img src="http://www.brownbabyreads.com/jpgs/darnell_rock_reporting.jpg" width="109" height="160" /></div></td>
+          <td valign="top"><div align="center"><img src="http://www.brownbabyreads.com/jpgs/clubhousemysteries_lostinthetunneloftime.jpg" width="107" height="160" /></div></td>
+          <td valign="top"><div align="center"><img src="http://www.brownbabyreads.com/jpgs/red_pyramid.jpg" width="105" height="160" /></div></td>
+        </tr>
+        <tr>
+          <td height="28" valign="top"><p><strong>A Friendship for Today by  Patricia McKissack</strong><br />
+            In  1954, when desegregation comes to Kirkland, Missouri, ten-year-old Rosemary  faces many changes and challenges at school and at home as her parents  separate.<br />
+Reading Level: 4.1<br /><strong><a href="http://www.amazon.com/gp/product/043966098X/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=043966098X&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+          <td valign="top"><p><strong>Technical Foul by Rich  Wallace</strong><br />
+            Jared,  a high-scoring member of the Hudson City Middle School basketball team, gets  angry when the point guard accuses him of being responsible for their string of  losses, but finally realizes they can win only if he becomes a team player.<br />
+Reading Level: 4.1<br /><strong><a href="http://www.amazon.com/gp/product/0142404446/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0142404446&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+          <td valign="top"><p><strong>Darnell Rock Reporting by  Walter Dean Myers</strong><br />
+            A boy  is given one last chance by the school principal to get his act together.<br />
+          Reading  Level: 4.3<br /><strong><a href="http://www.amazon.com/gp/product/0440411572/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0440411572&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></p></td>
+          <td valign="top"><p><strong>Clubhouse Mysteries: Lost in  the Tunnel of Time by Sharon Draper</strong><br />
+            Ziggy,  Rashawn, Jerome, and Rico are thrilled to discover that their hometown was a  stop on the Underground Railroad, and their friend Mr. Greene has given them an  old map that shows a secret passage under their own school.<br />
+Reading Level: 4.4<br /><strong><a href="http://www.amazon.com/gp/product/1442427043/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1442427043&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+          <td valign="top"><p><strong>Red Pyramid by Rick Riordan</strong><br />
+            Brilliant  Egyptologist Dr. Julius Kane accidentally unleashes the Egyptian god Set, who  banishes the doctor to oblivion and forces his two children to embark on a  dangerous journey, bringing them closer to the truth about their family and its  links to a secret order that has existed since the time of the pharoahs.<br />
+Reading Level: 4.5<br /><strong><a href="http://www.amazon.com/gp/product/1423113454/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1423113454&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+        </tr>
+        <tr>
+          <td height="28" valign="top"><div align="center"><img src="http://www.brownbabyreads.com/jpgs/nikkianddeja_weddingdrama.jpg" width="107" height="160" /></div></td>
+          <td valign="top"><div align="center"><img src="http://www.brownbabyreads.com/jpgs/onecrazysummer.jpg" width="106" height="160" /></div></td>
+          <td valign="top"><div align="center"><img src="http://www.brownbabyreads.com/jpgs/presidentofthewhole5thgrade2.JPG" width="108" height="160" /></div></td>
+          <td valign="top"><div align="center"><img src="http://www.brownbabyreads.com/jpgs/outofmymind.jpg" width="120" height="160" /></div></td>
+          <td valign="top"><div align="center"><img src="http://www.brownbabyreads.com/jpgs/BrendanBuckley.jpg" width="109" height="160" /></div></td>
+        </tr>
+        <tr>
+          <td height="28" valign="top"><p><strong>Wedding Drama by Karen  English</strong> <br />
+            Ms.  Shelby's third-grade girls are so excited about her upcoming wedding that they  start a wedding planning competition, which drives a wedge between best friends  Nikki and Deja, the two whose names were drawn to attend the event.<br />
+Reading Level: 4.5<br />
+<strong><a href="http://www.amazon.com/gp/product/0544003241/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0544003241&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+          <td valign="top"><p><strong>One Crazy Summer by Rita  Williams-Garcia</strong><br />
+            In  1968, Delphine and her two younger sisters travel to Oakland, California, to  spend a month with the mother they barely know, and discover that she is  resentful of the intrusion and wants them to attend a nearby Black Panther  summer camp.<br />
+Reading Level: 4.6<strong><a href="http://www.amazon.com/gp/product/0060760907/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0060760907&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+          <td valign="top"><p><strong>President Of The Whole Fifth  Grade </strong><br />
+            <strong>by Sherri Winston </strong><br />
+            To  gain leadership skills needed to run a cupcake-baking empire when she grows up,  Brianna runs for president of the fifth grade--expecting little  competition--until a new girl enters the race.<br />
+Reading Level: 4.8<strong><a href="http://www.amazon.com/gp/product/0316114332/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0316114332&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+          <td valign="top"><p><strong>Out of My Mind by Sharon  Draper</strong><br />
+Considered  by many to be mentally retarded, a brilliant, impatient fifth-grader with  cerebral palsy discovers a technological device that will allow her to speak  for the first time.          
+Reading Level: 4.3<strong><a href="http://www.amazon.com/gp/product/1416971718/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1416971718&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+          <td valign="top"><p><strong>Brendan Buckley's Universe  And Everything In It by Sundee Frazier</strong><br />
+            Brendan  Buckley, a biracial ten-year-old, applies his scientific problem-solving  ability and newfound interest in rocks and minerals to connect with his white  grandfather, the president of Puyallup Rock Club, and to learn why he and  Brendan's mother are estranged.<br />
+Reading Level: 4.0<strong><a href="http://www.amazon.com/gp/product/044042206X/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=044042206X&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+        </tr>
+        <tr>
+          <td height="28" valign="top"><div align="center"><img src="http://www.brownbabyreads.com/jpgs/maxaxiom_digestivesystemB.jpg" width="118" height="160" /></div></td>
+          <td valign="top"><div align="center"><img src="http://www.brownbabyreads.com/jpgs/golongB.jpg" width="108" height="160" /></div></td>
+          <td valign="top"><div align="center"><img src="http://www.brownbabyreads.com/jpgs/ellrayjakes_is_magic.jpg" width="120" height="160" /></div></td>
+          <td valign="top"><div align="center"><img src="http://www.brownbabyreads.com/jpgs/nikkianddejanewsynewsletter.gif" alt="" width="106" height="160" /></div></td>
+          <td valign="top"><div align="center"><img src="http://www.brownbabyreads.com/jpgs/maxaxiom_electricityB.jpg" width="118" height="160" /></div></td>
+        </tr>
+        <tr>
+          <td height="28" valign="top"><p><strong>Journey Through The  Digestive System With Max Axiom, Super Scientist by Emily Sohn</strong><br />
+            In  graphic novel format, follow the adventures of Max Axiom as he explains the  science behind the human digestive system.<br />
+Reading Level: 4.8<strong><a href="http://www.amazon.com/gp/product/1429634529/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1429634529&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+          <td valign="top"><p><strong>Go Long! By Tiki &amp; Ronde  Barber</strong><br />
+            When  Coach Spangler leaves at the start of their second year of junior high school,  thirteen-year-old twins Tiki and Ronde wonder if his replacement, history  teacher Mr. Wheeler, can coach the Eagles to another winning football season.<br />
+Reading Level: 4.9<strong><a href="http://www.amazon.com/gp/product/1416985735/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1416985735&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+          <td valign="top"><p><strong>Ellray Jakes is Magic! By  Sally Warner</strong><br />
+            Third-grader  EllRay, a &quot;shrimpy, goof-up kid,&quot; discovers magic all around him when  he and his schoolmates participate in the Oak Glen Primary School talent show  and work together on a wedding shower gift for their teacher.<br />
+Reading Level: 4.0<strong><a href="http://www.amazon.com/gp/product/0142423602/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0375956271&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+          <td valign="top"><strong>Nikki &amp; Deja: The Newsy  News Newsletter by Karen English</strong><br />
+When  Nikki and her best friend, Deja, start a newsletter about what is happening on  their street and in their school, they focus more on writing exciting stories  than on finding the truth.<br />
+Reading Level: 4.1<strong><a href="http://www.amazon.com/gp/product/0547406266/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0547406266&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+          <td valign="top"><p><strong>Shocking World Of  Electricity With Max Axiom, Super Scientist by Liam O’Donnell</strong><br />
+            In  graphic novel format, follow the adventures of Max Axiom as he explains the  science behind electricity.<br />
+Reading Level: 4.9<strong><a href="http://www.amazon.com/gp/product/0736878882/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0736878882&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+        </tr>
+        <tr>
+          <td height="28" valign="top"><div align="center"><img src="http://www.brownbabyreads.com/jpgs/mighty_miss_malone.jpg" width="107" height="160" /></div></td>
+          <td valign="top"><div align="center"><img src="http://www.brownbabyreads.com/jpgs/redzoneB.jpg" width="106" height="160" /></div></td>
+          <td valign="top"><div align="center"><img src="http://www.brownbabyreads.com/jpgs/nikkianddeja_birthdayblues.jpg" width="106" height="160" /></div></td>
+          <td valign="top"><div align="center"><img src="http://www.brownbabyreads.com/jpgs/STAT_SlamDunk.JPG" width="107" height="160" /></div></td>
+          <td valign="top"><div align="center"><img src="http://www.brownbabyreads.com/jpgs/greatcakemystery.jpg" width="109" height="160" /></div></td>
+        </tr>
+        <tr>
+          <td height="28" valign="top"><p><strong>The Mighty Miss Malone by  Christopher Paul Curtis</strong><br />
+            Deza  is the smartest girl in her class in Gary, Indiana, but the Great Depression  challenges her skills as she and her family fight to survive.<br />
+Reading Level: 4.7<strong><a href="http://www.amazon.com/gp/product/0440422140/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0440422140&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+          <td valign="top"><p><strong>Red Zone by Tiki &amp; Ronde  Barber</strong><br />
+            Identical  twins Ronde and Tiki's excitement over the approaching state championship  football game turns to worry when there is a chicken pox outbreak at Hidden  Valley Junior High.<br />
+Reading Level: 4.8<strong><a href="http://www.amazon.com/gp/product/141696861X/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=141696861X&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+          <td valign="top"><p><strong>Nikki &amp; Deja: Birthday  Blues by Karen English</strong><br />
+            As  her eighth birthday approaches, Deja's biggest concern is whether her father  will attend her party, until her aunt is called away on business and a  classmate schedules a &quot;just because party&quot; on the same afternoon.<br />
+Reading Level: 4.3<strong><a href="http://www.amazon.com/gp/product/0547248938/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0547248938&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+          <td valign="top"><p><strong>S.T.A.T.: Slam Dunk</strong> <strong>by Amar'e Stoudemire</strong><br />
+            When  some kids get on eleven-year-old Amar'e Studemire for not being able to dunk,  he sets a goal to make it happen, but when Amar'e's playing time is put on  hold, he must face all of the other things he's been neglecting, in  chapter-book format.<br />
+Reading Level: 4.4<strong><a href="http://www.amazon.com/gp/product/B00AJZGR26/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=B00AJZGR26&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+          <td valign="top"><p><strong>Great Cake Mystery: Precious  Ramotswe's Very First Case</strong><br />
+            <strong>By Alexander McCall Smith</strong><br />
+            Before  becoming the first female private investigator in Botswana, eight-year-old  Precious Ramotswe tracks down a thief who has been stealing her classmates'  snacks.<br />
+Reading Level: 4.5<strong><a href="http://www.amazon.com/gp/product/0307743896/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0307743896&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+        </tr>
+        <tr>
+          <td height="28" valign="top"><div align="center"><img src="http://www.brownbabyreads.com/jpgs/CelestesHarlemRenaissance.jpg" width="109" height="160" /></div></td>
+          <td valign="top"><div align="center"><img src="http://www.brownbabyreads.com/jpgs/ellrayjakes_dragonslayer.JPG" width="108" height="160" /></div></td>
+          <td valign="top"><div align="center"><img src="http://www.brownbabyreads.com/jpgs/yolandasgenius.png" width="126" height="161" /></div></td>
+          <td valign="top"><div align="center"><img src="http://www.brownbabyreads.com/jpgs/aftertupacdfoster.jpg" width="106" height="160" /></div></td>
+          <td valign="top"><div align="center"><img src="http://www.brownbabyreads.com/jpgs/fairway_phenom.jpg" width="100" height="160" /></div></td>
+        </tr>
+        <tr>
+          <td height="28" valign="top"><p><strong>Celeste's Harlem  Renaissance  </strong><br />
+            <strong>by Eleanor Tate </strong><br />
+            In  1921, thirteen-year-old Celeste leaves North Carolina to stay with her  glamorous Aunt Valentina in Harlem, New York, where she discovers the vibrant  Harlem Renaissance in full swing, even though her aunt's life is not exactly  what she was led to believe.<br />
+Reading Level: 4.7<strong><a href="http://www.amazon.com/gp/product/B006CDNMRC/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=B006CDNMRC&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+          <td valign="top"><p><strong>Ellray Jakes the Dragon  Slayer! By Sally Warner</strong><br />
+            A  mischievous eight-year-old boy helps his sister with a bully problem, while  facing a bully of his own at school.<br />
+Reading Level: 4.5<strong><a href="http://www.amazon.com/gp/product/0142423580/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0142423580&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+          <td valign="top"><p><strong>Yolonda's Genius  by   Carol Fenner</strong><br />
+            Yolanda  tries to prove her brother is a musical genius when her family moves out of  Chicago to a small town.<br />
+Reading Level: 4.8<strong><a href="http://www.amazon.com/gp/product/0689813279/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0689813279&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+          <td valign="top"><p><strong>After Tupac And D Foster by  Jacqueline Woodson</strong> <br />
+            In  the New York City borough of Queens in 1996, three girls bond over their shared  love of Tupac Shakur's music, as together they try to make sense of the unpredictable  world in which they live.<br />
+Reading Level: 4.7<strong><a href="http://www.amazon.com/gp/product/0142413992/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0142413992&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+          <td valign="top"><p><strong>Fairway Phenom  by Matt  Christopher</strong><br />
+            Malik  has never had any intention of playing golf until he sees a young black golfer  being cheered on by a crowd of adoring fans. But where is a kid living in  Brooklyn, New York, supposed to play golf?<br />
+Grade Level: 4.2<strong><a href="http://www.amazon.com/gp/product/0316075515/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0316075515&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+        </tr>
+        <tr>
+          <td height="28" colspan="5" valign="top"><h3>Reading Levels: 5.0 - 5.9</h3></td>
+        </tr>
+        <tr>
+          <td height="28" valign="top"><div align="center"><img src="http://www.brownbabyreads.com/jpgs/maxaxiom_photosynthesis.jpg" width="116" height="160" /></div></td>
+          <td valign="top"><div align="center"><img src="http://www.brownbabyreads.com/jpgs/budnotbuddy.jpg" width="109" height="160" /></div></td>
+          <td valign="top"><div align="center"><img src="http://www.brownbabyreads.com/jpgs/mrchickeesfunnymoney.jpg" width="109" height="160" /></div></td>
+          <td valign="top"><div align="center"><img src="http://www.brownbabyreads.com/jpgs/alloftheabove.jpg" width="110" height="160" /></div></td>
+          <td valign="top"><div align="center"><img src="http://www.brownbabyreads.com/jpgs/jubileejourney.jpg" width="100" height="160" /></div></td>
+        </tr>
+        <tr>
+          <td height="28" valign="top"><p><strong>Understanding Photosynthesis  With Max Axiom, Super Scientist by Liam O’Donnell</strong><br />
+            In  graphic novel format, follows the adventures of Max Axiom as he explains the  science behind photosynthesis.<br />
+Reading Level: 5.2<strong><a href="http://www.amazon.com/gp/product/0736878939/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0736878939&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+          <td valign="top"><p><strong>Bud, Not Buddy by  Christopher Paul Curtis</strong><br />
+            Ten-year-old  Bud, a motherless boy living in Flint, Michigan during the Great Depression,  escapes a bad foster home and sets out in search of the man he believes to be  his father--the renowned bandleader, H.E. Calloway of Grand Rapids.<br />
+Reading Level: 5.0<strong><a href="http://www.amazon.com/gp/product/0553494104/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0553494104&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+          <td valign="top"><p><strong>Mr. Chickee's Funny Money by  Christopher Paul Curtis</strong><br />
+            Flint  Future Detective Club members Steven Carter, his friend Russell, and Russell's  huge dog Zoopy solve the mystery of a quadrillion-dollar bill with the image of  James Brown on it.<br />
+Reading Level: 5.3<strong><a href="http://www.amazon.com/gp/product/0440229197/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0440229197&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+          <td valign="top"><p><strong>All Of The Above by Shelley  Pearsall</strong> <br />
+            Five  urban middle school students, their teacher, and other community members relate  how a school project to build the world's largest tetrahedron affects the lives  of everyone involved.<br />
+Reading Level: 5.3<strong><a href="http://www.amazon.com/gp/product/0316115266/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0316115266&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+          <td valign="top"><p><strong>Jubilee Journey by Carolyn  Meyer</strong><br />
+            Emily  Rose has always felt comfortable growing up in Connecticut with her  African-American mother and her &quot;French-American&quot; father, but when  they spend some time with her great-grandmother in Texas, Emily Rose learns  about her black heritage and uncovers some new and exciting parts of her own  identity.<br />
+Reading Level: 5.4<strong><a href="http://www.amazon.com/gp/product/0152058451/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0152058451&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+        </tr>
+        <tr>
+          <td height="28" valign="top"><div align="center"><img src="http://www.brownbabyreads.com/jpgs/mrchickeesmessymission.jpg" width="109" height="160" /></div></td>
+          <td valign="top"><div align="center"><img src="http://www.brownbabyreads.com/jpgs/maxaxiom_volcanoes.jpg" width="118" height="160" /></div></td>
+          <td valign="top"><div align="center"><img src="http://www.brownbabyreads.com/jpgs/watsonsgotobirmingham.jpg" width="108" height="160" /></div></td>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+        </tr>
+        <tr>
+          <td height="28" valign="top"><p><strong>Mr. Chickee’s Messy Mission  by Christopher Paul Curtis</strong><br />
+            The  Flint Future Detective Club members chase a gnome into a mural, only to find  the mysterious Mr. Chickee on the other side.<br />
+Reading Level: 5.6<strong><a href="http://www.amazon.com/gp/product/0440229227/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0440229227&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+          <td valign="top"><p><strong>Explosive World Of Volcanoes  With Max Axiom, Super Scientist</strong> <br />
+            In  graphic novel format, follow the adventures of Max Axiom as he explains the  science behind volcanoes.<br />
+Reading Level: 5.5<strong><a href="http://www.amazon.com/gp/product/1429617705/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1429617705&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+          <td valign="top"><p><strong>Watsons Go To Birmingham,  1963 by Christopher Paul Curtis</strong><br />
+            The  ordinary interactions and everyday routines of the Watsons, an African American  family living in Flint, Michigan, are drastically changed after they go to  visit Grandma in Alabama in the summer of 1963.<br />
+Reading Level: 5.0<strong><a href="http://www.amazon.com/gp/product/044022800X/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=044022800X&amp;linkCode=as2&amp;tag=brobabrea-20"><img src="http://www.brownbabyreads.com/buttons/buy_now_amazon.png" alt="" width="75" height="32" border="0" /></a></strong></td>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+        </tr>
+      </table>
+    </div>
+    <h3 align="center"><a href="http://www.brownbabyreads.com/docs/summer_book_list_3rd_to_5th.pdf" title="Download PDF" target="_blank">Download the pdf version</a></h3>
+    <h3 align="center"><!-- Please call pinit.js only once per page -->
+<script type="text/javascript" async  data-pin-hover="true" src="//assets.pinterest.com/js/pinit.js"></script><img src="http://www.brownbabyreads.com/jpgs/good_reads_summer_reading_pic.jpg" width="296" height="210" /></h3>
+    <p align="center"><img src="http://www.brownbabyreads.com/jpgs/summer_reads_3rd_5th.jpg" width="250" height="440" /></p>
+    <h3 align="center"><strong>Find More Book Titles in our Book Database </strong></h3>
+    <h3 align="center">Our   database contains over 2,000 book titles for/about African-American children</h3>
+    <h3 align="center"><a href="http://www.brownbabyreads.com/bookdatabase_overview.html" title="Database" target="_blank">Click here for the Database</a></h3>
+    <h6 align="center">&nbsp;</h6>
+    <p align="center">&nbsp;</p>
+  </div>
+ <div id="footer">
+    <div align="center">
+      <table width="717" border="0">
+        <tr>
+          <td width="126" height="140" align="left" valign="top"><p><img src="http://www.brownbabyreads.com/buttons/footerbuttons/Organization.png" width="125" height="20" /><a href="http://www.brownbabyreads.com/who_we_are.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('who_we_are','','http://www.brownbabyreads.com/buttons/footerbuttons/who_we_are_on.png',1)"><img src="http://www.brownbabyreads.com/buttons/footerbuttons/who_we_are_off.png" alt="who_we_are" name="who_we_are" width="125" height="20" border="0" id="who_we_are" /></a><a href="http://www.brownbabyreads.com/what_we_do.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('what_we_do','','http://www.brownbabyreads.com/buttons/footerbuttons/what_we_do_on.png',1)"><img src="http://www.brownbabyreads.com/buttons/footerbuttons/what_we_do_off.png" alt="what_we_do" name="what_we_do" width="125" height="20" border="0" id="what_we_do" /></a><a href="http://www.brownbabyreads.com/contactus.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('contactus','','http://www.brownbabyreads.com/buttons/footerbuttons/contactus_on.png',1)"><img src="http://www.brownbabyreads.com/buttons/footerbuttons/contactus_off.png" alt="contact us" name="contactus" width="125" height="20" border="0" id="contactus" /></a><a href="http://www.brownbabyreads.com/privacypolicy.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('privacypolicy','','http://www.brownbabyreads.com/buttons/footerbuttons/privacypolicy_on.png',1)"><img src="http://www.brownbabyreads.com/buttons/footerbuttons/privacypolicy_off.png" alt="privacy policy" name="privacypolicy" width="125" height="20" border="0" id="privacypolicy" /></a><br />
+          </p></td>
+          <td width="137" align="left" valign="top"><p><img src="http://www.brownbabyreads.com/buttons/footerbuttons/resources.png" width="125" height="20" /><a href="http://www.brownbabyreads.com/bookdatabase.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('bookdatabase','','http://www.brownbabyreads.com/buttons/footerbuttons/bookdatabase_on.png',1)"><img src="http://www.brownbabyreads.com/buttons/footerbuttons/bookdatabase_off.png" alt="book database" name="bookdatabase" width="125" height="20" border="0" id="bookdatabase" /></a><a href="http://www.brownbabyreads.com/blackhistorytimeline.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('historytimeline','','http://www.brownbabyreads.com/buttons/footerbuttons/historytimeline_on.png',1)"><img src="http://www.brownbabyreads.com/buttons/footerbuttons/historytimeline_off.png" alt="history timeline" name="historytimeline" width="125" height="20" border="0" id="historytimeline" /></a><a href="http://www.brownbabyreads.com/articles_research.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('articlesresearch','','http://www.brownbabyreads.com/buttons/footerbuttons/articlesresearch_on.png',1)"><img src="http://www.brownbabyreads.com/buttons/footerbuttons/articlesresearch_off.png" alt="articles research" name="articlesresearch" width="125" height="20" border="0" id="articlesresearch" /></a><a href="http://www.brownbabyreads.com/newbooks.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('newreleases','','http://www.brownbabyreads.com/buttons/footerbuttons/newreleases_on.png',1)"><img src="http://www.brownbabyreads.com/buttons/footerbuttons/newreleases_off.png" alt="new releases" name="newreleases" width="125" height="20" border="0" id="newreleases" /></a><a href="http://www.brownbabyreads.com/cocoakidsread.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('cocoakidsread','','http://www.brownbabyreads.com/buttons/footerbuttons/cocoakidsread_on.png',1)"><img src="http://www.brownbabyreads.com/buttons/footerbuttons/cocoakidsread_off.png" alt="cocoa kids read" name="cocoakidsread" width="125" height="20" border="0" id="cocoakidsread" /></a></p></td>
+          <td width="125" align="left" valign="top"><p><img src="http://www.brownbabyreads.com/buttons/footerbuttons/engage.png" width="125" height="20" /><a href="http://www.brownbabyreads.com/registration.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('register','','http://www.brownbabyreads.com/buttons/footerbuttons/register_on.png',1)"><img src="http://www.brownbabyreads.com/buttons/footerbuttons/register_off.png" alt="register" name="register" width="125" height="20" border="0" id="register" /></a><a href="http://www.brownbabyreads.com/spreadtheword.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('spreadtheword','','http://www.brownbabyreads.com/buttons/footerbuttons/spreadtheword_on.png',1)"></a><a href="http://visitor.r20.constantcontact.com/manage/optin/ea?v=001qv8C0zYblRlBz2KWCpcudO0j_IjjK0mLhPk0L4kz47H0gWz8mECzi9i5-bqHa2AC1OqRhWJMvDNFt1rFFQOU3w%3D%3D" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('getnewsletter','','http://www.brownbabyreads.com/buttons/footerbuttons/getnewsletter_on.png',1)"><img src="http://www.brownbabyreads.com/buttons/footerbuttons/getnewsletter_off.png" alt="get newsletter" name="getnewsletter" width="125" height="20" border="0" id="getnewsletter" /></a><a href="http://www.brownbabyreads.com/shop.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('shop','','http://www.brownbabyreads.com/buttons/footerbuttons/shop_on.png',1)"><img src="http://www.brownbabyreads.com/buttons/footerbuttons/shop_off.png" alt="shop" name="shop" width="125" height="20" border="0" id="shop" /></a></p></td>
+          <td width="136" align="left" valign="top"><p><img src="http://www.brownbabyreads.com/buttons/footerbuttons/support.png" width="125" height="20" /><a href="http://www.brownbabyreads.com/give/donatenow.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('makeadonation','','http://www.brownbabyreads.com/buttons/footerbuttons/makeadonation_on.png',1)"><img src="http://www.brownbabyreads.com/buttons/footerbuttons/makeadonation_off.png" alt="make a donation" name="makeadonation" width="125" height="20" border="0" id="makeadonation" /></a><a href="http://www.brownbabyreads.com/give/corporatesupport.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('corporatesupport','','http://www.brownbabyreads.com/buttons/footerbuttons/corporatesupport_on.png',1)"><img src="http://www.brownbabyreads.com/buttons/footerbuttons/corporatesupport_off.png" alt="corporate support" name="corporatesupport" width="125" height="20" border="0" id="corporatesupport" /></a></p></td>
+          <td width="171" align="left" valign="top"><p><img src="http://www.brownbabyreads.com/buttons/footerbuttons/connectwithus.png" width="125" height="20" /><a href="https://www.facebook.com/pages/Brown-Baby-Reads/79187997574"><img src="http://www.brownbabyreads.com/buttons/footerbuttons/facebook_icon.png" width="52" height="52" border="0" /></a><a href="https://twitter.com/BrownBabyReads"> <img src="http://www.brownbabyreads.com/buttons/footerbuttons/twitter_icon.png" width="50" height="50" border="0" /> </a><a href="https://pinterest.com/BrownBabyReads"><img src="http://www.brownbabyreads.com/buttons/footerbuttons/pinterest_icon.png" width="50" height="50" border="0" /></a></p></td>
+        </tr>
+        <tr>
+          <td height="30" colspan="5" align="left" valign="middle"><h5 align="center">&copy; 2009-14 Brown Baby Reads&#8482; All Rights Reserved. www.brownbabyreads.com</h5></td>
+        </tr>
+      </table>
+      <script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"
+    data-pin-hover="true"
+></script>
+      <!-- end #footer -->
+    </div>
+ </div>
+  <!-- end #container --></div>
+
+</body>
+</html>

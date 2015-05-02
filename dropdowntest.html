@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+<style type="text/css">
+.list {
+	cursor:default;
+	vertical-align:inherit;
+	padding:0px;
+	width:150px;
+	height:45px;
+	background-color:#ffff99;
+	border:0px solid #000;
+	marigin:0;
+}
+#restoflist {
+width:210px;
+height:160px;
+}
+#dropdown {
+	width:210px;
+	height:185px;
+	left: inherit;
+}
+.list1 {
+	cursor:default;
+	vertical-align:central;
+	padding:5px;
+	width:150px;
+	height:20px;
+	background-color:#ffff99;
+	border:0px solid #000;
+	marigin:0;
+	text-align: left;
+}
+.list2 {cursor:default;
+vertical-align:central;
+padding:5px;
+width:150px;
+height:20px;
+background-color:#ffff99;
+border:0px solid #000;
+marigin:0;
+}
+.list11 {	cursor:default;
+	vertical-align:central;
+	padding:5px;
+	width:150px;
+	height:20px;
+	background-color:#ffff99;
+	border:0px solid #000;
+	marigin:0;
+	text-align: left;
+}
+.list3 {	cursor:default;
+	vertical-align:bottom;
+	padding:0px;
+	width:150px;
+	height:20px;
+	background-color:#ffff99;
+	border:0px solid #000;
+	marigin:0;
+}
+.list4 {	cursor:default;
+	vertical-align:bottom;
+	padding:0px;
+	width:150px;
+	height:20px;
+	background-color:#ffff99;
+	border:0px solid #000;
+	marigin:0;
+}
+.list31 {cursor:default;
+	vertical-align:bottom;
+	padding:0px;
+	width:150px;
+	height:45px;
+	background-color:#ffff99;
+	border:0px solid #000;
+	marigin:0;
+}
+</style>
+<script type="text/javascript">
+$(document).ready(function() {
+$("#restoflist").hide();
+$(".list").mouseenter(function() {
+$(this).css({'background-color':'#DDD'});
+});
+$(".list").mouseleave(function() {
+$(this).css({'background-color':'#CCC'});
+});
+$("#1").click(function() {
+$("#restoflist").show("blind", 250);
+});
+$("#dropdown").mouseleave(function() {
+$("#restoflist").hide("blind", 250);
+});
+});
+</script>
+</head>
+<body>
+<div id="dropdown">
+
+<div id="1" class="list"><img src="http://www.brownbabyreads.com/buttons/who_we_are.jpg" alt="who we are" width="151" height="45" border="0" /></div>
+<div id="restoflist">
+<div id="shp" class="list">Standard Home</div>
+<div id="bp" class="list">Small Business </div>
+<div id="gmp" class="list">Ultimate Gaming </div>
+<div id="hrp" class="list">Top-of-the-Lin</div>
+<div id="hp" class="list">Hackintosh Computer</div>
+</div>
+</div>
+</body>
+</html> 

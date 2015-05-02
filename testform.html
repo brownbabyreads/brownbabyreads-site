@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+
+<FORM NAME="asia">
+<INPUT TYPE="hidden" NAME="userid">
+</FORM>
+
+<SCRIPT LANGUAGE="javascript">
+
+var locate = window.location
+document.asia.userid.value = locate
+
+var text = document.asia.userid.value
+
+function delineate(str)
+{
+theleft = str.indexOf("=") + 1;
+theright = str.lastIndexOf("&");
+return(str.substring(theleft, theright));
+}
+document.write("Welcome Back " +delineate(text)+"!");
+
+
+function delineate2(str)
+{
+point = str.lastIndexOf("=");
+return(str.substring(point+1,str.length));
+}
+document.write("Your First Name is " +delineate2(text)); 
+
+</SCRIPT>
+
+<FORM NAME="bull">
+  Welcome back: 
+    <INPUT TYPE="text" NAME="bear">
+</FORM>
+
+<SCRIPT LANGUAGE="javascript">
+var zork = delineate2(text)
+document.bull.bear.value = zork
+</SCRIPT> 
+
+
+</body>
+</html>
