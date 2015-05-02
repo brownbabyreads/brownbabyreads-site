@@ -11,7 +11,7 @@
 
     // This is your option name where all the Redux data is stored.
     $opt_name = "_bbr_admin";
-    
+
     /**
      * ---> SET ARGUMENTS
      * All the possible arguments for Redux.
@@ -95,7 +95,7 @@
         // FUTURE -> Not in use yet, but reserved or partially implemented. Use at your own risk.
         'database'             => '',
         // possible: options, theme_mods, theme_mods_expanded, transient. Not fully functional, warning!
-        
+
         //'compiler'             => true,
 
         // HINTS
@@ -153,8 +153,8 @@
     // Set the help sidebar
     // $content = __( '<p>This is the sidebar content, HTML is allowed.</p>', 'redux-framework-demo' );
     // Redux::setHelpSidebar( $opt_name, $content );
-    
-    
+
+
     /*
      *
      * ---> START SECTIONS
@@ -171,7 +171,7 @@
     //
     // -> START Basic Fields
     //
-    
+
     Redux::setSection( $opt_name, [
         'title' => 'General',
         'icon' => 'el-icon-home',
@@ -199,7 +199,6 @@
                 [
                     'id' => 'opt-header-button-callout-url',
                     'type' => 'text',
-                    'validate' => 'url',
                     'title' => 'Header Button Callout URL',
                 ],
             [
@@ -267,7 +266,7 @@
             ],
         ]
     ]);
-    
+
     /*
      * <--- END SECTIONS
      */

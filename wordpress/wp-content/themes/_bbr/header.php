@@ -21,6 +21,7 @@ global $_bbr_admin;
 <meta name="format-detection" content="telephone=no">
 
 <?php wp_head(); ?>
+<script type="text/javascript" src="http://fast.fonts.net/jsapi/c0a8a970-01e4-4469-b503-c47e8679a75c.js"></script>
 </head>
 <body <?php body_class('home header-style3'); ?>>
 <!--[if lt IE 7]>

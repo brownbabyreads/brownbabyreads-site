@@ -9,8 +9,6 @@ Author:	imithemes
 @import url("font-awesome.css");
 @import url("line-icons.css");
 @import url("animations.css");
-@import url(http://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700,700italic);
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic);
 
 /*------------------------------------------------------------------
 [Table of contents]
@@ -81,7 +79,7 @@ html, hmtl a{
 	-ms-text-size-adjust: 100%;
 }
 a{
-	color:#5e5e5e;
+	color: #c34e30;
 	text-decoration: none;
 	cursor: pointer;
 	-webkit-transition:all 0.3s ease 0.2s;
@@ -95,7 +93,7 @@ a:active,
 a:focus{
 	text-decoration:none;
 	outline: 0;
-	color:#5e5e5e;
+	color:#c34e30;
 }
 a img {
 	border: none;
@@ -194,11 +192,11 @@ h4,
 h5,
 h6{
 	margin:0 0 20px 0;
-	color:#333;
+	color: #5b2e22;
 	font-weight:400;
 	line-height:1.5em;
 	letter-spacing:.5px;
-	font-family: 'Playfair Display', serif;
+	font-family: 'PMN Caecilia W01', serif;
 }
 h1{
 	font-size:30px;
@@ -220,7 +218,7 @@ h4{
 	letter-spacing:1px;
 	font-weight:700;
 	text-transform:uppercase;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'PMN Caecilia W01', sans-serif;
 }
 h5{
 	font-size:14px;
@@ -239,7 +237,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
 	text-decoration:none;
 }
 h1 .label, h2 .label, h3 .label, h4 .label, h5 .label, h6 .label{
-	font-family: 'Roboto', sans-serif;
+	font-family: 'PMN Caecilia W01', sans-serif;
 }
 .huge{
 	font-size:10em;
@@ -255,7 +253,7 @@ blockquote p{
 	line-height:1.8em;
 	font-style:italic;
 	color:#999;
-	font-family: 'Playfair Display', serif;
+	font-family: 'PMN Caecilia W01', serif;
 }
 blockquote cite{
 	font-weight:700;
@@ -1204,7 +1202,7 @@ html[xmlns] .slides {
 	font-size:14px;
 	color:#555;
 	letter-spacing:0;
-	font-family:'Roboto', sans-serif;
+	font-family: 'Helvetica Neue', Helvetica, Arial sans-serif;
 }
 .input-lg .selectpicker{
 	padding-top:12px;
@@ -1267,7 +1265,7 @@ body{
 	color:#999;
 	font-size:14px;
 	font-weight:400;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Helvetica Neue', Helvetica, Arial sans-serif;
 	line-height:1.5em;
 	background-attachment:fixed;
 	overflow-x:hidden;
@@ -1419,7 +1417,9 @@ body.boxed .body{
 	padding-left:0;
 }
 .site-logo img{
-	max-width:250px;
+  width: 100%;
+  height: auto;
+	max-width: 400px;
 	-webkit-transition:all 0.3s ease 0.2s;
 	-moz-transition:all 0.3s ease 0.2s;
 	-ms-transition:all 0.3s ease 0.2s;
@@ -1446,28 +1446,29 @@ body.boxed .body{
 	float:right;
 	top:0;
 	position:relative;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'PMN Caecilia W01', serif;
 }
 .header-style3 .main-navigation{
 	float:none;
-	text-align:center;
+	text-align:left;
 }
 .main-navigation > ul{
 	margin:0;
 	list-style-type:none;
 }
 .main-navigation > ul > li{
-	font-weight:400;
-	font-size:16px;
-	position:relative;
-	display:inline-block;
-	margin-left:30px;
+  font-weight:400;
+  font-size:16px;
+  position:relative;
+  display:inline-block;
 }
 .header-style3 .main-navigation > ul > li{
-	text-transform:uppercase;
-	letter-spacing:1px;
-	margin:0 20px;
-	font-size:15px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  font-size:15px;
+}
+.header-style3 .main-navigation > ul > li + li {
+  margin-left: 20px;
 }
 .main-navigation > ul > li > a{
 	display:block;
@@ -1791,7 +1792,7 @@ body.boxed .body{
 	padding:15px 40px;
 	margin-bottom:-1px;
 	color:#fff;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Helvetica Neue', Helvetica, Arial sans-serif;
 	font-size:22px;
 }
 .skewed-title-bar h4 span{
@@ -1805,7 +1806,7 @@ body.boxed .body{
 	position:relative;
 	display:block;
 	text-transform:uppercase;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Helvetica Neue', Helvetica, Arial sans-serif;
 }
 .lgray-bg .widget-title{
 	margin-bottom:40px;
@@ -2419,7 +2420,7 @@ ul.slot-exhibitions li h5{
 	margin-bottom:0;
 }
 .widget li a{
-	color:#5e5e5e;
+	color:#c34e30;
 }
 .widget li .meta-data a{
 	color:#CDCBCB;
@@ -2633,7 +2634,7 @@ ul.slot-exhibitions li h5{
 	letter-spacing:1px;
 	margin-bottom:0;
 	color:#252525;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Helvetica Neue', Helvetica, Arial sans-serif;
 }
 .icon-box p{
 	margin:8px 0 0;
@@ -3069,7 +3070,7 @@ ul.slot-exhibitions li h5{
 	background:none;
 }
 .pricing-column .features a{
-	color:#5e5e5e;
+	color:#c34e30;
 }
 .pricing-column .pricing-column-content {
 	padding: 0px 0px 20px 0px;
