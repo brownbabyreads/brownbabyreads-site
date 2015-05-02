@@ -61,9 +61,21 @@ global $_bbr_admin;
         <header class="site-header">
             <div class="container sp-cont">
                 <div class="site-logo">
-                    <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="images/logow.png" alt="<?php bloginfo( 'name' ); ?>"></a></h1>
+                    <h1>
+                    	<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                    		<?php
+                    			if($_bbr_admin['opt-main-logo']){
+                    				echo '<img src="'.$_bbr_admin['opt-main-logo']['url'].'" alt="'.bloginfo('name').'">';
+                    			}
+                    		?>
+                    	</a>
+                    </h1>
                 </div>
-                <a href="#" class="btn btn-primary pull-right push-top hidden-xs hidden-sm">Support your history</a>
+                <?php
+                	if($_bbr_admin['opt-header-button-callout-url'] && $_bbr_admin['opt-header-button-callout-text']){
+                		echo '<a href="'.$_bbr_admin['opt-header-button-callout-url'].'" class="btn btn-primary pull-right push-top hidden-xs hidden-sm">'.$_bbr_admin['opt-header-button-callout-text'].'</a>';
+                	}
+                ?>
                 <a href="#" class="visible-sm visible-xs" id="menu-toggle"><i class="fa fa-bars"></i></a>
             </div>
         </header>
