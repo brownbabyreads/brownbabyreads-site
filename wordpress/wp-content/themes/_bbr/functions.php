@@ -14,6 +14,7 @@ if ( ! isset( $content_width ) ) {
 
 // Register Custom Navigation Walker
 require_once('inc/wp_bootstrap_navwalker.php');
+require_once (dirname(__FILE__) . '/admin-config.php');
 
 if ( ! function_exists( '_bbr_setup' ) ) :
 /**

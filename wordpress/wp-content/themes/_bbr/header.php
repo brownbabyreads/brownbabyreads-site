@@ -6,6 +6,9 @@
  *
  * @package brownbabyreads
  */
+
+global $_bbr_admin;
+
 ?><!DOCTYPE HTML>
 <html class="no-js" <?php language_attributes(); ?>>
 <head>
@@ -32,10 +35,22 @@
                 </div>
                 <div class="col-md-6 col-sm-6">
                 	<ul class="pull-right social-icons-colored">
-                    	<li class="facebook"><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                    	<li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    	<li class="instagram"><a href="#"><i class="fa fa-instagram"></i></a></li>
-                    	<li class="flickr"><a href="#"><i class="fa fa-flickr"></i></a></li>
+                    	<?php
+							if($top_networks = $_bbr_admin['opt-topnav-social-icons']){
+								if ( in_array("twitter", $top_networks) && !empty($_bbr_admin['topnav-twitter-url']) ) {
+                    				echo '<li class="twitter"><a href="'.$_bbr_admin['topnav-twitter-url'].'" title="Twitter"><i class="fa fa-twitter"></i></a></li>';
+								}
+								if ( in_array("facebook", $top_networks) && !empty($_bbr_admin['topnav-facebook-url']) ) {
+                    				echo '<li class="facebook"><a href="'.$_bbr_admin['topnav-facebook-url'].'" title="Facebook"><i class="fa fa-facebook-f"></i></a></li>';
+								}
+								if ( in_array("instagram", $top_networks) && !empty($_bbr_admin['topnav-instagram-url']) ) {
+                    				echo '<li class="instagram"><a href="'.$_bbr_admin['topnav-instagram-url'].'" title="Instagram"><i class="fa fa-instagram"></i></a></li>';
+								}
+								if ( in_array("flickr", $top_networks) && !empty($_bbr_admin['topnav-flickr-url']) ) {
+                    				echo '<li class="flickr"><a href="'.$_bbr_admin['topnav-flickr-url'].'" title="Flickr"><i class="fa fa-flickr"></i></a></li>';
+								}
+							}
+                    	?>
                     </ul>
                 </div>
             </div>
