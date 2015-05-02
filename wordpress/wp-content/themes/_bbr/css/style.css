@@ -3,7 +3,7 @@
 Project:	AutoStars
 Version:	1.1
 Last change:	02/17/15
-Author:	imithemes 
+Author:	imithemes
 -------------------------------------------------------------------*/
 /* Stylesheets and Google fonts import */
 @import url("font-awesome.css");
@@ -76,8 +76,8 @@ html, body {
 
 html, hmtl a{
 	width:100%;
-	font-size: 100%; 
-	-webkit-text-size-adjust: 100%; 
+	font-size: 100%;
+	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
 }
 a{
@@ -101,7 +101,7 @@ a img {
 	border: none;
 }
 a > img {
-	vertical-align: middle;	
+	vertical-align: middle;
 }
 .gray-bg{
 	background:#CDCBCB;
@@ -116,7 +116,7 @@ a > img {
 	background:#454545;
 }
 img {
-	max-width: 100%;	
+	max-width: 100%;
 }
 img, object, embed, audio, video {
 	max-width: 100%;
@@ -151,7 +151,7 @@ i, em, .italic{
 	text-align: center;
 }
 .text-align-right {
-	text-align: right;	
+	text-align: right;
 }
 .color-text {
     color: #ffffff;
@@ -169,15 +169,15 @@ i, em, .italic{
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color: #999;  
+   color: #999;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: #999;  
+   color: #999;
 }
 
-:-ms-input-placeholder {  
-   color: #999;  
+:-ms-input-placeholder {
+   color: #999;
 }
 iframe{
 	border:0;
@@ -926,10 +926,10 @@ p.meta-data{
 	visibility: hidden;
 	line-height: 0;
 	height: 0;
-} 
+}
 html[xmlns] .slides {
 	display: block;
-} 
+}
 * html .slides {
 	height: 1%;
 }
@@ -937,7 +937,7 @@ html[xmlns] .slides {
 	zoom: 1;
 	margin:0;
 	list-style-type:none;
-}  
+}
 .hero-slider{
 	position:relative;
 	z-index:1;
@@ -1288,7 +1288,7 @@ body.boxed .body{
 	box-shadow:0 0 2px rgba(0,0,0,.2);
 }
 .topbar{
-	background:#222;
+	background:#fff;
 	height:40px;
 	overflow:hidden;
 	font-size:12px;
@@ -1383,7 +1383,7 @@ body.boxed .body{
 	box-shadow:0 1px 2px rgba(0,0,0,.1);
 }
 .header-style3 .site-header{
-	background:#454545;
+	color: #454545;
 }
 .site-header .push-top{
 	margin-top:22px;
@@ -1411,8 +1411,8 @@ body.boxed .body{
 .site-logo h1{
 	margin:0;
 	padding:17px 22px;
-	font-size:0;
-	line-height:0;
+  font-size: 0;
+  line-height: 0;
 	text-align:center;
 }
 .header-style2 .site-logo h1, .header-style3 .site-logo h1{
@@ -1431,7 +1431,7 @@ body.boxed .body{
    6.1. Main Navigation
 ================================================== */
 .main-navbar{
-	background:#F9F8F5;
+	background: #fff;
 	width:100%;
 	position:relative;
 	z-index:99;
@@ -3038,13 +3038,13 @@ ul.slot-exhibitions li h5{
 /* Pricing Tables
 /*-------------------------------------------------------------------------------------------*/
 .pricing-table {
-	margin-top: 50px;	
+	margin-top: 50px;
 	margin-bottom: 50px;
 }
-.pricing-table:after { 
-	display: block; 
-	visibility: hidden; 
-	clear: both; 
+.pricing-table:after {
+	display: block;
+	visibility: hidden;
+	clear: both;
 	height: 0;
 	content: "";
 }
@@ -3135,7 +3135,7 @@ ul.slot-exhibitions li h5{
 .pricing-column h4 {
 	margin-bottom: 0px;
 	margin-left: -22px;
-	padding: 20px 30px 6px 30px;	
+	padding: 20px 30px 6px 30px;
 	color: #333333;
 	font-size: 54px!important;
 	line-height: 42px!important;
@@ -3185,7 +3185,7 @@ ul.slot-exhibitions li h5{
 	p.lead{
 		line-height:2em;
 	}
-	
+
 }
 @media (min-width: 992px) and (max-width: 1199px) {
 	.dd-menu .megamenu-container ul{
@@ -3493,5 +3493,5 @@ ul.slot-exhibitions li h5{
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 }
 @media all and (-webkit-min-device-pixel-ratio: 1.5) {
-	
+
 }
