@@ -1739,6 +1739,7 @@ body.boxed .body{
 	position:relative;
 	margin-bottom:20px;
 	overflow:hidden;
+	background: black;
 }
 .featured-block figure a{
 	display:block;

@@ -100,6 +100,45 @@ global $_bbr_admin;
       </div>
     </div>
   </div>
+  <!-- Start Hero Slider -->
+  <div class="hero-area">
+    <?php if ( is_front_page() ) { ?>
+      <div class="slider-rev-cont">
+        <div class="tp-banner-container">
+          <div class="tp-banner">
+            <?php while (have_posts() ) : the_post(); ?>
+              <ul style="display:none;">
+                <?php
+                  // check if the repeater field has rows of data
+                  if( have_rows('home_page_slideshow') ):
+                    // loop through the rows of data
+                    while ( have_rows('home_page_slideshow') ) : the_row();
+                      $i = 1;
+                      $image = get_sub_field('image');
+                      $title = get_sub_field('title');
+                      $subtitle = get_sub_field('subtitle');
+                    ?>
+                      <!-- SLIDE  -->
+                      <li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Slide <?php echo $i; ?>">
+                        <!-- MAIN IMAGE -->
+                        <img src="<?php echo $image['url']; ?>" alt="fullslide1" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                        <div class="tp-caption light_heavy_60 sfb rtt tp-resizeme" data-x="left" data-hoffset="20" data-y="center" data-voffset="0" data-speed="600" data-start="800" data-easing="Power4.easeOut" data-splitin="none" data-splitout="none" data-elementdelay="0.01" data-endelementdelay="0.1" data-endspeed="500" data-endeasing="Power4.easeIn" style="z-index: 2; max-width: auto; max-height: auto; white-space: nowrap;"><?php echo $title; ?></div>
+                        <div class="tp-caption light_medium_30_shadowed sfb rtt tp-resizeme" data-x="left" data-hoffset="20" data-y="center" data-voffset="70" data-speed="600" data-start="900" data-easing="Power4.easeOut" data-splitin="none" data-splitout="none" data-elementdelay="0.01" data-endelementdelay="0.1" data-endspeed="500" data-endeasing="Power4.easeIn" style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap;"><?php echo $subtitle; ?></div>
+                      </li>
+                    <?php
+                    $i++;
+                    endwhile;
+                  endif;
+                ?>
+              </ul>
+            <?php endwhile; // end of the loop. ?>
+            <div class="tp-bannertimer" style="display:none;"></div>
+          </div>
+        </div>
+      </div>
+    <?php } ?>
+  </div>
+  <!-- End Hero Slider -->
 <!--   <div class="hero-area">
     <div class="page-header parallax" style="background-image:url(http://placehold.it/1400x600&amp;text=IMAGE+PLACEHOLDER)">
       <div><div>

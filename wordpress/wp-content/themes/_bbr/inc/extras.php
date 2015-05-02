@@ -125,6 +125,12 @@ remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
 // }
 // add_action( 'init', 'custom_dog' );
 
+// Custom thumbnail
+add_image_size( 'home-info-featured', 600, 400, true );
+
+// Post Thumbs
+add_theme_support( 'post-thumbnails' ); 
+
 // Breadcrumbs
 function the_breadcrumb() {
   
