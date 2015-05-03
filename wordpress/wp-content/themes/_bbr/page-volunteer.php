@@ -42,7 +42,7 @@ get_header();
         </div>
       </div>
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-6 col-md-offset-3">
           <div class="spacer-60"></div>
           <?php if( function_exists( 'ninja_forms_display_form' ) ){
             ninja_forms_display_form( 2 );
