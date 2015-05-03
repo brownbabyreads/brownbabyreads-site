@@ -121,6 +121,40 @@ the_post(); ?>
           <hr class="fw" id="request_brochures">
           <h2><?php echo the_field('request_brochures_title'); ?></h2>
           <?php echo the_field('request_brochures_content'); ?>
+          <div class="carousel-wrapper">
+            <div class="row">
+              <ul class="owl-carousel carousel-fw" id="team-slider" data-columns="2" data-autoplay="" data-pagination="yes" data-arrows="no" data-single-item="no" data-items-desktop="2" data-items-desktop-small="2" data-items-tablet="2" data-items-mobile="1">
+                <?php
+                  // check if the repeater field has rows of data
+                  if( have_rows('brochures') ):
+                    // loop through the rows of data
+                    while ( have_rows('brochures') ) : the_row();
+                      $i = 1;
+                      $image = get_sub_field('image');
+                      $name = get_sub_field('name');
+                      $pdfurl = get_sub_field('pdf-url');
+                    ?>
+                      <!-- STAFF ITEM -->
+                      <li class="item">
+                        <div class="grid-item staff-item format-image">
+                          <?php if($image['url']) { ?>
+                            <a href="<?php echo $pdfurl; ?>" class="media-box grid-featured-img">
+                              <img src="<?php echo $image['url']; ?>" alt="<?php echo $name; ?>">
+                            </a>
+                          <?php } ?>
+                          <div class="grid-item-content">
+                            <h3><a href="<?php echo $pdfurl; ?>"><?php echo $name; ?></a></h3>
+                          </div>
+                        </div>
+                      </li>
+                    <?php
+                    $i++;
+                    endwhile;
+                  endif;
+                ?>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
