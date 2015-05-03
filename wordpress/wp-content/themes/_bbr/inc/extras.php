@@ -30,6 +30,36 @@ function cc_mime_types($mimes) {
 }
 add_filter('upload_mimes', 'cc_mime_types');
 
+add_action( 'user_register', 'contstant_contact_signup', 10, 1 );
+
+function contstant_contact_signup( $user_id ) {
+  // POST to Constant Contact
+  if ( isset( $_POST['email'] ) ) {
+    //extract data from the post
+    extract($_POST);
+
+    //set POST variables
+    $url = 'http://visitor.r20.constantcontact.com/manage/optin/ea?v=001qv8C0zYblRlBz2KWCpcudO0j_IjjK0mLhPk0L4kz47H0gWz8mECzi9i5-bqHa2AC1OqRhWJMvDO0mImHkKWhUtdi6g_uRLdu30Mav8DNAZc%3D';
+    $fields = array(
+      'emailAddr' => urlencode($email)
+    );
+
+    //open connection
+    $ch = curl_init();
+
+    //set the url, number of POST vars, POST data
+    curl_setopt($ch,CURLOPT_URL, $url);
+    curl_setopt($ch,CURLOPT_POST, count($fields));
+    curl_setopt($ch,CURLOPT_POSTFIELDS, $fields_string);
+
+    //execute post
+    $result = curl_exec($ch);
+
+    //close connection
+    curl_close($ch);
+  }
+}
+
 // Hide default WP roles
 if (!current_user_can('administrator')) {
     function exclude_role($roles) {
@@ -136,11 +166,11 @@ remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
 add_image_size( 'home-info-featured', 600, 400, true );
 
 // Post Thumbs
-add_theme_support( 'post-thumbnails' ); 
+add_theme_support( 'post-thumbnails' );
 
 // Pagination
-function custom_pagination($pages = '', $range = 1){  
-     $showitems = ($range * 2)+1;  
+function custom_pagination($pages = '', $range = 1){
+     $showitems = ($range * 2)+1;
 
      global $paged;
      if(empty($paged)) $paged = 1;
@@ -153,7 +183,7 @@ function custom_pagination($pages = '', $range = 1){
          {
              $pages = 1;
          }
-     }   
+     }
 
      if(1 != $pages)
      {
@@ -169,7 +199,7 @@ function custom_pagination($pages = '', $range = 1){
              }
          }
 
-         if ($paged < $pages && $showitems < $pages) echo "<li><a href='".get_pagenum_link($paged + 1)."'><i class='fa fa-chevron-right'></i></a></li>";  
+         if ($paged < $pages && $showitems < $pages) echo "<li><a href='".get_pagenum_link($paged + 1)."'><i class='fa fa-chevron-right'></i></a></li>";
          if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages) echo "<li><a href='".get_pagenum_link($pages)."'><i class='fa fa-angle-double-right'></i></a></li>";
          echo "</ul>\n";
      }

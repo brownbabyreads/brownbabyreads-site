@@ -5,6 +5,7 @@ Template Name: Sign up
 
 get_header();
 
+the_post();
 ?>
 
 <div class="main" role="main">
@@ -23,83 +24,10 @@ get_header();
             <li>Eligibility to rent elegant museum spaces for private events</li>
             <li>Special benefits and features in the Members-only section of the Museum's website</li>
           </ul>
-
           <hr class="fw">
-          <h2 class="widget-title">Membership Levels</h2>
           <div class="spacer-30"></div>
 
-          <!-- Membership Plans -->
-          <div class="membership-plans">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="icon-box ibox-rounded">
-                  <div class="ibox-icon">
-                    <i class="fa fa-user"></i>
-                  </div>
-                  <h3>Individual</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus.</p>
-                  <a href="#" class="btn btn-default">Join now</a>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="icon-box ibox-rounded">
-                  <div class="ibox-icon">
-                    <i class="fa fa-users"></i>
-                  </div>
-                  <h3>Group</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus.</p>
-                  <a href="#" class="btn btn-default">Join now</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="spacer-50 hidden-sm hidden-xs"></div>
-
-            <div class="row">
-              <div class="col-md-6">
-                <div class="icon-box ibox-rounded">
-                  <div class="ibox-icon">
-                    <i class="fa fa-building"></i>
-                  </div>
-                  <h3>Corporate</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus.</p>
-                  <a href="#" class="btn btn-default">Join now</a>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="icon-box ibox-rounded">
-                  <div class="ibox-icon">
-                    <i class="fa fa-star"></i>
-                  </div>
-                  <h3>Special</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus.</p>
-                  <a href="#" class="btn btn-default">Join now</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-3 sidebar right-sidebar">
-          <div class="widget sidebar-widget">
-            <div class="box-style1">
-              <h4>Members Calendar</h4>
-              <a href="http://placehold.it/300x350&amp;text=IMAGE+PLACEHOLDER" data-rel="prettyPhoto"><img src="http://placehold.it/300x350&amp;text=IMAGE+PLACEHOLDER" alt=""></a>
-              <br>
-              <br>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. <a href="#">Join to grab it</a></p>
-            </div>
-          </div>
-
-          <div class="widget sidebar-widget">
-            <div class="box-style1">
-              <h4>Members-Only Dining Spaces</h4>
-              <img src="http://placehold.it/800x500&amp;text=IMAGE+PLACEHOLDER" alt="">
-              <br>
-              <br>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. <a href="#">Join now!</a></p>
-            </div>
-          </div>
+          <?php the_content(); ?>
         </div>
       </div>
     </div>
