@@ -25,7 +25,7 @@ get_header();
                   $content = get_sub_field('content');
                   $icon = get_sub_field('icon');
                 ?>
-                  <div class="col-md-3 col-md-offset-1">
+                  <div class="col-md-4">
                     <div class="icon-box" style="text-align: center;">
                       <div class="ibox-icon center-block">
                         <i class="fa <?php echo $icon; ?>"></i>
