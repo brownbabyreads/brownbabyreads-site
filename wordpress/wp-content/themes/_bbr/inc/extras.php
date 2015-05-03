@@ -33,30 +33,8 @@ add_filter('upload_mimes', 'cc_mime_types');
 add_action( 'user_register', 'contstant_contact_signup', 10, 1 );
 
 function contstant_contact_signup( $user_id ) {
-  // POST to Constant Contact
   if ( isset( $_POST['email'] ) ) {
-    //extract data from the post
-    extract($_POST);
-
-    //set POST variables
-    $url = 'http://visitor.r20.constantcontact.com/manage/optin/ea?v=001qv8C0zYblRlBz2KWCpcudO0j_IjjK0mLhPk0L4kz47H0gWz8mECzi9i5-bqHa2AC1OqRhWJMvDO0mImHkKWhUtdi6g_uRLdu30Mav8DNAZc%3D';
-    $fields = array(
-      'emailAddr' => urlencode($email)
-    );
-
-    //open connection
-    $ch = curl_init();
-
-    //set the url, number of POST vars, POST data
-    curl_setopt($ch,CURLOPT_URL, $url);
-    curl_setopt($ch,CURLOPT_POST, count($fields));
-    curl_setopt($ch,CURLOPT_POSTFIELDS, $fields_string);
-
-    //execute post
-    $result = curl_exec($ch);
-
-    //close connection
-    curl_close($ch);
+    // POST to Constant Contact
   }
 }
 
