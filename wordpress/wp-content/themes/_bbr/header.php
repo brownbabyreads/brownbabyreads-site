@@ -70,7 +70,7 @@ global $_bbr_admin;
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
               <?php
                 if($_bbr_admin['opt-main-logo']){
-                  echo '<img src="'.$_bbr_admin['opt-main-logo']['url'].'" alt="'.bloginfo('name').'">';
+                  echo '<img src="'.$_bbr_admin['opt-main-logo']['url'].'" alt="'.get_bloginfo('name').'">';
                 }
               ?>
             </a>

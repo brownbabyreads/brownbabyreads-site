@@ -191,21 +191,34 @@
                 'title' => 'Header Button Callout',
                 'indent' => true
             ],
-                [
-                    'id' => 'opt-header-button-callout-text',
-                    'type' => 'text',
-                    'title' => 'Header Button Callout Text',
-                ],
-                [
-                    'id' => 'opt-header-button-callout-url',
-                    'type' => 'text',
-                    'title' => 'Header Button Callout URL',
-                ],
+
+            [
+                'id' => 'opt-header-button-callout-text',
+                'type' => 'text',
+                'title' => 'Header Button Callout Text',
+            ],
+
+            [
+                'id' => 'opt-header-button-callout-url',
+                'type' => 'text',
+                'title' => 'Header Button Callout URL',
+            ],
+
             [
                 'id' => 'section-header-button-callout-end',
                 'type' => 'section',
                 'indent' => false
             ],
+
+            [
+                'id' => 'opt-footer-logo',
+                'type' => 'media',
+                'url' => true,
+                'title' => 'Footer Logo',
+                'compiler' => 'true',
+                'subtitle' => 'Upload the footer logo',
+            ],
+
             [
                 'id' => 'opt-footer-copyright-text',
                 'type' => 'text',

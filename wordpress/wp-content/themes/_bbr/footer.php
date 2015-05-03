@@ -11,69 +11,70 @@ global $_bbr_admin;
 ?>
 <!-- Start site footer -->
 <footer class="site-footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 col-sm-6">
-                <div class="widget footer-widget">
-                    <h4 class="widget-title">About our museum</h4>
-                    <img src="images/logo.png" alt=""><br><br>
-                    <p>A visible trace, evidence, or sign of something that once existed but exists or appears no more: a building that is the area's last vestige of its colonial era. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam.</p>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="widget footer-widget widget_links">
-                    <h4 class="widget-title">Navigation</h4>
-                    <?php
-                        wp_nav_menu([
-                            'theme_location' => 'footer',
-                            'menu_id' => 'footer-menu',
-                            'container' => false
-                        ]);
-                    ?>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="widget footer-widget">
-                    <h4 class="widget-title">Our Venues</h4>
-                    <address>
-                        <a href="venue-single.html"><strong>Accrue Homestead</strong></a><br>
-                        <span>158 Marion Street<br>
-                        Columbia, SC 29201</span>
-                    </address>
-                    <hr>
-                    <address>
-                        <a href="venue-single.html"><strong>Mehar Mansion</strong></a><br>
-                        <span>158 Marion Street<br>
-                        Columbia, SC 29201</span>
-                    </address>
-                    <hr>
-                    <address>
-                        <a href="venue-single.html"><strong>Shop Pleu</strong></a><br>
-                        <span>158 Marion Street<br>
-                        Columbia, SC 29201</span>
-                    </address>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="widget footer-widget">
-                    <h4 class="widget-title">Twitter Updates</h4>
-                    <div class="twitter-widget" data-tweets-count="2"></div>
-                </div>
-            </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-sm-6">
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+          <?php
+            if($_bbr_admin['opt-main-logo']){
+              echo '<img src="'.$_bbr_admin['opt-footer-logo']['url'].'" alt="'.get_bloginfo('name').'">';
+            }
+          ?>
+        </a>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <div class="widget footer-widget">
+          <h4 class="widget-title">About us</h4>
+          <p>A visible trace, evidence, or sign of something that once existed but exists or appears no more: a building that is the area's last vestige of its colonial era. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam.</p>
+          <p><a class="btn btn-primary" href="/donate">Donate Now!</a></p>
         </div>
+      </div>
+      <div class="col-md-2 col-sm-6">
+        <div class="widget footer-widget">
+          <h4 class="widget-title">Resources</h4>
+          <?php
+            wp_nav_menu([
+              'theme_location' => 'footer_resources',
+              'menu_id' => 'footer-menu',
+              'container' => false
+            ]);
+          ?>
+        </div>
+      </div>
+      <div class="col-md-2 col-sm-6">
+        <div class="widget footer-widget">
+          <h4 class="widget-title">Participate</h4>
+          <?php
+            wp_nav_menu([
+              'theme_location' => 'footer_participate',
+              'menu_id' => 'footer-menu',
+              'container' => false
+            ]);
+          ?>
+        </div>
+      </div>
     </div>
+  </div>
 </footer>
     <footer class="site-footer-bottom">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-sm-6 copyrights-left">
-                    <?php
-                        if($_bbr_admin['opt-footer-copyright-text']){
-                            echo '<p>'.$_bbr_admin['opt-footer-copyright-text'].'</p>';
-                        }
-                    ?>
+                <div class="col-md-9 col-sm-9 copyrights-left">
+                  <?php
+                    if($_bbr_admin['opt-footer-copyright-text']){
+                      echo '<p>'.$_bbr_admin['opt-footer-copyright-text'].'</p>';
+                    }
+                  ?>
+                  <?php
+                    wp_nav_menu([
+                      'theme_location' => 'footer_participate',
+                      'menu_id' => 'footer-menu',
+                      'container' => false
+                    ]);
+                  ?>
                 </div>
-                <div class="col-md-6 col-sm-6 copyrights-right">
+                <div class="col-md-3 col-sm-3 copyrights-right">
                     <ul class="pull-right social-icons-colored">
                         <?php
                             if($top_networks = $_bbr_admin['opt-topnav-social-icons']){
@@ -97,7 +98,7 @@ global $_bbr_admin;
         </div>
     </footer>
     <!-- End site footer -->
-    <a id="back-to-top"><i class="fa fa-chevron-up"></i></a>  
+    <a id="back-to-top"><i class="fa fa-chevron-up"></i></a>
 </div><!-- .body -->
 <?php wp_footer(); ?>
 <script type="text/javascript">
@@ -108,25 +109,25 @@ global $_bbr_admin;
             startwidth:1100,
             startheight:500,
             hideThumbs:200,
-            
+
             thumbWidth:100,
             thumbHeight:50,
             thumbAmount:5,
-            
+
             navigationType:"none",
             navigationArrows:"solo",
             navigationStyle:"preview2",
-            
+
             touchenabled:"on",
             onHoverStop:"on",
-            
+
             swipe_velocity: 0.7,
             swipe_min_touches: 1,
             swipe_max_touches: 1,
             drag_block_vertical: false,
-                                        
+
             keyboardNavigation:"on",
-            
+
             navigationHAlign:"center",
             navigationVAlign:"bottom",
             navigationHOffset:0,
@@ -141,35 +142,35 @@ global $_bbr_admin;
             soloArrowRightValign:"center",
             soloArrowRightHOffset:20,
             soloArrowRightVOffset:0,
-                    
+
             shadow:0,
             fullWidth:"on",
             fullScreen:"off",
 
             spinner:"spinner0",
-            
+
             stopLoop:"off",
             stopAfterLoops:-1,
             stopAtSlide:-1,
 
             shuffle:"off",
-            
-            autoHeight:"off",                       
-            forceFullWidth:"off",                       
-                                    
-                                    
-                                    
+
+            autoHeight:"off",
+            forceFullWidth:"off",
+
+
+
             hideThumbsOnMobile:"off",
-            hideNavDelayOnMobile:1500,                      
+            hideNavDelayOnMobile:1500,
             hideBulletsOnMobile:"off",
             hideArrowsOnMobile:"off",
             hideThumbsUnderResolution:0,
-            
+
             hideSliderAtLimit:0,
             hideCaptionAtLimit:0,
             hideAllCaptionAtLilmit:0,
             startWithSlide:0
-        });             
+        });
     });
 </script>
 <pre>
