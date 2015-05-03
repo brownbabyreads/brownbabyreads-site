@@ -126,7 +126,7 @@ global $_bbr_admin;
                       $subtitle = get_sub_field('subtitle');
                     ?>
                       <!-- SLIDE  -->
-                      <li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Slide <?php echo $i; ?>">
+                      <li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="">
                         <!-- MAIN IMAGE -->
                         <img src="<?php echo $image['url']; ?>" alt="fullslide1" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
                         <div class="tp-caption light_heavy_60 sfb rtt tp-resizeme" data-x="left" data-hoffset="20" data-y="center" data-voffset="0" data-speed="600" data-start="800" data-easing="Power4.easeOut" data-splitin="none" data-splitout="none" data-elementdelay="0.01" data-endelementdelay="0.1" data-endspeed="500" data-endeasing="Power4.easeIn" style="z-index: 2; max-width: auto; max-height: auto; white-space: nowrap;"><?php echo $title; ?></div>
