@@ -117,19 +117,25 @@ var BBR = React.createClass({displayName: "BBR",
   },
   componentDidMount: function () {
     var self = this;
-    $.ajax({
-      url: 'https://tranquil-sands-8572.herokuapp.com/books?page=0',
-      jsonp: 'callback',
-      dataType: 'jsonp',
-      success: function (data, textStatus) {
-        console.log(data);
-        if (textStatus === 'success') {
-          self.setState({books: data.data});
-        } else {
-          self.setState({books: false});
+    var local = JSON.parse(localStorage.getItem('bbr_books'));
+    if (local) {
+      self.setState({books: local.data});
+    } else {
+      $.ajax({
+        url: 'https://tranquil-sands-8572.herokuapp.com/books?page=0',
+        jsonp: 'callback',
+        dataType: 'jsonp',
+        success: function (data, textStatus) {
+          console.log(data);
+          if (textStatus === 'success') {
+            self.setState({books: data.data});
+            localStorage.setItem('bbr_books', JSON.stringify(data));
+          } else {
+            self.setState({books: false});
+          }
         }
-      }
-    });
+      });
+    }
   },
   render: function () {
     var style = {};
@@ -154,7 +160,11 @@ var Books = React.createClass({displayName: "Books",
       book: { cursor: 'pointer' },
       image: {
         width: '100%',
-        height: '240px'
+        height: 240
+      },
+      title: {
+        height: 81,
+        overflow: 'hidden'
       }
     };
     return (
@@ -180,7 +190,7 @@ var Books = React.createClass({displayName: "Books",
                   React.createElement("li", {className: "col-md-4 col-sm-4 grid-item format-standard accrue-homestead", key: index, onClick: self._openBook.bind(null, book), style: style.book}, 
                     React.createElement("div", {style: _.extend({background: 'url(http://overnight-website.s3.amazonaws.com/wp-uploads'+ book.picture +') center / cover'}, style.image)}), 
                     React.createElement("div", {className: "grid-item-content"}, 
-                      React.createElement("h3", null, book.title), 
+                      React.createElement("h3", {style: style.title}, book.title), 
                       React.createElement("div", {className: "meta-data grid-item-meta"}, React.createElement("i", {className: "fa fa-clock-o"}), " Available at Overload"), 
                       React.createElement("div", {className: "post-actions"}, 
                         React.createElement("button", {className: "btn btn-default"}, "Learn more")
@@ -209,6 +219,8 @@ var Book = React.createClass({displayName: "Book",
   },
   render: function () {
     var book = this.props.book;
+    var store_link = book.bbr_estore_link;
+    var google_preview = book.google_book_preview;
     return (
       React.createElement("div", {className: "container"}, 
         React.createElement("div", {className: "row"}, 
@@ -216,7 +228,8 @@ var Book = React.createClass({displayName: "Book",
             React.createElement("button", {className: "btn btn-default", onClick: this._back}, "Back to Browse Books"), 
             React.createElement("div", {className: "spacer-20"}), 
             React.createElement("img", {src: 'http://overnight-website.s3.amazonaws.com/wp-uploads'+ book.picture}), 
-            React.createElement("a", {href: "#"}, "Google Book Preview")
+            React.createElement("div", {className: "spacer-20"}), 
+            React.createElement("p", null, google_preview && React.createElement("a", {href: google_preview}, "Google Book Preview"))
           ), 
           React.createElement("div", {className: "col-md-6"}, 
             React.createElement("h1", {className: "post-title"}, book.title), 
@@ -260,10 +273,9 @@ var Book = React.createClass({displayName: "Book",
             )
           ), 
           React.createElement("div", {className: "col-md-3 sidebar right-sidebar"}, 
-            React.createElement("div", {className: "widget sidebar-widget widget_next_exhibitions box-style1"}, 
-              React.createElement("button", {type: "submit", className: "btn btn-primary btn-lg"}, "$ Purchase Book"), 
-              React.createElement("a", {href: "#"}, "Download PDF")
-            )
+            store_link && (React.createElement("div", {className: "widget sidebar-widget widget_next_exhibitions box-style1"}, 
+              React.createElement("a", {className: "btn btn-primary btn-lg", href: store_link}, "$ Purchase Book")
+            ))
           )
         )
       )
