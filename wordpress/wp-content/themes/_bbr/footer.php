@@ -173,10 +173,10 @@ global $_bbr_admin;
         });
     });
 </script>
-<pre>
 <?php
-    print_r ($_bbr_admin);
+  // echo '<pre>';
+  // print_r ($_bbr_admin);
+  // echo '</pre>';
 ?>
-</pre>
 </body>
 </html>

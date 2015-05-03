@@ -147,6 +147,12 @@ global $_bbr_admin;
           <span> <?php the_archive_title(); ?></span>
         </div></div>
       </div>
+    <?php } else { ?>
+      <div class="page-header parallax" style="background-image:url(http://placehold.it/1400x600&amp;text=IMAGE+PLACEHOLDER)">
+        <div><div>
+          <span> <?php the_title(); ?></span>
+        </div></div>
+      </div>
     <?php } ?>
   </div>
   <!-- Breadcrumbs -->
