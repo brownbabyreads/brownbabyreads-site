@@ -1379,7 +1379,7 @@ body.boxed .body{
 	color: #454545;
 }
 .site-header .push-top{
-	margin-top:22px;
+	margin-top: 20px;
 }
 .site-logo{
 	float:left;
@@ -1412,9 +1412,9 @@ body.boxed .body{
 	padding-left:0;
 }
 .site-logo img{
-  width: 100%;
+  width: 140%;
   height: auto;
-	max-width: 400px;
+  max-width: none;
 	-webkit-transition:all 0.3s ease 0.2s;
 	-moz-transition:all 0.3s ease 0.2s;
 	-ms-transition:all 0.3s ease 0.2s;
@@ -1425,6 +1425,21 @@ body.boxed .body{
 /* ==================================================
    6.1. Main Navigation
 ================================================== */
+#utility-menu {
+  float: right;
+  list-style-type: none;
+  margin: 30px 20px 0;
+}
+#utility-menu > li {
+  display: inline-block;
+}
+#utility-menu > li > a {
+  display: inline-block;
+  padding: 5px;
+}
+#utility-menu > li + li::before {
+  content: "|";
+}
 .main-navbar{
 	background: #fff;
 	width:100%;
@@ -3377,9 +3392,6 @@ ul.slot-exhibitions li h5{
 	}
 	.body{
 		padding-top:0!important;
-	}
-	.site-logo img{
-		max-width:200px;
 	}
 	.header-style1 .page-header > div > div > span{
 		margin-top:0;

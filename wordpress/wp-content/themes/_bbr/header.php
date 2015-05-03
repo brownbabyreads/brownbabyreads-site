@@ -78,12 +78,13 @@ global $_bbr_admin;
             </a>
           </h1>
         </div>
+
         <?php
           // if($_bbr_admin['opt-header-button-callout-url'] && $_bbr_admin['opt-header-button-callout-text']){
           //   echo '<a href="'.$_bbr_admin['opt-header-button-callout-url'].'" class="btn btn-primary pull-right push-top hidden-xs hidden-sm">'.$_bbr_admin['opt-header-button-callout-text'].'</a>';
           // }
         ?>
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" class=" pull-right push-top hidden-xs hidden-sm" style="margin-top:12px;">
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" class=" pull-right push-top hidden-xs hidden-sm">
           <input type="hidden" name="cmd" value="_donations">
           <input type="hidden" name="business" value="paypal@brownbabyreads.com">
           <input type="hidden" name="lc" value="US">
@@ -94,6 +95,22 @@ global $_bbr_admin;
           <input type="image" src="http://overnight-website.s3.amazonaws.com/wp-uploads/btn-donate-red.svg" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" height="40px">
           <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
           </form>
+
+          <?php
+            if (!is_user_logged_in()) {
+              wp_nav_menu([
+                'theme_location' => 'login_nav',
+                'menu_id' => 'utility-menu',
+                'container' => false
+              ]);
+            } else {
+              wp_nav_menu([
+                'theme_location' => 'profile_nav',
+                'menu_id' => 'utility-menu',
+                'container' => false
+              ]);
+            }
+          ?>
         <a href="#" class="visible-sm visible-xs" id="menu-toggle"><i class="fa fa-bars"></i></a>
       </div>
     </header>
