@@ -147,6 +147,16 @@ global $_bbr_admin;
           <span> <?php the_archive_title(); ?></span>
         </div></div>
       </div>
+    <?php } else if ( is_single() ) { ?>
+      <?php if( have_posts() ): ?>
+      <?php while( have_posts() ): the_post(); ?>
+        <div class="page-header parallax darken-page-header" style="background-image:url('<?php if ( has_post_thumbnail() ) { ?><?php $image_attributes = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ) ); echo $image_attributes[0]; ?><?php } ?>')">
+          <div><div>
+            <span> <?php the_title(); ?></span>
+          </div></div>
+        </div>
+      <?php endwhile; ?>
+      <?php endif; ?>
     <?php } else { ?>
       <div class="page-header parallax" style="background-image:url(http://placehold.it/1400x600&amp;text=IMAGE+PLACEHOLDER)">
         <div><div>
