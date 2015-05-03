@@ -68,7 +68,7 @@ global $_bbr_admin;
                   ?>
                   <?php
                     wp_nav_menu([
-                      'theme_location' => 'footer_participate',
+                      'theme_location' => 'footer_contact',
                       'menu_id' => 'footer-menu',
                       'container' => false
                     ]);
