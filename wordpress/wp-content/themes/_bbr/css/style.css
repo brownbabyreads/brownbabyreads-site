@@ -250,7 +250,7 @@ blockquote p{
 	white-space:1px;
 	line-height:1.8em;
 	font-style:italic;
-	color:#999;
+	color:#666;
 	font-family: 'PMN Caecilia W01', serif;
 }
 blockquote cite{
@@ -273,7 +273,7 @@ p.lg{
 	color:#ccc;
 }
 p.small{
-	color:#999;
+	color:#666;
 	font-size:12px;
 	line-height:17px;
 	margin-top:10px;
@@ -411,7 +411,7 @@ label {
   display: inline-block;
   margin-bottom: 5px;
   font-weight:400;
-  color:#999;
+  color:#666;
 }
 
 /* ==================================================
@@ -1260,7 +1260,7 @@ html[xmlns] .slides {
 ================================================== */
 body{
 	background-color:#fff;
-	color:#999;
+	color:#666;
 	font-size:14px;
 	font-weight:400;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
