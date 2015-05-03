@@ -64,10 +64,10 @@ while (have_posts() ) : the_post();
                 ?>
             </div>
         </div>
-        <div class="spacer-50"></div>
+        <!-- <div class="spacer-50"></div> -->
 
         <?php /* Featured content */ ?>
-        <div class="dgray-bg">
+        <!-- <div class="dgray-bg">
             <div class="skewed-title-bar">
                 <div class="container">
                     <h4>
@@ -137,7 +137,7 @@ while (have_posts() ) : the_post();
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <?php /* Latest Blog Posts */ ?>
         <div class="padding-tb45">
