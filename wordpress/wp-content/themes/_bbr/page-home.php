@@ -8,6 +8,7 @@ get_header();
 while (have_posts() ) : the_post();
 ?>
 
+<?php if (!is_user_logged_in()) : ?>
 <!-- Notive Bar -->
 <div class="notice-bar">
     <div class="container">
@@ -21,6 +22,8 @@ while (have_posts() ) : the_post();
         </div>
     </div>
 </div>
+<?php endif; ?>
+
 <!-- Start Body Content -->
 <div class="main" role="main">
     <div id="content" class="content full">
