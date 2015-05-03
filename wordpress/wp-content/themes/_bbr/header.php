@@ -142,7 +142,7 @@ global $_bbr_admin;
         </div>
       </div>
     <?php } else if ( is_archive()|| is_category() ) { ?>
-      <div class="page-header parallax" style="background-image:url(http://placehold.it/1400x600&amp;text=IMAGE+PLACEHOLDER)">
+      <div class="page-header parallax">
         <div><div>
           <span> <?php the_archive_title(); ?></span>
         </div></div>
@@ -158,7 +158,7 @@ global $_bbr_admin;
       <?php endwhile; ?>
       <?php endif; ?>
     <?php } else { ?>
-      <div class="page-header parallax" style="background-image:url(http://placehold.it/1400x600&amp;text=IMAGE+PLACEHOLDER)">
+      <div class="page-header parallax">
         <div><div>
           <span> <?php the_title(); ?></span>
         </div></div>

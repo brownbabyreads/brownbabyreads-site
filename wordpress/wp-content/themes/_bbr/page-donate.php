@@ -10,7 +10,7 @@ while (have_posts() ) : the_post();
 
 <!-- Start Body Content -->
 <div class="main" role="main">
-  <div id="content" class="content full  lgray-bg">
+  <div class="content full lgray-bg">
     <div class="container">
       <div class="row text-align-center">
         <div class="col-md-6 col-md-offset-3">
@@ -22,7 +22,7 @@ while (have_posts() ) : the_post();
     </div>
   </div>
 
-  <div id="content" class="content full">
+  <div class="content full">
     <div class="container">
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
