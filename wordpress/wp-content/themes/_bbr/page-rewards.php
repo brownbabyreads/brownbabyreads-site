@@ -31,10 +31,11 @@ the_post();
               $content = get_sub_field('content');
             ?>
               <div class="col-md-6">
-                <img src="<?php echo $image['url']; ?>" />
+                <a href="<?php echo $url; ?>"><img src="<?php echo $image['url']; ?>" /></a>
+                <div class="spacer-20"></div>
                 <h3><?php echo $name; ?></h3>
                 <p><?php echo $content; ?></p>
-                <a href="<?php echo $pdfurl; ?>">Detailed Instructions</a>
+                <a href="<?php echo $url; ?>">Detailed Instructions</a>
               </div>
             <?php
             $i++;
