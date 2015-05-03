@@ -139,7 +139,7 @@ while (have_posts() ) : the_post();
                 <h3 class="widget-title text-align-center"><?php echo the_field('blog_section_title'); ?></h3>
                 <div class="carousel-wrapper">
                     <div class="row">
-                        <ul class="owl-carousel carousel-fw" id="news-slider" data-columns="4" data-autoplay="" data-pagination="yes" data-arrows="no" data-single-item="no" data-items-desktop="3" data-items-desktop-small="2" data-items-tablet="2" data-items-mobile="1">
+                        <ul class="owl-carousel carousel-fw" id="news-slider" data-columns="3" data-autoplay="" data-pagination="yes" data-arrows="no" data-single-item="no" data-items-desktop="3" data-items-desktop-small="2" data-items-tablet="2" data-items-mobile="1">
                             <?php
                             // Args
                             $args = array(
