@@ -43,18 +43,17 @@ the_post(); ?>
         <div class="col-md-8">
           <h2 id="mission_vision"><?php echo the_field('mission_vision_title'); ?></h2>
           <?php echo the_field('mission_vision_content'); ?>
-          <hr class="fw">
-          <h2 id="values"><?php echo the_field('values_title'); ?></h2>
+          <hr id="values" class="fw">
+          <h2><?php echo the_field('values_title'); ?></h2>
           <?php echo the_field('values'); ?>
-          <hr class="fw">
-          <h2 id="what_we_do"><?php echo the_field('what_we_do_title'); ?></h2>
+          <hr class="fw" id="what_we_do">
+          <h2><?php echo the_field('what_we_do_title'); ?></h2>
           <?php echo the_field('what_we_do_content'); ?>
-          <hr class="fw">
-          <h2 id="who_we_are"><?php echo the_field('who_we_are_title'); ?></h2>
+          <hr class="fw" id="who_we_are">
+          <h2><?php echo the_field('who_we_are_title'); ?></h2>
           <?php echo the_field('who_we_are_content'); ?>
-          <hr class="fw">
-          <h2 id="leadership">Leadership</h2>
-          <div class="spacer-20"></div>
+          <hr class="fw" id="leadership">
+          <h2>Leadership</h2>
           <div class="carousel-wrapper">
             <div class="row">
               <ul class="owl-carousel carousel-fw" id="team-slider" data-columns="4" data-autoplay="" data-pagination="yes" data-arrows="no" data-single-item="no" data-items-desktop="4" data-items-desktop-small="3" data-items-tablet="2" data-items-mobile="1">
@@ -104,8 +103,8 @@ the_post(); ?>
               </ul>
             </div>
           </div>
-          <hr class="fw">
-          <h2 id="advisory_board"><?php echo the_field('advisory_board_title'); ?></h2>
+          <hr class="fw" id="advisory_board">
+          <h2><?php echo the_field('advisory_board_title'); ?></h2>
           <ul>
             <?php
               // check if the repeater field has rows of data
@@ -119,8 +118,8 @@ the_post(); ?>
               endif;
             ?>
           </ul>
-          <hr class="fw">
-          <h2 id="request_brochures"><?php echo the_field('request_brochures_title'); ?></h2>
+          <hr class="fw" id="request_brochures">
+          <h2><?php echo the_field('request_brochures_title'); ?></h2>
           <?php echo the_field('request_brochures_content'); ?>
         </div>
       </div>
