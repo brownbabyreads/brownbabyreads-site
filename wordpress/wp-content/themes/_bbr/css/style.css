@@ -896,6 +896,15 @@ p.meta-data{
 .icon-box.icon-box-style1:hover .ico{
 	color:#fff;
 }
+*:nth-of-type(1) .icon-box .ibox-icon i {
+  background: #da9035;
+}
+*:nth-of-type(2) .icon-box .ibox-icon i {
+  background: #8f3725;
+}
+*:nth-of-type(3) .icon-box .ibox-icon i {
+  background: #5b2e22;
+}
 .icon-box.icon-box-style1 .icon-box-head h4{
 	display:inline-block;
 	margin-bottom:0;
