@@ -117,9 +117,19 @@ var BBR = React.createClass({
   },
   componentDidMount: function () {
     var self = this;
-    setTimeout(function () {
-      self.setState({books: testData.data});
-    }, 1000);
+    $.ajax({
+      url: 'https://tranquil-sands-8572.herokuapp.com/books?page=0',
+      jsonp: 'callback',
+      dataType: 'jsonp',
+      success: function (data, textStatus) {
+        console.log(data);
+        if (textStatus === 'success') {
+          self.setState({books: data.data});
+        } else {
+          self.setState({books: false});
+        }
+      }
+    });
   },
   render: function () {
     var style = {};
@@ -140,6 +150,13 @@ var Books = React.createClass({
   },
   render: function () {
     var self = this;
+    var style = {
+      book: { cursor: 'pointer' },
+      image: {
+        width: '100%',
+        height: '240px'
+      }
+    };
     return (
       <div className="container">
         <div className="row">
@@ -160,13 +177,13 @@ var Books = React.createClass({
             <ul className="sort-destination isotope exhibitions-grid" data-sort-id="grid">
               {this.props.books.map(function (book, index) {
                 return (
-                  <li className="col-md-4 col-sm-4 grid-item format-standard accrue-homestead" key={index} onClick={self._openBook.bind(null, book)}>
-                    <img src={'http://overnight-website.s3.amazonaws.com/wp-uploads'+ book.picture} />
+                  <li className="col-md-4 col-sm-4 grid-item format-standard accrue-homestead" key={index} onClick={self._openBook.bind(null, book)} style={style.book}>
+                    <div style={_.extend({background: 'url(http://overnight-website.s3.amazonaws.com/wp-uploads'+ book.picture +') center / cover'}, style.image)} />
                     <div className="grid-item-content">
-                      <h3>A new version: Modernist Photography</h3>
+                      <h3>{book.title}</h3>
                       <div className="meta-data grid-item-meta"><i className="fa fa-clock-o"></i> Available at Overload</div>
                       <div className="post-actions">
-                        <a href="books-single.html" className="btn btn-default">Learn more</a>
+                        <button className="btn btn-default">Learn more</button>
                       </div>
                     </div>
                   </li>

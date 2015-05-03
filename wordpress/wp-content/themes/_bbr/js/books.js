@@ -117,9 +117,19 @@ var BBR = React.createClass({displayName: "BBR",
   },
   componentDidMount: function () {
     var self = this;
-    setTimeout(function () {
-      self.setState({books: testData.data});
-    }, 1000);
+    $.ajax({
+      url: 'https://tranquil-sands-8572.herokuapp.com/books?page=0',
+      jsonp: 'callback',
+      dataType: 'jsonp',
+      success: function (data, textStatus) {
+        console.log(data);
+        if (textStatus === 'success') {
+          self.setState({books: data.data});
+        } else {
+          self.setState({books: false});
+        }
+      }
+    });
   },
   render: function () {
     var style = {};
@@ -140,6 +150,13 @@ var Books = React.createClass({displayName: "Books",
   },
   render: function () {
     var self = this;
+    var style = {
+      book: { cursor: 'pointer' },
+      image: {
+        width: '100%',
+        height: '240px'
+      }
+    };
     return (
       React.createElement("div", {className: "container"}, 
         React.createElement("div", {className: "row"}, 
@@ -160,13 +177,13 @@ var Books = React.createClass({displayName: "Books",
             React.createElement("ul", {className: "sort-destination isotope exhibitions-grid", "data-sort-id": "grid"}, 
               this.props.books.map(function (book, index) {
                 return (
-                  React.createElement("li", {className: "col-md-4 col-sm-4 grid-item format-standard accrue-homestead", key: index, onClick: self._openBook.bind(null, book)}, 
-                    React.createElement("img", {src: 'http://overnight-website.s3.amazonaws.com/wp-uploads'+ book.picture}), 
+                  React.createElement("li", {className: "col-md-4 col-sm-4 grid-item format-standard accrue-homestead", key: index, onClick: self._openBook.bind(null, book), style: style.book}, 
+                    React.createElement("div", {style: _.extend({background: 'url(http://overnight-website.s3.amazonaws.com/wp-uploads'+ book.picture +') center / cover'}, style.image)}), 
                     React.createElement("div", {className: "grid-item-content"}, 
-                      React.createElement("h3", null, "A new version: Modernist Photography"), 
+                      React.createElement("h3", null, book.title), 
                       React.createElement("div", {className: "meta-data grid-item-meta"}, React.createElement("i", {className: "fa fa-clock-o"}), " Available at Overload"), 
                       React.createElement("div", {className: "post-actions"}, 
-                        React.createElement("a", {href: "books-single.html", className: "btn btn-default"}, "Learn more")
+                        React.createElement("button", {className: "btn btn-default"}, "Learn more")
                       )
                     )
                   )
