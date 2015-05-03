@@ -8,6 +8,7 @@ get_header();
 while (have_posts() ) : the_post();
 ?>
 
+<?php if (!is_user_logged_in()) : ?>
 <!-- Notive Bar -->
 <div class="notice-bar">
     <div class="container">
@@ -21,6 +22,8 @@ while (have_posts() ) : the_post();
         </div>
     </div>
 </div>
+<?php endif; ?>
+
 <!-- Start Body Content -->
 <div class="main" role="main">
     <div id="content" class="content full">
@@ -62,6 +65,8 @@ while (have_posts() ) : the_post();
             </div>
         </div>
         <div class="spacer-50"></div>
+
+        <?php /* Featured content */ ?>
         <div class="dgray-bg">
             <div class="skewed-title-bar">
                 <div class="container">
@@ -133,7 +138,8 @@ while (have_posts() ) : the_post();
                 </div>
             </div>
         </div>
-        <!-- Latest Blog Posts -->
+
+        <?php /* Latest Blog Posts */ ?>
         <div class="padding-tb45">
             <div class="container">
                 <h3 class="widget-title text-align-center"><?php echo the_field('blog_section_title'); ?></h3>
