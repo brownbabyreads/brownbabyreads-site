@@ -186,6 +186,40 @@ while (have_posts() ) : the_post();
                 </div>
             </div>
         </div>
+        <!-- VISITORS SAY -->
+        <div class="latest-testimonials accent-bg padding-tb45">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <h2 class="light-title"><?php echo the_field('testimonial_section_title'); ?></h2>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="row">
+                            <ul class="owl-carousel carousel-fw" id="testimonials-slider" data-columns="2" data-autoplay="" data-pagination="no" data-arrows="yes" data-single-item="no" data-items-desktop="2" data-items-desktop-small="3" data-items-tablet="1" data-items-mobile="1">
+                                <?php
+                                  // check if the repeater field has rows of data
+                                  if( have_rows('testimonials') ):
+                                    // loop through the rows of data
+                                    while ( have_rows('testimonials') ) : the_row();
+                                      $testimonial_content = get_sub_field('testimonial_content');
+                                      $testimonial_person = get_sub_field('testimonial_person');
+                                    ?>
+                                      <li class="item">
+                                        <blockquote>
+                                            <?php echo $testimonial_content; ?>
+                                            <cite><?php echo $testimonial_person; ?></cite>
+                                        </blockquote>
+                                      </li>
+                                    <?php
+                                    endwhile;
+                                  endif;
+                                ?>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <!-- End Body Content -->
