@@ -31,14 +31,7 @@ get_header(); ?>
               <?php get_template_part( 'template-parts/content', 'none' ); ?>
             <?php endif; ?>
           </div>
-          <?php the_posts_navigation(); ?>
-          <ul class="pagination">
-              <li><a href="#" title="First"><i class="fa fa-chevron-left"></i></a></li>
-              <li class="active"><span>1</span></li>
-              <li><a href="#" class="">2</a></li>
-              <li><a href="#" class="">3</a></li>
-              <li><a href="#" title="Last"><i class="fa fa-chevron-right"></i></a></li>
-          </ul>
+          <?php custom_pagination(); ?>
         </div>
       </div>
     </div>

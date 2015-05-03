@@ -23,7 +23,11 @@ global $_bbr_admin;
 <?php wp_head(); ?>
 <script type="text/javascript" src="http://fast.fonts.net/jsapi/c0a8a970-01e4-4469-b503-c47e8679a75c.js"></script>
 </head>
-<body <?php body_class('home header-style3'); ?>>
+<?php if ( is_front_page() ) { ?>
+  <body <?php body_class('home header-style3'); ?>>
+<?php } else { ?>
+  <body <?php body_class('header-style3'); ?>>
+<?php } ?>
 <!--[if lt IE 7]>
   <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
 <![endif]-->
