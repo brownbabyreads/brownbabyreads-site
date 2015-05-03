@@ -117,19 +117,25 @@ var BBR = React.createClass({
   },
   componentDidMount: function () {
     var self = this;
-    $.ajax({
-      url: 'https://tranquil-sands-8572.herokuapp.com/books?page=0',
-      jsonp: 'callback',
-      dataType: 'jsonp',
-      success: function (data, textStatus) {
-        console.log(data);
-        if (textStatus === 'success') {
-          self.setState({books: data.data});
-        } else {
-          self.setState({books: false});
+    var local = JSON.parse(localStorage.getItem('bbr_books'));
+    if (local) {
+      self.setState({books: local.data});
+    } else {
+      $.ajax({
+        url: 'https://tranquil-sands-8572.herokuapp.com/books?page=0',
+        jsonp: 'callback',
+        dataType: 'jsonp',
+        success: function (data, textStatus) {
+          console.log(data);
+          if (textStatus === 'success') {
+            self.setState({books: data.data});
+            localStorage.setItem('bbr_books', JSON.stringify(data));
+          } else {
+            self.setState({books: false});
+          }
         }
-      }
-    });
+      });
+    }
   },
   render: function () {
     var style = {};
@@ -154,7 +160,11 @@ var Books = React.createClass({
       book: { cursor: 'pointer' },
       image: {
         width: '100%',
-        height: '240px'
+        height: 240
+      },
+      title: {
+        height: 81,
+        overflow: 'hidden'
       }
     };
     return (
@@ -180,7 +190,7 @@ var Books = React.createClass({
                   <li className="col-md-4 col-sm-4 grid-item format-standard accrue-homestead" key={index} onClick={self._openBook.bind(null, book)} style={style.book}>
                     <div style={_.extend({background: 'url(http://overnight-website.s3.amazonaws.com/wp-uploads'+ book.picture +') center / cover'}, style.image)} />
                     <div className="grid-item-content">
-                      <h3>{book.title}</h3>
+                      <h3 style={style.title}>{book.title}</h3>
                       <div className="meta-data grid-item-meta"><i className="fa fa-clock-o"></i> Available at Overload</div>
                       <div className="post-actions">
                         <button className="btn btn-default">Learn more</button>
@@ -209,6 +219,8 @@ var Book = React.createClass({
   },
   render: function () {
     var book = this.props.book;
+    var store_link = book.bbr_estore_link;
+    var google_preview = book.google_book_preview;
     return (
       <div className="container">
         <div className="row">
@@ -216,7 +228,8 @@ var Book = React.createClass({
             <button className="btn btn-default" onClick={this._back}>Back to Browse Books</button>
             <div className="spacer-20" />
             <img src={'http://overnight-website.s3.amazonaws.com/wp-uploads'+ book.picture} />
-            <a href="#">Google Book Preview</a>
+            <div className="spacer-20" />
+            <p>{google_preview && <a href={google_preview}>Google Book Preview</a>}</p>
           </div>
           <div className="col-md-6">
             <h1 className="post-title">{book.title}</h1>
@@ -260,10 +273,9 @@ var Book = React.createClass({
             </table>
           </div>
           <div className="col-md-3 sidebar right-sidebar">
-            <div className="widget sidebar-widget widget_next_exhibitions box-style1">
-              <button type="submit" className="btn btn-primary btn-lg">$ Purchase Book</button>
-              <a href="#">Download PDF</a>
-            </div>
+            {store_link && (<div className="widget sidebar-widget widget_next_exhibitions box-style1">
+              <a className="btn btn-primary btn-lg" href={store_link}>$ Purchase Book</a>
+            </div>)}
           </div>
         </div>
       </div>
