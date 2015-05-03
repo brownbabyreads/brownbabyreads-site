@@ -3,27 +3,17 @@
  * @package brownbabyreads
  */
 ?>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
-		<div class="entry-meta">
-			<?php _bbr_posted_on(); ?>
-		</div><!-- .entry-meta -->
-	</header><!-- .entry-header -->
-
-	<div class="entry-content">
-		<?php the_content(); ?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', '_bbr' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php _bbr_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	<div class="row">
+		<div class="col-sm-12">
+			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+	      <div class="meta-data alt">
+	        <div><i class="fa fa-clock-o"></i> <?php _bbr_posted_on(); ?></div>
+	        <hr class="fw">
+	        <?php the_content(); ?>
+	        <hr class="fw">
+			<?php _bbr_entry_footer(); ?>
+	      </div>
+		</div>
+	</div>
 </article><!-- #post-## -->
