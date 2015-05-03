@@ -1500,29 +1500,7 @@ body.boxed .body{
 	color:#999;
 }
 .main-navigation > ul > li:first-child > a {
-  background-color: rgb(206, 78, 48);
-  border-bottom-width: 1px solid transparent;
-  border-radius: 3px;
-  color: #fff;
-  display: inline-block;
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 23px;
-  outline: none;
-  padding-bottom: 6px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 6px;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  transition-delay: 0.3s 0.1s all ease;
-  vertical-align: middle;
-  white-space: nowrap;
-}
-.main-navigation > ul > li:first-child > a:hover {
-  color: #fff;
-  opacity:.8
+  color: rgb(206, 78, 48);
 }
 .dd-menu > ul > li ul{
 	margin:0;
