@@ -2080,11 +2080,10 @@ ul.slot-exhibitions li h5{
 	margin:0;
 	padding:0;
 	border:0;
-	background:url(../images/diagonal.png) repeat;
-	background-size:auto;
-	background-color:#ccc;
+	background:#da9035;
 	color:#fff;
 	text-align:center;
+  font-family: 'PMN Caecilia W01', serif;
 	font-size: 34px;
 	font-weight: 700;
 }
@@ -3024,7 +3023,7 @@ ul.slot-exhibitions li h5{
 	-moz-background-size:cover;
 	background-size:cover;
 	background-repeat:no-repeat;
-	background-color:#f8f8f8;
+	background-color:#da9035;
 }
 .touch .parallax, .page-header.parallax{
 	background-attachment:scroll!important;
