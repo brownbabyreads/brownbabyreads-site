@@ -23,11 +23,11 @@ global $_bbr_admin;
         </a>
       </div>
 
-      <div class="col-md-4 col-sm-6">
+      <div class="col-md-5 col-sm-6">
         <div class="widget footer-widget">
-          <h4 class="widget-title">About us</h4>
-          <p>A visible trace, evidence, or sign of something that once existed but exists or appears no more: a building that is the area's last vestige of its colonial era. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam.</p>
-          <p><a class="btn btn-primary" href="/donate">Donate Now!</a></p>
+          <?php echo '<h4 class="widget-title">'.$_bbr_admin['opt-footer-about-text'].'</h4>'; ?>
+          <?php echo '<p>'.$_bbr_admin['opt-footer-about-content'].'</p>'; ?>
+          <?php echo '<p><a class="btn btn-primary" href="'.$_bbr_admin['opt-footer-about-donate-url'].'">'.$_bbr_admin['opt-footer-about-donate-text'].'</a></p>'; ?>
         </div>
       </div>
       <div class="col-md-2 col-sm-6">

@@ -192,20 +192,57 @@
                 'indent' => true
             ],
 
-            [
-                'id' => 'opt-header-button-callout-text',
-                'type' => 'text',
-                'title' => 'Header Button Callout Text',
-            ],
+                [
+                    'id' => 'opt-header-button-callout-text',
+                    'type' => 'text',
+                    'title' => 'Header Button Callout Text',
+                ],
 
-            [
-                'id' => 'opt-header-button-callout-url',
-                'type' => 'text',
-                'title' => 'Header Button Callout URL',
-            ],
+                [
+                    'id' => 'opt-header-button-callout-url',
+                    'type' => 'text',
+                    'title' => 'Header Button Callout URL',
+                ],
 
             [
                 'id' => 'section-header-button-callout-end',
+                'type' => 'section',
+                'indent' => false
+            ],
+
+            [
+                'id' => 'opt-footer-about-start',
+                'type' => 'section',
+                'title' => 'Footer About',
+                'indent' => true
+            ],
+
+                [
+                    'id' => 'opt-footer-about-text',
+                    'type' => 'text',
+                    'title' => 'Footer About Text',
+                ],
+
+                [
+                    'id' => 'opt-footer-about-content',
+                    'type' => 'textarea',
+                    'title' => 'Footer About Content',
+                ],
+
+                [
+                    'id' => 'opt-footer-about-donate-text',
+                    'type' => 'text',
+                    'title' => 'Footer About Donate Button Text',
+                ],
+
+                [
+                    'id' => 'opt-footer-about-donate-url',
+                    'type' => 'text',
+                    'title' => 'Footer About Donate Button URL',
+                ],
+
+            [
+                'id' => 'opt-footer-about-end',
                 'type' => 'section',
                 'indent' => false
             ],
