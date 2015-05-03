@@ -8,7 +8,7 @@ get_header();
 the_post(); ?>
 
 <!-- Start Body Content -->
-<div class="main" role="main">
+<div class="main" role="main" id="mission_vision">
   <div id="content" class="content full">
     <div class="container">
       <div class="row">
@@ -41,7 +41,7 @@ the_post(); ?>
             </div>
         </div>
         <div class="col-md-8">
-          <h2 id="mission_vision"><?php echo the_field('mission_vision_title'); ?></h2>
+          <h2><?php echo the_field('mission_vision_title'); ?></h2>
           <?php echo the_field('mission_vision_content'); ?>
           <hr id="values" class="fw">
           <h2><?php echo the_field('values_title'); ?></h2>
