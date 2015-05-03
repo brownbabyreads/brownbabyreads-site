@@ -143,7 +143,7 @@ while (have_posts() ) : the_post();
                             <?php
                             // Args
                             $args = array(
-                                'category_name' => blog,
+                                'category_name' => 'blog',
                                 'order' => 'ASC'
                             );
 

@@ -3,7 +3,6 @@
  * @package brownbabyreads
  */
 ?>
-
 <!-- List Item -->
 <article id="post-<?php the_ID(); ?>" class="list-item blog-list-item format-standard">
   <div class="row">
