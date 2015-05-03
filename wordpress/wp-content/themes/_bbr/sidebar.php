@@ -13,7 +13,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 <div class="widget sidebar-widget box-style1">
   <?php dynamic_sidebar( 'sidebar-1' ); ?>
 
-<!-- 	<h3 class="widget-title">Categories</h3>
+	<h3 class="widget-title">Categories</h3>
 	<ul>
 		<?php
 			$args = [
@@ -21,6 +21,5 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 			];
 			wp_list_categories( $args );
 		?>
-
-	</ul> -->
+	</ul>
 </div>
