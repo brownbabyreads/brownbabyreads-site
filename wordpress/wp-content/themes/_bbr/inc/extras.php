@@ -35,6 +35,18 @@ add_filter('upload_mimes', 'cc_mime_types');
 
 add_action( 'user_register', 'contstant_contact_signup', 10, 1 );
 
+// Reduce lengeth of excerpt
+function custom_excerpt_length( $length ) {
+  return 18;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+// Custom excerpt more [...]
+function custom_excerpt_more( $more ) {
+  return '...';
+}
+add_filter( 'excerpt_more', 'custom_excerpt_more' );
+
 function contstant_contact_signup( $user_id ) {
   if ( isset( $_POST['email'] ) ) {
     // POST to Constant Contact
