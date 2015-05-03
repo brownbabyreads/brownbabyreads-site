@@ -30,10 +30,3 @@
     </div>
   </div>
 </article>
-
-<?php
-  wp_link_pages( array(
-    'before' => '<div class="page-links">' . __( 'Pages:', '_bbr' ),
-    'after'  => '</div>',
-  ) );
-?>

@@ -70,15 +70,9 @@ function _bbr_setup() {
 	 * Enable support for Post Formats.
 	 * See http://codex.wordpress.org/Post_Formats
 	 */
-	add_theme_support( 'post-formats', array(
-		'aside', 'image', 'video', 'quote', 'link',
-	) );
-
-	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( '_bbr_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
+	// add_theme_support( 'post-formats', array(
+	// 	'aside', 'image', 'video', 'quote', 'link',
+	// ) );
 }
 endif; // _bbr_setup
 add_action( 'after_setup_theme', '_bbr_setup' );
