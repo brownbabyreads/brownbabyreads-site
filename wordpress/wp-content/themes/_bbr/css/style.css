@@ -1499,6 +1499,31 @@ body.boxed .body{
 .sticky-header .main-navigation > ul > li > a > i{
 	color:#999;
 }
+.main-navigation > ul > li:first-child > a {
+  background-color: rgb(206, 78, 48);
+  border-bottom-width: 1px solid transparent;
+  border-radius: 3px;
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 23px;
+  outline: none;
+  padding-bottom: 6px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 6px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition-delay: 0.3s 0.1s all ease;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.main-navigation > ul > li:first-child > a:hover {
+  color: #fff;
+  opacity:.8
+}
 .dd-menu > ul > li ul{
 	margin:0;
 	list-style-type:none;
@@ -1718,7 +1743,7 @@ body.boxed .body{
 	margin-bottom:-45px;
 	z-index:2;
 	background:#ccc;
-	min-height:200px;
+	min-height:150px;
 }
 .header-style2 .hero-area, .header-style3 .hero-area{
 	top:0;
@@ -2105,7 +2130,7 @@ ul.slot-exhibitions li h5{
 .page-header > div{
 	display:table;
 	width:100%;
-	height:260px;
+	height: 150px;
 	vertical-align:middle;
 }
 .page-header > div > div{
@@ -3214,7 +3239,7 @@ ul.slot-exhibitions li h5{
 	.dd-menu .megamenu-container ul{
 		min-width:inherit;
 	}
-	.main-navigation > ul > li{
+	.main-navigation > ul > li {
 		margin-left:25px;
 	}
 	.featured-block figure .caption{
@@ -3396,8 +3421,8 @@ ul.slot-exhibitions li h5{
 	.header-style1 .page-header > div > div > span{
 		margin-top:0;
 	}
-	.hero-area{
-		min-height:160px;
+	.hero-area {
+		min-height: 150px;
 	}
 	.posts-listing h3, .list-item h3{
 		margin-top:25px;
@@ -3420,7 +3445,7 @@ ul.slot-exhibitions li h5{
 		width:100%;
 	}
 	.page-header > div{
-		height:160px;
+		height: 150px;
 	}
 	.featured-block{
 		margin-bottom:30px;
