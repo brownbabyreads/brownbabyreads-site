@@ -1,43 +1,203 @@
-var testBook = {
-  "data": {
-    "age_group": "3rd to 5th",
-    "bbr_estore_link": "",
-    "biography_person": "",
-    "booklists": "",
-    "date_entered": "None",
-    "description": "In 1921, thirteen-year-old Celeste leaves North Carolina to stay with her glamorous Aunt Valentina in Harlem, New York, where she discovers the vibrant Harlem Renaissance in full swing, even though her aunt's life is not exactly what she was led to believe. From Youngmindslibrary",
-    "dra": "",
-    "google_book_preview": "",
-    "guided_reading_level": "X",
-    "id": 1,
-    "illustrator": "",
-    "interest_level": "",
-    "lexile": "780",
-    "out_of_print": false,
-    "pages": "288",
-    "parent_publisher": "Hatchette Books",
-    "picture": "/CelestesHarlemRenaissance.jpg",
-    "publish_date": "None",
-    "publisher": "Little, Brown Young Readers",
-    "reading_grade_level": "",
-    "reading_room": true,
-    "series": "",
-    "title": "Celeste's Harlem Renaissance",
-    "type": "realistic fiction"
-  }
+var testData = {
+  "data": [
+    {
+      "age_group": "3rd to 5th",
+      "bbr_estore_link": "",
+      "biography_person": "",
+      "booklists": "",
+      "date_entered": "None",
+      "description": "In 1921, thirteen-year-old Celeste leaves North Carolina to stay with her glamorous Aunt Valentina in Harlem, New York, where she discovers the vibrant Harlem Renaissance in full swing, even though her aunt's life is not exactly what she was led to believe. From Youngmindslibrary",
+      "dra": "",
+      "google_book_preview": "",
+      "guided_reading_level": "X",
+      "id": 1,
+      "illustrator": "",
+      "interest_level": "",
+      "lexile": "780",
+      "out_of_print": false,
+      "pages": "288",
+      "parent_publisher": "Hatchette Books",
+      "picture": "/CelestesHarlemRenaissance.jpg",
+      "publish_date": "None",
+      "publisher": "Little, Brown Young Readers",
+      "reading_grade_level": "",
+      "reading_room": true,
+      "series": "",
+      "title": "Celeste's Harlem Renaissance",
+      "type": "realistic fiction"
+    },
+    {
+      "age_group": "3rd to 5th",
+      "bbr_estore_link": "",
+      "biography_person": "",
+      "booklists": "",
+      "date_entered": "None",
+      "description": "In 1921, thirteen-year-old Celeste leaves North Carolina to stay with her glamorous Aunt Valentina in Harlem, New York, where she discovers the vibrant Harlem Renaissance in full swing, even though her aunt's life is not exactly what she was led to believe. From Youngmindslibrary",
+      "dra": "",
+      "google_book_preview": "",
+      "guided_reading_level": "X",
+      "id": 1,
+      "illustrator": "",
+      "interest_level": "",
+      "lexile": "780",
+      "out_of_print": false,
+      "pages": "288",
+      "parent_publisher": "Hatchette Books",
+      "picture": "/CelestesHarlemRenaissance.jpg",
+      "publish_date": "None",
+      "publisher": "Little, Brown Young Readers",
+      "reading_grade_level": "",
+      "reading_room": true,
+      "series": "",
+      "title": "Celeste's Harlem Renaissance",
+      "type": "realistic fiction"
+    },
+    {
+      "age_group": "3rd to 5th",
+      "bbr_estore_link": "",
+      "biography_person": "",
+      "booklists": "",
+      "date_entered": "None",
+      "description": "In 1921, thirteen-year-old Celeste leaves North Carolina to stay with her glamorous Aunt Valentina in Harlem, New York, where she discovers the vibrant Harlem Renaissance in full swing, even though her aunt's life is not exactly what she was led to believe. From Youngmindslibrary",
+      "dra": "",
+      "google_book_preview": "",
+      "guided_reading_level": "X",
+      "id": 1,
+      "illustrator": "",
+      "interest_level": "",
+      "lexile": "780",
+      "out_of_print": false,
+      "pages": "288",
+      "parent_publisher": "Hatchette Books",
+      "picture": "/CelestesHarlemRenaissance.jpg",
+      "publish_date": "None",
+      "publisher": "Little, Brown Young Readers",
+      "reading_grade_level": "",
+      "reading_room": true,
+      "series": "",
+      "title": "Celeste's Harlem Renaissance",
+      "type": "realistic fiction"
+    },
+    {
+      "age_group": "3rd to 5th",
+      "bbr_estore_link": "",
+      "biography_person": "",
+      "booklists": "",
+      "date_entered": "None",
+      "description": "In 1921, thirteen-year-old Celeste leaves North Carolina to stay with her glamorous Aunt Valentina in Harlem, New York, where she discovers the vibrant Harlem Renaissance in full swing, even though her aunt's life is not exactly what she was led to believe. From Youngmindslibrary",
+      "dra": "",
+      "google_book_preview": "",
+      "guided_reading_level": "X",
+      "id": 1,
+      "illustrator": "",
+      "interest_level": "",
+      "lexile": "780",
+      "out_of_print": false,
+      "pages": "288",
+      "parent_publisher": "Hatchette Books",
+      "picture": "/CelestesHarlemRenaissance.jpg",
+      "publish_date": "None",
+      "publisher": "Little, Brown Young Readers",
+      "reading_grade_level": "",
+      "reading_room": true,
+      "series": "",
+      "title": "Celeste's Harlem Renaissance",
+      "type": "realistic fiction"
+    }
+  ]
 };
 
-var App = React.createClass({
-  getInitialState: function() {
-    return {};
+var BBR = React.createClass({
+  getInitialState: function () {
+    return {
+      books: null,
+      book: null,
+      offset: 1
+    };
+  },
+  componentDidMount: function () {
+    var self = this;
+    setTimeout(function () {
+      self.setState({books: testData.data});
+    }, 1000);
   },
   render: function () {
     var style = {};
+    var book = this.state.book;
+    var books = this.state.books;
+    if (book) return <Book up={this} book={book} />;
+    if (books === null) {
+      return <h1>Loading books…</h1>;
+    } else {
+      return <Books up={this} books={books} />;
+    }
+  }
+});
+
+var Books = React.createClass({
+  _openBook: function (book) {
+    this.props.up.setState({book: book});
+  },
+  render: function () {
+    var self = this;
+    return (
+      <div className="container">
+        <div className="row">
+          <div className="col-md-3 sidebar right-sidebar">
+            <div className="widget sidebar-widget box-style1">
+              <h3 className="widget-title">Top categories</h3>
+              <ul className="top-categories-list">
+              </ul>
+            </div>
+            <div className="widget sidebar-widget box-style1">
+              <h3 className="widget-title">Categories</h3>
+              <ul className="categories-list">
+
+              </ul>
+            </div>
+          </div>
+          <div className="col-md-9">
+            <ul className="sort-destination isotope exhibitions-grid" data-sort-id="grid">
+              {this.props.books.map(function (book, index) {
+                return (
+                  <li className="col-md-4 col-sm-4 grid-item format-standard accrue-homestead" key={index} onClick={self._openBook.bind(null, book)}>
+                    <img src={'http://overnight-website.s3.amazonaws.com/wp-uploads'+ book.picture} />
+                    <div className="grid-item-content">
+                      <h3>A new version: Modernist Photography</h3>
+                      <div className="meta-data grid-item-meta"><i className="fa fa-clock-o"></i> Available at Overload</div>
+                      <div className="post-actions">
+                        <a href="books-single.html" className="btn btn-default">Learn more</a>
+                      </div>
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-sm-9 col-sm-offset-3">
+            <ul className="pagination">
+            </ul>
+          </div>
+        </div>
+      </div>
+    );
+  }
+});
+
+var Book = React.createClass({
+  _back: function () {
+    this.props.up.setState({book: null});
+  },
+  render: function () {
     var book = this.props.book;
     return (
       <div className="container">
         <div className="row">
           <div className="col-md-3">
+            <button className="btn btn-default" onClick={this._back}>Back to Browse Books</button>
+            <div className="spacer-20" />
             <img src={'http://overnight-website.s3.amazonaws.com/wp-uploads'+ book.picture} />
             <a href="#">Google Book Preview</a>
           </div>
@@ -94,4 +254,4 @@ var App = React.createClass({
   }
 });
 
-React.render(<App book={testBook.data} />, document.querySelector('#books'));
+React.render(<BBR />, document.querySelector('#books'));
