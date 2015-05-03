@@ -2616,9 +2616,8 @@ ul.slot-exhibitions li h5{
 }
 .icon-box .ibox-icon{
 	display:block;
-	position:absolute;
-	width:64px;
-	height:64px;
+	width:120px;
+	height:120px;
 	top:0;
 	left:0
 }
@@ -2634,9 +2633,9 @@ ul.slot-exhibitions li h5{
 }
 .icon-box .ibox-icon i{
 	font-style:normal;
-	font-size:28px;
+	font-size:40px;
 	text-align:center;
-	line-height:64px
+	line-height:120px
 }
 .icon-box h3{
 	font-size:16px;
@@ -2935,18 +2934,15 @@ ul.slot-exhibitions li h5{
 .icon-box {
 	position:relative;
 	margin-top:20px;
-	padding:0 0 0 80px;
 }
 .icon-box:first-child {
 	margin-top:0;
 }
 .icon-box .ibox-icon {
 	display:block;
-	position:absolute;
-	width:64px;
-	height:64px;
-	top:0;
-	left:0;
+	width:120px;
+	height:120px;
+  margin-bottom: 20px;
 }
 .icon-box .ibox-icon a,.icon-box .ibox-icon i,.icon-box .ibox-icon img {
 	display:block;
@@ -2959,10 +2955,10 @@ ul.slot-exhibitions li h5{
 	border-radius:50%;
 }
 .icon-box .ibox-icon i {
-	font-style:normal;
-	font-size:28px;
-	text-align:center;
-	line-height:64px;
+  font-style: normal;
+  font-size: 40px;
+  text-align: center;
+  line-height: 120px;
 }
 .icon-box h3 {
 	font-size:16px;
