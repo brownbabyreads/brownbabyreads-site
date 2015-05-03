@@ -23,6 +23,9 @@ function _bbr_body_classes( $classes ) {
 }
 add_filter( 'body_class', '_bbr_body_classes' );
 
+// Redirect to home after logout
+add_action('wp_logout',create_function('','wp_redirect(home_url());exit();'));
+
 // Allow SVG upload
 function cc_mime_types($mimes) {
   $mimes['svg'] = 'image/svg+xml';
