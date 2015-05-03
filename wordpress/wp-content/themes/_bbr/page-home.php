@@ -193,7 +193,7 @@ while (have_posts() ) : the_post();
             </div>
         </div>
         <!-- VISITORS SAY -->
-        <div class="latest-testimonials accent-bg padding-tb45">
+        <div class="latest-testimonials accent-bg padding-tb45" style="background-color: #da9035;">
             <div class="container">
                 <div class="row">
                     <div class="col-md-3">
