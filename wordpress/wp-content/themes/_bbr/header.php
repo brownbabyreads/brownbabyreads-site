@@ -150,4 +150,6 @@ global $_bbr_admin;
     <?php } ?>
   </div>
   <!-- Breadcrumbs -->
-  <?php the_breadcrumb(); ?>
+  <?php if (!is_front_page()): ?>
+    <?php the_breadcrumb(); ?>
+  <?php endif; ?>
