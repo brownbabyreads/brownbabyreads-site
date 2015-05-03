@@ -137,23 +137,13 @@ global $_bbr_admin;
           </div>
         </div>
       </div>
+    <?php } else if ( is_archive()|| is_category() ) { ?>
+      <div class="page-header parallax" style="background-image:url(http://placehold.it/1400x600&amp;text=IMAGE+PLACEHOLDER)">
+        <div><div>
+          <span> <?php the_archive_title(); ?></span>
+        </div></div>
+      </div>
     <?php } ?>
   </div>
-  <!-- End Hero Slider -->
-<!--   <div class="hero-area">
-    <div class="page-header parallax" style="background-image:url(http://placehold.it/1400x600&amp;text=IMAGE+PLACEHOLDER)">
-      <div><div>
-        <span>Dog</span>
-      </div></div>
-    </div>
-  </div> -->
   <!-- Breadcrumbs -->
   <?php the_breadcrumb(); ?>
-<!--   <div class="notice-bar">
-    <div class="container">
-      <ol class="breadcrumb">
-        <li><a href="#">Home</a></li>
-        <li class="active">About</li>
-      </ol>
-    </div>
-  </div> -->
