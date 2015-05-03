@@ -12,7 +12,7 @@ the_post(); ?>
   <div id="content" class="content full">
     <div class="container">
       <div class="row">
-        <div class="col-md-4 sidebar right-sidebar">
+        <div class="col-md-3 sidebar right-sidebar">
           <div class="widget sidebar-widget widget_upcoming_events box-style1">
               <h3 class="widget-title">About Brown Baby Reads</h3>
                 <ul>
@@ -40,7 +40,7 @@ the_post(); ?>
                 </ul>
             </div>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-9">
           <h2><?php echo the_field('mission_vision_title'); ?></h2>
           <?php echo the_field('mission_vision_content'); ?>
           <hr id="values" class="fw">
@@ -123,7 +123,7 @@ the_post(); ?>
           <?php echo the_field('request_brochures_content'); ?>
           <div class="carousel-wrapper">
             <div class="row">
-              <ul class="owl-carousel carousel-fw" id="team-slider" data-columns="2" data-autoplay="" data-pagination="yes" data-arrows="no" data-single-item="no" data-items-desktop="2" data-items-desktop-small="2" data-items-tablet="2" data-items-mobile="1">
+              <ul class="owl-carousel carousel-fw" id="team-slider" data-columns="4" data-autoplay="" data-pagination="yes" data-arrows="no" data-single-item="no" data-items-desktop="4" data-items-desktop-small="4" data-items-tablet="2" data-items-mobile="1">
                 <?php
                   // check if the repeater field has rows of data
                   if( have_rows('brochures') ):
@@ -143,7 +143,7 @@ the_post(); ?>
                             </a>
                           <?php } ?>
                           <div class="grid-item-content">
-                            <h3><a href="<?php echo $pdfurl; ?>"><?php echo $name; ?></a></h3>
+                            <h4><a href="<?php echo $pdfurl; ?>"><?php echo $name; ?></a></h4>
                           </div>
                         </div>
                       </li>
