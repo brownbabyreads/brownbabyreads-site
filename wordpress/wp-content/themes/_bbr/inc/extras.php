@@ -165,6 +165,25 @@ remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
 // Custom thumbnail
 add_image_size( 'home-info-featured', 600, 400, true );
 
+// PayPal Button
+// Add Shortcode
+function paypal_donation() {
+  // Code
+  return '<div class="spacer-10"></div><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+  <input type="hidden" name="cmd" value="_donations">
+  <input type="hidden" name="business" value="paypal@brownbabyreads.com">
+  <input type="hidden" name="lc" value="US">
+  <input type="hidden" name="item_name" value="Brown Baby Reads">
+  <input type="hidden" name="no_note" value="0">
+  <input type="hidden" name="currency_code" value="USD">
+  <input type="hidden" name="bn" value="PP-DonationsBF:btn-donate.svg:NonHostedGuest">
+  <input type="image" src="http://overnight-website.s3.amazonaws.com/wp-uploads/btn-donate-red.svg" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" height="40px">
+  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+  </form><div class="spacer-20"></div>
+  ';
+}
+add_shortcode( 'paypal_donation_btn', 'paypal_donation' );
+
 // Post Thumbs
 add_theme_support( 'post-thumbnails' );
 
