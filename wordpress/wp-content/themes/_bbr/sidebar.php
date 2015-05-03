@@ -17,6 +17,12 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 <div class="widget sidebar-widget box-style1">
 	<h3 class="widget-title">Categories</h3>
 	<ul>
-		<?php wp_list_categories(); ?>
+		<?php
+			$args = [
+				'title_li' => null,
+			];
+			wp_list_categories( $args ); 
+		?>
+
 	</ul>
 </div>
