@@ -13,44 +13,37 @@ get_header();
   <div id="content" class="content full">
     <div class="container">
       <div class="row">
-        <div class="col-md-9">
-          <?php the_content(); ?>
+        <div class="col-md-12">
           <div class="row">
-            <div class="col-md-4">
-              <div class="icon-box">
-                <div class="ibox-icon">
-                  <i class="fa fa-calendar-o"></i>
-                </div>
-                <h3>Volunteer</h3>
-                <p>Contribute your time to help review books, tutor students or volunteer at Brown Baby Reads events. Get started by registering as a volunteer.</p>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="icon-box">
-                <div class="ibox-icon">
-                  <i class="fa fa-paint-brush"></i>
-                </div>
-                <h3>Earn Rewards</h3>
-                <p>Earn rewards and support African-American students every time you go grocery shopping or fill up at the gas station. Apply for a free rewards card today.</p>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="icon-box">
-                <div class="ibox-icon">
-                  <i class="fa fa-image"></i>
-                </div>
-                <h3>Donate</h3>
-                <p>Individual, monthly &amp; corporate donations go directly towards promoting literacy among African-American children and youth. Contribute today.</p>
-              </div>
-            </div>
-          </div>
+            <?php
+              // check if the repeater field has rows of data
+              if( have_rows('icon_box') ):
+                // loop through the rows of data
+                while ( have_rows('icon_box') ) : the_row();
+                  $i = 1;
+                  $name = get_sub_field('name');
+                  $content = get_sub_field('content');
+                  $icon = get_sub_field('icon');
+                ?>
+                  <div class="col-md-3 col-md-offset-1">
+                    <div class="icon-box" style="text-align: center;">
+                      <div class="ibox-icon center-block">
+                        <i class="fa <?php echo $icon; ?>"></i>
+                      </div>
+                      <h3><?php echo $name; ?></h3>
+                      <p><?php echo $content; ?></p>
+                    </div>
+                  </div>
+                <?php
+                $i++;
+                endwhile;
+              endif;
+            ?>
         </div>
       </div>
-
       <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-12">
+          <div class="spacer-60"></div>
           <?php if( function_exists( 'ninja_forms_display_form' ) ){
             ninja_forms_display_form( 2 );
             } ?>
