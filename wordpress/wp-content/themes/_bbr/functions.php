@@ -55,7 +55,10 @@ function _bbr_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus([
 		'primary' => __( 'Primary Menu', '_bbr' ),
-		'footer' => __( 'Footer Menu', '_bbr' ),
+		'footer_resources' => __( 'Footer Resources', '_bbr' ),
+    'footer_participate' => __( 'Footer Participate', '_bbr' ),
+    'footer_contact' => __( 'Footer Contact', '_bbr' ),
+
 	]);
 
 	/*
