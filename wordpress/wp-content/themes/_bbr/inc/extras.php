@@ -398,3 +398,203 @@ if ( version_compare( $GLOBALS['wp_version'], '4.1', '<' ) ) :
     }
     add_action( 'wp_head', '_bbr_render_title' );
 endif;
+
+// Register Custom Post Type
+function custom_books() {
+
+    $labels = array(
+        'name'                => 'Books',
+        'singular_name'       => 'Book',
+        'menu_name'           => 'Books',
+        'name_admin_bar'      => 'Book',
+        'parent_item_colon'   => 'Parent Book:',
+        'all_items'           => 'All Books',
+        'add_new_item'        => 'Add New Book',
+        'add_new'             => 'Add New',
+        'new_item'            => 'New Book',
+        'edit_item'           => 'Edit Book',
+        'update_item'         => 'Update Book',
+        'view_item'           => 'View Book',
+        'search_items'        => 'Search Book',
+        'not_found'           => 'Not found',
+        'not_found_in_trash'  => 'Not found in Trash',
+    );
+    $args = array(
+        'label'               => 'custom_book',
+        'description'         => 'A book',
+        'labels'              => $labels,
+        'supports'            => array( 'title', 'editor', 'author', 'revisions', 'custom-fields', 'page-attributes', 'post-formats', ),
+        'taxonomies'          => array( 'book_authors' ),
+        'hierarchical'        => false,
+        'public'              => true,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'menu_position'       => 15,
+        'show_in_admin_bar'   => true,
+        'show_in_nav_menus'   => true,
+        'can_export'          => true,
+        'has_archive'         => true,
+        'exclude_from_search' => false,
+        'publicly_queryable'  => true,
+        'capability_type'     => 'post',
+    );
+    register_post_type( 'custom_book', $args );
+
+}
+
+// Hook into the 'init' action
+add_action( 'init', 'custom_books', 0 );
+
+// Register Custom Taxonomy
+function book_authors() {
+
+    $labels = array(
+        'name'                       => _x( 'Authors', 'Taxonomy General Name', 'text_domain' ),
+        'singular_name'              => _x( 'Author', 'Taxonomy Singular Name', 'text_domain' ),
+        'menu_name'                  => __( 'Authors', 'text_domain' ),
+        'all_items'                  => __( 'All Authors', 'text_domain' ),
+        'parent_item'                => __( 'Parent Author', 'text_domain' ),
+        'parent_item_colon'          => __( 'Parent Author:', 'text_domain' ),
+        'new_item_name'              => __( 'New Item Author', 'text_domain' ),
+        'add_new_item'               => __( 'Add New Author', 'text_domain' ),
+        'edit_item'                  => __( 'Edit Author', 'text_domain' ),
+        'update_item'                => __( 'Update Author', 'text_domain' ),
+        'view_item'                  => __( 'View Authors', 'text_domain' ),
+        'separate_items_with_commas' => __( 'Separate items with commas', 'text_domain' ),
+        'add_or_remove_items'        => __( 'Add or remove Authors', 'text_domain' ),
+        'choose_from_most_used'      => __( 'Choose from the most used', 'text_domain' ),
+        'popular_items'              => __( 'Popular Authors', 'text_domain' ),
+        'search_items'               => __( 'Search Authors', 'text_domain' ),
+        'not_found'                  => __( 'Not Found', 'text_domain' ),
+    );
+    $args = array(
+        'labels'                     => $labels,
+        'hierarchical'               => false,
+        'public'                     => true,
+        'show_ui'                    => true,
+        'show_admin_column'          => true,
+        'show_in_nav_menus'          => true,
+        'show_tagcloud'              => false,
+    );
+    register_taxonomy( 'authors', array( 'custom_book' ), $args );
+
+}
+
+// Hook into the 'init' action
+add_action( 'init', 'book_authors', 0 );
+
+// Register Custom Taxonomy
+function book_keywords() {
+
+    $labels = array(
+        'name'                       => _x( 'Keywords', 'Taxonomy General Name', 'text_domain' ),
+        'singular_name'              => _x( 'Keyword', 'Taxonomy Singular Name', 'text_domain' ),
+        'menu_name'                  => __( 'Keywords', 'text_domain' ),
+        'all_items'                  => __( 'All Keywords', 'text_domain' ),
+        'parent_item'                => __( 'Parent Keyword', 'text_domain' ),
+        'parent_item_colon'          => __( 'Parent Keyword:', 'text_domain' ),
+        'new_item_name'              => __( 'New Item Keyword', 'text_domain' ),
+        'add_new_item'               => __( 'Add New Keyword', 'text_domain' ),
+        'edit_item'                  => __( 'Edit Keyword', 'text_domain' ),
+        'update_item'                => __( 'Update Keyword', 'text_domain' ),
+        'view_item'                  => __( 'View Keywords', 'text_domain' ),
+        'separate_items_with_commas' => __( 'Separate items with commas', 'text_domain' ),
+        'add_or_remove_items'        => __( 'Add or remove Keywords', 'text_domain' ),
+        'choose_from_most_used'      => __( 'Choose from the most used', 'text_domain' ),
+        'popular_items'              => __( 'Popular Keywords', 'text_domain' ),
+        'search_items'               => __( 'Search Keywords', 'text_domain' ),
+        'not_found'                  => __( 'Not Found', 'text_domain' ),
+    );
+    $args = array(
+        'labels'                     => $labels,
+        'hierarchical'               => false,
+        'public'                     => true,
+        'show_ui'                    => true,
+        'show_admin_column'          => true,
+        'show_in_nav_menus'          => true,
+        'show_tagcloud'              => false,
+    );
+    register_taxonomy( 'keywords', array( 'custom_book' ), $args );
+
+}
+
+// Hook into the 'init' action
+add_action( 'init', 'book_keywords', 0 );
+
+
+// Register Custom Taxonomy
+function book_links() {
+
+    $labels = array(
+        'name'                       => _x( 'Links', 'Taxonomy General Name', 'text_domain' ),
+        'singular_name'              => _x( 'Link', 'Taxonomy Singular Name', 'text_domain' ),
+        'menu_name'                  => __( 'Links', 'text_domain' ),
+        'all_items'                  => __( 'All Links', 'text_domain' ),
+        'parent_item'                => __( 'Parent Link', 'text_domain' ),
+        'parent_item_colon'          => __( 'Parent Link:', 'text_domain' ),
+        'new_item_name'              => __( 'New Item Link', 'text_domain' ),
+        'add_new_item'               => __( 'Add New Link', 'text_domain' ),
+        'edit_item'                  => __( 'Edit Link', 'text_domain' ),
+        'update_item'                => __( 'Update Link', 'text_domain' ),
+        'view_item'                  => __( 'View Links', 'text_domain' ),
+        'separate_items_with_commas' => __( 'Separate items with commas', 'text_domain' ),
+        'add_or_remove_items'        => __( 'Add or remove Links', 'text_domain' ),
+        'choose_from_most_used'      => __( 'Choose from the most used', 'text_domain' ),
+        'popular_items'              => __( 'Popular Links', 'text_domain' ),
+        'search_items'               => __( 'Search Links', 'text_domain' ),
+        'not_found'                  => __( 'Not Found', 'text_domain' ),
+    );
+    $args = array(
+        'labels'                     => $labels,
+        'hierarchical'               => false,
+        'public'                     => true,
+        'show_ui'                    => true,
+        'show_admin_column'          => true,
+        'show_in_nav_menus'          => true,
+        'show_tagcloud'              => false,
+    );
+    register_taxonomy( 'links', array( 'custom_book' ), $args );
+
+}
+
+// Hook into the 'init' action
+add_action( 'init', 'book_links', 0 );
+
+
+// Register Custom Taxonomy
+function book_types() {
+
+    $labels = array(
+        'name'                       => _x( 'Types', 'Taxonomy General Name', 'text_domain' ),
+        'singular_name'              => _x( 'Type', 'Taxonomy Singular Name', 'text_domain' ),
+        'menu_name'                  => __( 'Types', 'text_domain' ),
+        'all_items'                  => __( 'All Types', 'text_domain' ),
+        'parent_item'                => __( 'Parent Type', 'text_domain' ),
+        'parent_item_colon'          => __( 'Parent Type:', 'text_domain' ),
+        'new_item_name'              => __( 'New Item Type', 'text_domain' ),
+        'add_new_item'               => __( 'Add New Type', 'text_domain' ),
+        'edit_item'                  => __( 'Edit Type', 'text_domain' ),
+        'update_item'                => __( 'Update Type', 'text_domain' ),
+        'view_item'                  => __( 'View Types', 'text_domain' ),
+        'separate_items_with_commas' => __( 'Separate items with commas', 'text_domain' ),
+        'add_or_remove_items'        => __( 'Add or remove Types', 'text_domain' ),
+        'choose_from_most_used'      => __( 'Choose from the most used', 'text_domain' ),
+        'popular_items'              => __( 'Popular Types', 'text_domain' ),
+        'search_items'               => __( 'Search Types', 'text_domain' ),
+        'not_found'                  => __( 'Not Found', 'text_domain' ),
+    );
+    $args = array(
+        'labels'                     => $labels,
+        'hierarchical'               => false,
+        'public'                     => true,
+        'show_ui'                    => true,
+        'show_admin_column'          => true,
+        'show_in_nav_menus'          => true,
+        'show_tagcloud'              => false,
+    );
+    register_taxonomy( 'types', array( 'custom_book' ), $args );
+
+}
+
+// Hook into the 'init' action
+add_action( 'init', 'book_types', 0 );
