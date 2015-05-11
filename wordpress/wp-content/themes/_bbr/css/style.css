@@ -1431,6 +1431,21 @@ body.boxed .body{
 	-o-transition:all 0.3s ease 0.2s;
 	transition:all 0.3s ease 0.1s;
 }
+.btn {
+  font-family: 'PMN Caecilia W01', sans-serif;
+  font-size: 16px;
+  letter-spacing: normal;
+  text-transform: none;
+}
+.btn-success {
+  background: #27C191;
+}
+.btn-success:hover,
+.btn-success:active,
+.btn-success:focus {
+  background: #179e74;
+}
+
 
 /* ==================================================
    6.1. Main Navigation
