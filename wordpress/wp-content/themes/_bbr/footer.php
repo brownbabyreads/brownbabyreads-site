@@ -13,20 +13,22 @@ global $_bbr_admin;
 <footer class="site-footer">
   <div class="container">
     <div class="row">
-      <div class="col-md-3 col-sm-6">
+      <div class="col-md-2 col-sm-4">
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
           <?php
             if($_bbr_admin['opt-main-logo']){
-              echo '<img src="'.$_bbr_admin['opt-footer-logo']['url'].'" alt="'.get_bloginfo('name').'">';
+              echo '<img class="footer-logo" src="'.$_bbr_admin['opt-footer-logo']['url'].'" alt="'.get_bloginfo('name').'">';
             }
           ?>
         </a>
       </div>
 
-      <div class="col-md-5 col-sm-6">
+      <div class="col-md-5 col-sm-8">
         <div class="widget footer-widget">
-          <?php echo '<h4 class="widget-title">'.$_bbr_admin['opt-footer-about-text'].'</h4>'; ?>
-          <?php echo '<p>'.$_bbr_admin['opt-footer-about-content'].'</p>'; ?>
+          <?php if ($_bbr_admin['opt-footer-about-text']): ?>
+            <h4 class="widget-title"><?php echo $_bbr_admin['opt-footer-about-text']; ?></h4>
+          <?php endif; ?>
+          <p><?php echo $_bbr_admin['opt-footer-about-content']; ?></p>
           <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
             <input type="hidden" name="cmd" value="_donations">
             <input type="hidden" name="business" value="paypal@brownbabyreads.com">
@@ -40,7 +42,7 @@ global $_bbr_admin;
             </form>
         </div>
       </div>
-      <div class="col-md-2 col-sm-6">
+      <div class="col-md-2 col-sm-6 col-md-offset-1">
         <div class="widget footer-widget">
           <h4 class="widget-title">Resources</h4>
           <?php
