@@ -1911,6 +1911,9 @@ h3.widget-title{
 	left:auto;
 	right:0;
 }
+.footer-logo {
+  margin-bottom: 20px;
+}
 .footer-widget .widget-title{
 	font-size:15px;
 	padding-bottom:0;
