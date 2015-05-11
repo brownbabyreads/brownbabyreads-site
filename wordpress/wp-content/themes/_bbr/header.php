@@ -100,12 +100,14 @@ global $_bbr_admin;
             if (!is_user_logged_in()) {
               wp_nav_menu([
                 'theme_location' => 'login_nav',
+                'menu_class' => 'hidden-xs hidden-sm',
                 'menu_id' => 'utility-menu',
                 'container' => false
               ]);
             } else {
               wp_nav_menu([
                 'theme_location' => 'profile_nav',
+                'menu_class' => 'hidden-xs hidden-sm',
                 'menu_id' => 'utility-menu',
                 'container' => false
               ]);

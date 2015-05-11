@@ -1397,6 +1397,7 @@ body.boxed .body{
 	left:15px;
 	z-index:999;
 	top:0;
+  max-width: 90%;
 	-webkit-border-radius:0 0 2px 2px;
 	border-radius:0 0 2px 2px;
 	-webkit-box-shadow:0 3px 5px rgba(0,0,0,.2);
@@ -1421,9 +1422,9 @@ body.boxed .body{
 	padding-left:0;
 }
 .site-logo img{
-  width: 140%;
+  width: 400px;
   height: auto;
-  max-width: none;
+  max-width: 100%;
 	-webkit-transition:all 0.3s ease 0.2s;
 	-moz-transition:all 0.3s ease 0.2s;
 	-ms-transition:all 0.3s ease 0.2s;
@@ -1509,7 +1510,8 @@ body.boxed .body{
 	color:#999;
 }
 .main-navigation > ul > li:first-child > a {
-  color: rgb(206, 78, 48);
+  color: #CE4E30;
+  font-weight: 700;
 }
 .dd-menu > ul > li ul{
 	margin:0;
@@ -1716,10 +1718,11 @@ body.boxed .body{
 	text-decoration:none;
 }
 #menu-toggle{
-	float:right;
-	font-size:24px;
-	line-height:45px;
-	color:#fff;
+  width: 10%;
+  float:right;
+  font-size:24px;
+  line-height:80px;
+  color:#444;
 }
 .header-style2 #menu-toggle{
 	color:#222;
