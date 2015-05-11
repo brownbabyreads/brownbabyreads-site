@@ -1431,11 +1431,42 @@ body.boxed .body{
 	-o-transition:all 0.3s ease 0.2s;
 	transition:all 0.3s ease 0.1s;
 }
-.btn {
+body.logged-in .hidden-loggedin {
+  display: none !important;
+}
+body:not(.logged-in) .hidden-loggedout {
+  display: none !important;
+}
+.btn,
+.piereg_entry-content input[type="submit"],
+.piereg_container .piereg_login_wrapper .submit input[type="submit"],
+.pieregWrapper input[type="submit"] {
   font-family: 'PMN Caecilia W01', sans-serif;
   font-size: 16px;
   letter-spacing: normal;
   text-transform: none;
+}
+.piereg_entry-content input[type="submit"],
+.piereg_container .piereg_login_wrapper .submit input[type="submit"],
+.pieregWrapper input[type="submit"] {
+  background: #ce4e30;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  padding: 6px 20px;
+  font-weight: 700;
+  line-height: 1.66;
+  transition: all .35s ease-in-out;
+}
+.piereg_entry-content input[type="submit"]:hover,
+.piereg_container .piereg_login_wrapper .submit input[type="submit"]:hover,
+.pieregWrapper input[type="submit"]:hover {
+  background: #8F3725;
+}
+.btn-primary:hover {
+  background: #8F3725 !important;
+  color: #fff !important;
 }
 .btn-success {
   background: #27C191;
