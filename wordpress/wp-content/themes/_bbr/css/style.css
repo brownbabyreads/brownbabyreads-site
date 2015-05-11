@@ -1464,6 +1464,10 @@ body:not(.logged-in) .hidden-loggedout {
 .pieregWrapper input[type="submit"]:hover {
   background: #8F3725;
 }
+.btn-primary:hover {
+  background: #8F3725 !important;
+  color: #fff !important;
+}
 .btn-success {
   background: #27C191;
 }
