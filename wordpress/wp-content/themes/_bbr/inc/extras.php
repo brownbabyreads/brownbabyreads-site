@@ -1064,7 +1064,8 @@ function import_books() {
         'tax_input'      => array(
           'keywords'     => $book['keywords'],
           'authors'      => array($book['author']),
-          'types'        => array($book['type'])
+          'types'        => array($book['type']),
+          'links'        => $book['curriculums']
         )
       );
 
