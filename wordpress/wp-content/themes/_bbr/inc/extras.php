@@ -1047,11 +1047,13 @@ function import_books() {
   if (!file_exists($bbr_file)) {
     return 0;
   }
-  $books_json = file_get_contents(get_template_directory(). '/inc/brown_baby_reads_data.json');
+  $books_json = file_get_contents($bbr_file);
 
   // Parse books JSON
   // JSON must be valid: keys + values need DOUBLE quotes
   $books = json_decode($books_json, true);
+  // echo var_dump($books);
+  // echo count($books);
 
   foreach ($books as $book) {
     $id = my_post_exists($book['title']);
@@ -1063,8 +1065,8 @@ function import_books() {
         'post_type'      => 'custom_book',
         'tax_input'      => array(
           'keywords'     => $book['keywords'],
-          'authors'      => array($book['author']),
-          'types'        => array($book['type']),
+          // 'authors'      => $book['author'],
+          'types'        => $book['type'],
           'links'        => $book['curriculums']
         )
       );
@@ -1074,9 +1076,9 @@ function import_books() {
       // Need to call this for each custom field
       // Grad the keys from custom fields in our functions file
       $date = date_create($book['publish_date']);
-      $pub_date = date_format($date, 'Ymd');
+      $pub_date = $date ? date_format($date, 'Ymd') : '';
 
-      update_field('field_555aae80f1f77', $book['age_group'], $id);
+      update_field('field_555aae80f1f77', $book['age_group'],  $id);
       update_field('field_555aaefcf1f78', $book['bbr_estore_link'], $id);
       update_field('field_555aaf09f1f79', $book['biography_person'], $id);
       update_field('field_555aaf3bf1f7a', $book['booklists'], $id);
@@ -1096,8 +1098,17 @@ function import_books() {
       update_field('field_555aafddf1f88', $book['reading_room'], $id);
       update_field('field_555aafe1f1f89', $book['series'], $id);
       update_post_meta($id, 'old_id', $book['id']);
-    } else {}
+    } else {
+      // The book title was found in the database, so we can use $id to update it
+      if ($book['author']) {
+        $term = term_exists($book['author'], 'authors');
+        if ($term == 0 || $term == null) {
+          $term = wp_insert_term($book['author'], 'authors');
+        }
+        wp_set_object_terms($id, array($term['term_id']), 'authors');
+      }
+    }
   }
 }
 
-add_action('init', 'import_books');
+// add_action('init', 'import_books');
