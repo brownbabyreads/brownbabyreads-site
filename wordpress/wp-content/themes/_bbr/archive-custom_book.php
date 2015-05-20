@@ -25,7 +25,7 @@ get_header(); ?>
         <?php if( have_posts() ): ?>
         <?php while ( have_posts() ) : the_post(); ?>
         <li class="col-md-4 col-sm-4 grid-item format-standard accrue-homestead">
-          <div style="width:100%;height:240px;background:url(http://overnight-website.s3.amazonaws.com/wp-uploads/<?php the_field('picture'); ?>) center / cover;" />
+          <div style="width:100%;height:240px;background:url(http://overnight-website.s3.amazonaws.com/wp-uploads<?php the_field('picture'); ?>) center / cover;" />
           <div class="grid-item-content">
             <!-- note: these inline styles keep the entire layout from falling apart -->
             <h3 style="height:81px;overflow:hidden;"><?php the_title(); ?></h3>

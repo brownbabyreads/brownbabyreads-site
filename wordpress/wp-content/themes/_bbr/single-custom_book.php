@@ -10,7 +10,7 @@ the_post(); ?>
 
     <div class="col-md-3">
       <div class="spacer-20"></div>
-      <img src="http://overnight-website.s3.amazonaws.com/wp-uploads/<?php the_field('picture'); ?>" />
+      <img src="http://overnight-website.s3.amazonaws.com/wp-uploads<?php the_field('picture'); ?>" />
       <div class="spacer-20"></div>
       <?php if ( get_field('google_book_preview') ) : ?>
       <p><a href="<?php the_field('google_book_preview'); ?>">Google Book Preview</a></p>
