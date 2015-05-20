@@ -23,7 +23,8 @@ _.each(books, function (book, index, books) {
   book.keywords = [];
   book.curriculums = [];
   bookwords.forEach(function(obj) {
-    book.keywords.push(keywords[obj[book.id]]);
+    var word = keywords[obj[book.id]];
+    if (word) book.keywords.push(word);
   });
   curry.forEach(function(obj) {
     book.curriculums.push(curriculum[obj[book.id]]);
