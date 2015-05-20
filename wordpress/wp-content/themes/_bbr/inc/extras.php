@@ -437,6 +437,9 @@ function custom_books() {
         'exclude_from_search' => false,
         'publicly_queryable'  => true,
         'capability_type'     => 'post',
+        'rewrite' => array(
+          'slug' => 'books'
+        ),
     );
     register_post_type( 'custom_book', $args );
 
@@ -1042,61 +1045,61 @@ function my_post_exists($title, $content = '', $date = '') {
     return 0;
 }
 
-function import_books() {
-  $bbr_file = get_template_directory(). '/inc/brown_baby_reads_data.json';
-  if (!file_exists($bbr_file)) {
-    return 0;
-  }
-  $books_json = file_get_contents(get_template_directory(). '/inc/brown_baby_reads_data.json');
+// function import_books() {
+//   $bbr_file = get_template_directory(). '/inc/brown_baby_reads_data.json';
+//   if (!file_exists($bbr_file)) {
+//     return 0;
+//   }
+//   $books_json = file_get_contents(get_template_directory(). '/inc/brown_baby_reads_data.json');
 
-  // Parse books JSON
-  // JSON must be valid: keys + values need DOUBLE quotes
-  $books = json_decode($books_json, true);
+//   // Parse books JSON
+//   // JSON must be valid: keys + values need DOUBLE quotes
+//   $books = json_decode($books_json, true);
 
-  foreach ($books as $book) {
-    $id = my_post_exists($book['title']);
-    if (!$id) {
-      $post = array(
-        'post_content'   => $book['description'],
-        'post_title'     => $book['title'],
-        'post_status'    => 'publish',
-        'post_type'      => 'custom_book',
-        'tax_input'      => array(
-          'keywords'     => $book['keywords'],
-          'authors'      => array($book['author']),
-          'types'        => array($book['type'])
-        )
-      );
+//   foreach ($books as $book) {
+//     $id = my_post_exists($book['title']);
+//     if (!$id) {
+//       $post = array(
+//         'post_content'   => $book['description'],
+//         'post_title'     => $book['title'],
+//         'post_status'    => 'publish',
+//         'post_type'      => 'custom_book',
+//         'tax_input'      => array(
+//           'keywords'     => $book['keywords'],
+//           'authors'      => array($book['author']),
+//           'types'        => array($book['type'])
+//         )
+//       );
 
-      $id = wp_insert_post($post, true);
+//       $id = wp_insert_post($post, true);
 
-      // Need to call this for each custom field
-      // Grad the keys from custom fields in our functions file
-      $date = date_create($book['publish_date']);
-      $pub_date = date_format($date, 'Ymd');
+//       // Need to call this for each custom field
+//       // Grad the keys from custom fields in our functions file
+//       $date = date_create($book['publish_date']);
+//       $pub_date = date_format($date, 'Ymd');
 
-      update_field('field_555aae80f1f77', $book['age_group'], $id);
-      update_field('field_555aaefcf1f78', $book['bbr_estore_link'], $id);
-      update_field('field_555aaf09f1f79', $book['biography_person'], $id);
-      update_field('field_555aaf3bf1f7a', $book['booklists'], $id);
-      update_field('field_555aaf43f1f7b', $book['dra'], $id);
-      update_field('field_555aaf4bf1f7c', $book['google_book_preview'], $id);
-      update_field('field_555aaf54f1f7d', $book['guided_reading_level'], $id);
-      update_field('field_555aaf5cf1f7e', $book['illustrator'], $id);
-      update_field('field_555aaf65f1f7f', $book['interest_level'], $id);
-      update_field('field_555aaf6ef1f80', $book['lexile'], $id);
-      update_field('field_555aaf76f1f81', $book['out_of_print'], $id);
-      update_field('field_555aaf81f1f82', $book['pages'], $id);
-      update_field('field_555aaf96f1f83', $book['parent_publisher'], $id);
-      update_field('field_555aaf9df1f84', $book['picture'], $id);
-      update_field('field_555aafaff1f85', $pub_date, $id);
-      update_field('field_555aafcdf1f86', $book['publisher'], $id);
-      update_field('field_555aafd5f1f87', $book['reading_grade_level'], $id);
-      update_field('field_555aafddf1f88', $book['reading_room'], $id);
-      update_field('field_555aafe1f1f89', $book['series'], $id);
-      update_post_meta($id, 'old_id', $book['id']);
-    } else {}
-  }
-}
+//       update_field('field_555aae80f1f77', $book['age_group'], $id);
+//       update_field('field_555aaefcf1f78', $book['bbr_estore_link'], $id);
+//       update_field('field_555aaf09f1f79', $book['biography_person'], $id);
+//       update_field('field_555aaf3bf1f7a', $book['booklists'], $id);
+//       update_field('field_555aaf43f1f7b', $book['dra'], $id);
+//       update_field('field_555aaf4bf1f7c', $book['google_book_preview'], $id);
+//       update_field('field_555aaf54f1f7d', $book['guided_reading_level'], $id);
+//       update_field('field_555aaf5cf1f7e', $book['illustrator'], $id);
+//       update_field('field_555aaf65f1f7f', $book['interest_level'], $id);
+//       update_field('field_555aaf6ef1f80', $book['lexile'], $id);
+//       update_field('field_555aaf76f1f81', $book['out_of_print'], $id);
+//       update_field('field_555aaf81f1f82', $book['pages'], $id);
+//       update_field('field_555aaf96f1f83', $book['parent_publisher'], $id);
+//       update_field('field_555aaf9df1f84', $book['picture'], $id);
+//       update_field('field_555aafaff1f85', $pub_date, $id);
+//       update_field('field_555aafcdf1f86', $book['publisher'], $id);
+//       update_field('field_555aafd5f1f87', $book['reading_grade_level'], $id);
+//       update_field('field_555aafddf1f88', $book['reading_room'], $id);
+//       update_field('field_555aafe1f1f89', $book['series'], $id);
+//       update_post_meta($id, 'old_id', $book['id']);
+//     } else {}
+//   }
+// }
 
-add_action('init', 'import_books');
+// add_action('init', 'import_books');
