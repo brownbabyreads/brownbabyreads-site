@@ -1,4 +1,5 @@
 <?php
+remove_filter ('the_content', 'wpautop');
 
 get_header();
 
@@ -21,7 +22,7 @@ the_post(); ?>
       <h1 class="post-title"><?php the_title(); ?></h1>
       <div class="post-content">
         <strong>by <?php the_terms($post->ID, 'authors'); if ( get_field('illustrator') ) : ?>, <?php the_field('illustrator'); ?> (Illustrator)<?php endif; ?></strong>
-        <h3>Overview</h3>
+        <h3 class="overview-title">Overview</h3>
         <p><?php the_content(); ?></p>
       </div>
       <div class="spacer-20"></div>

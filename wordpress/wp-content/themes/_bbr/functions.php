@@ -128,7 +128,7 @@ function _bbr_scripts() {
 	wp_enqueue_script( '_bbr-flexslider', get_template_directory_uri() . '/vendor/flexslider/js/jquery.flexslider.js', array(), '', true );
 	wp_enqueue_script( '_bbr-themepunch-tools', get_template_directory_uri() . '/vendor/revslider/js/jquery.themepunch.tools.min.js', array(), '', true );
 	wp_enqueue_script( '_bbr-themepunch-revolution', get_template_directory_uri() . '/vendor/revslider/js/jquery.themepunch.revolution.min.js', array(), '', true );
-  wp_enqueue_script( '_bbr-books', get_template_directory_uri() . '/js/react-0.13.2.min.js', array(), '', true );
+  // wp_enqueue_script( '_bbr-books', get_template_directory_uri() . '/js/react-0.13.2.min.js', array(), '', true );
   // wp_enqueue_script( '_bbr-books', get_template_directory_uri() . '/js/books.js', array(), '', true );
 
 	// wp_enqueue_script( '_bbr-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
