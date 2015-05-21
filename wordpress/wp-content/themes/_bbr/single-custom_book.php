@@ -10,7 +10,7 @@ the_post(); ?>
 
     <div class="col-md-3">
       <div class="spacer-20"></div>
-      <img src="http://overnight-website.s3.amazonaws.com/wp-uploads/<?php the_field('picture'); ?>" />
+      <img src="http://overnight-website.s3.amazonaws.com/wp-uploads<?php the_field('picture'); ?>" />
       <div class="spacer-20"></div>
       <?php if ( get_field('google_book_preview') ) : ?>
       <p><a href="<?php the_field('google_book_preview'); ?>">Google Book Preview</a></p>
@@ -58,6 +58,10 @@ the_post(); ?>
       <?php if ( get_field('bbr_estore_link') ) : ?>
       <div class="widget sidebar-widget widget_next_exhibitions box-style1">
         <a class="btn btn-primary btn-lg" href="<?php the_field('bbr_estore_link'); ?>">$ Purchase Book</a>
+      </div>
+      <?php else : ?>
+      <div class="widget sidebar-widget widget_next_exhibitions box-style1">
+        <p>This book is not currently available in our store.</p>
       </div>
       <?php endif; ?>
     </div>
