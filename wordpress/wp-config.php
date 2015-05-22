@@ -26,6 +26,7 @@ define('UPLOADS', 'wp-uploads');
 
 // ** MySQL settings - You can get this info from your web host ** //
 $url = parse_url(getenv('CLEARDB_DATABASE_URL') ? getenv('CLEARDB_DATABASE_URL') : 'mysql://b13413500555e5:a850b7b2@us-cdbr-iron-east-02.cleardb.net/heroku_8aa24dfc4d687e6?reconnect=true');
+// $url = parse_url(getenv('CLEARDB_DATABASE_URL') ? getenv('CLEARDB_DATABASE_URL') : 'mysql://wordpress:wordpress@localhost/wordpress');
 
 /** The name of the database for WordPress */
 define('DB_NAME', trim($url['path'], '/'));

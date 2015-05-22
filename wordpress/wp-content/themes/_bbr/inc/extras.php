@@ -423,8 +423,8 @@ function custom_books() {
         'label'               => 'custom_book',
         'description'         => 'A book',
         'labels'              => $labels,
-        'supports'            => array( 'title', 'editor', 'author', 'revisions', 'custom-fields', 'page-attributes', 'post-formats', ),
-        'taxonomies'          => array( 'book_authors' ),
+        'supports'            => array( 'title', 'editor', 'revisions', 'thumbnail', ),
+        'taxonomies'          => array( 'authors', 'keywords', 'links', 'types' ),
         'hierarchical'        => false,
         'public'              => true,
         'show_ui'             => true,
@@ -437,9 +437,12 @@ function custom_books() {
         'exclude_from_search' => false,
         'publicly_queryable'  => true,
         'capability_type'     => 'post',
+        'rewrite' => array(
+          'slug' => 'books'
+        ),
     );
     register_post_type( 'custom_book', $args );
-
+    flush_rewrite_rules();
 }
 
 // Hook into the 'init' action
@@ -476,8 +479,8 @@ function book_authors() {
         'show_in_nav_menus'          => true,
         'show_tagcloud'              => false,
     );
-    register_taxonomy( 'authors', array( 'custom_book' ), $args );
-
+    register_taxonomy('authors', array( 'custom_book' ), $args);
+    register_taxonomy_for_object_type('authors', 'custom_book');
 }
 
 // Hook into the 'init' action
@@ -515,7 +518,7 @@ function book_keywords() {
         'show_tagcloud'              => false,
     );
     register_taxonomy( 'keywords', array( 'custom_book' ), $args );
-
+    register_taxonomy_for_object_type('keywords', 'custom_book');
 }
 
 // Hook into the 'init' action
@@ -598,3 +601,583 @@ function book_types() {
 
 // Hook into the 'init' action
 add_action( 'init', 'book_types', 0 );
+
+
+if( function_exists('acf_add_local_field_group') ):
+
+acf_add_local_field_group(array (
+  'key' => 'group_555aae7738f81',
+  'title' => 'Book',
+  'fields' => array (
+    array (
+      'key' => 'field_555aae80f1f77',
+      'label' => 'Age Group',
+      'name' => 'age_group',
+      'type' => 'text',
+      'instructions' => '',
+      'required' => 0,
+      'conditional_logic' => 0,
+      'wrapper' => array (
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'default_value' => '',
+      'placeholder' => '',
+      'prepend' => '',
+      'append' => '',
+      'maxlength' => '',
+      'readonly' => 0,
+      'disabled' => 0,
+    ),
+    array (
+      'key' => 'field_555aaefcf1f78',
+      'label' => 'eStore Link',
+      'name' => 'bbr_estore_link',
+      'type' => 'text',
+      'instructions' => '',
+      'required' => 0,
+      'conditional_logic' => 0,
+      'wrapper' => array (
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'default_value' => '',
+      'placeholder' => '',
+      'prepend' => '',
+      'append' => '',
+      'maxlength' => '',
+      'readonly' => 0,
+      'disabled' => 0,
+    ),
+    array (
+      'key' => 'field_555aaf09f1f79',
+      'label' => 'Biography Person',
+      'name' => 'biography_person',
+      'type' => 'text',
+      'instructions' => '',
+      'required' => 0,
+      'conditional_logic' => 0,
+      'wrapper' => array (
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'default_value' => '',
+      'placeholder' => '',
+      'prepend' => '',
+      'append' => '',
+      'maxlength' => '',
+      'readonly' => 0,
+      'disabled' => 0,
+    ),
+    array (
+      'key' => 'field_555aaf3bf1f7a',
+      'label' => 'Booklists',
+      'name' => 'booklists',
+      'type' => 'text',
+      'instructions' => '',
+      'required' => 0,
+      'conditional_logic' => 0,
+      'wrapper' => array (
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'default_value' => '',
+      'placeholder' => '',
+      'prepend' => '',
+      'append' => '',
+      'maxlength' => '',
+      'readonly' => 0,
+      'disabled' => 0,
+    ),
+    array (
+      'key' => 'field_555aaf43f1f7b',
+      'label' => 'DRA',
+      'name' => 'dra',
+      'type' => 'text',
+      'instructions' => '',
+      'required' => 0,
+      'conditional_logic' => 0,
+      'wrapper' => array (
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'default_value' => '',
+      'placeholder' => '',
+      'prepend' => '',
+      'append' => '',
+      'maxlength' => '',
+      'readonly' => 0,
+      'disabled' => 0,
+    ),
+    array (
+      'key' => 'field_555aaf4bf1f7c',
+      'label' => 'Google Book Preview',
+      'name' => 'google_book_preview',
+      'type' => 'text',
+      'instructions' => '',
+      'required' => 0,
+      'conditional_logic' => 0,
+      'wrapper' => array (
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'default_value' => '',
+      'placeholder' => '',
+      'prepend' => '',
+      'append' => '',
+      'maxlength' => '',
+      'readonly' => 0,
+      'disabled' => 0,
+    ),
+    array (
+      'key' => 'field_555aaf54f1f7d',
+      'label' => 'Guided Reading Level',
+      'name' => 'guided_reading_level',
+      'type' => 'text',
+      'instructions' => '',
+      'required' => 0,
+      'conditional_logic' => 0,
+      'wrapper' => array (
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'default_value' => '',
+      'placeholder' => '',
+      'prepend' => '',
+      'append' => '',
+      'maxlength' => '',
+      'readonly' => 0,
+      'disabled' => 0,
+    ),
+    array (
+      'key' => 'field_555aaf5cf1f7e',
+      'label' => 'Illustrator',
+      'name' => 'illustrator',
+      'type' => 'text',
+      'instructions' => '',
+      'required' => 0,
+      'conditional_logic' => 0,
+      'wrapper' => array (
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'default_value' => '',
+      'placeholder' => '',
+      'prepend' => '',
+      'append' => '',
+      'maxlength' => '',
+      'readonly' => 0,
+      'disabled' => 0,
+    ),
+    array (
+      'key' => 'field_555aaf65f1f7f',
+      'label' => 'Interest Level',
+      'name' => 'interest_level',
+      'type' => 'text',
+      'instructions' => '',
+      'required' => 0,
+      'conditional_logic' => 0,
+      'wrapper' => array (
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'default_value' => '',
+      'placeholder' => '',
+      'prepend' => '',
+      'append' => '',
+      'maxlength' => '',
+      'readonly' => 0,
+      'disabled' => 0,
+    ),
+    array (
+      'key' => 'field_555aaf6ef1f80',
+      'label' => 'Lexile',
+      'name' => 'lexile',
+      'type' => 'text',
+      'instructions' => '',
+      'required' => 0,
+      'conditional_logic' => 0,
+      'wrapper' => array (
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'default_value' => '',
+      'placeholder' => '',
+      'prepend' => '',
+      'append' => '',
+      'maxlength' => '',
+      'readonly' => 0,
+      'disabled' => 0,
+    ),
+    array (
+      'key' => 'field_555aaf76f1f81',
+      'label' => 'Out Of Print',
+      'name' => 'out_of_print',
+      'type' => 'true_false',
+      'instructions' => '',
+      'required' => 0,
+      'conditional_logic' => 0,
+      'wrapper' => array (
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'message' => '',
+      'default_value' => 0,
+    ),
+    array (
+      'key' => 'field_555aaf81f1f82',
+      'label' => 'Pages',
+      'name' => 'pages',
+      'type' => 'text',
+      'instructions' => '',
+      'required' => 0,
+      'conditional_logic' => 0,
+      'wrapper' => array (
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'default_value' => '',
+      'placeholder' => '',
+      'prepend' => '',
+      'append' => '',
+      'maxlength' => '',
+      'readonly' => 0,
+      'disabled' => 0,
+    ),
+    array (
+      'key' => 'field_555aaf96f1f83',
+      'label' => 'Parent Publisher',
+      'name' => 'parent_publisher',
+      'type' => 'text',
+      'instructions' => '',
+      'required' => 0,
+      'conditional_logic' => 0,
+      'wrapper' => array (
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'default_value' => '',
+      'placeholder' => '',
+      'prepend' => '',
+      'append' => '',
+      'maxlength' => '',
+      'readonly' => 0,
+      'disabled' => 0,
+    ),
+    array (
+      'key' => 'field_555aaf9df1f84',
+      'label' => 'Picture',
+      'name' => 'picture',
+      'type' => 'text',
+      'instructions' => '',
+      'required' => 0,
+      'conditional_logic' => 0,
+      'wrapper' => array (
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'default_value' => '',
+      'placeholder' => '',
+      'prepend' => '',
+      'append' => '',
+      'maxlength' => '',
+      'readonly' => 0,
+      'disabled' => 0,
+    ),
+    array (
+      'key' => 'field_555aafaff1f85',
+      'label' => 'Publish Date',
+      'name' => 'publish_date',
+      'type' => 'date_picker',
+      'instructions' => '',
+      'required' => 0,
+      'conditional_logic' => 0,
+      'wrapper' => array (
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'display_format' => 'm/d/Y',
+      'return_format' => 'm/d/Y',
+      'first_day' => 1,
+    ),
+    array (
+      'key' => 'field_555aafcdf1f86',
+      'label' => 'Publisher',
+      'name' => 'publisher',
+      'type' => 'text',
+      'instructions' => '',
+      'required' => 0,
+      'conditional_logic' => 0,
+      'wrapper' => array (
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'default_value' => '',
+      'placeholder' => '',
+      'prepend' => '',
+      'append' => '',
+      'maxlength' => '',
+      'readonly' => 0,
+      'disabled' => 0,
+    ),
+    array (
+      'key' => 'field_555aafd5f1f87',
+      'label' => 'Reading Grade Level',
+      'name' => 'reading_grade_level',
+      'type' => 'text',
+      'instructions' => '',
+      'required' => 0,
+      'conditional_logic' => 0,
+      'wrapper' => array (
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'default_value' => '',
+      'placeholder' => '',
+      'prepend' => '',
+      'append' => '',
+      'maxlength' => '',
+      'readonly' => 0,
+      'disabled' => 0,
+    ),
+    array (
+      'key' => 'field_555aafddf1f88',
+      'label' => 'Reading Room',
+      'name' => 'reading_room',
+      'type' => 'true_false',
+      'instructions' => '',
+      'required' => 0,
+      'conditional_logic' => 0,
+      'wrapper' => array (
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'message' => '',
+      'default_value' => 0,
+    ),
+    array (
+      'key' => 'field_555aafe1f1f89',
+      'label' => 'Series',
+      'name' => 'series',
+      'type' => 'text',
+      'instructions' => '',
+      'required' => 0,
+      'conditional_logic' => 0,
+      'wrapper' => array (
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'default_value' => '',
+      'placeholder' => '',
+      'prepend' => '',
+      'append' => '',
+      'maxlength' => '',
+      'readonly' => 0,
+      'disabled' => 0,
+    ),
+  ),
+  'location' => array (
+    array (
+      array (
+        'param' => 'post_type',
+        'operator' => '==',
+        'value' => 'custom_book',
+      ),
+    ),
+  ),
+  'menu_order' => 0,
+  'position' => 'normal',
+  'style' => 'default',
+  'label_placement' => 'top',
+  'instruction_placement' => 'label',
+  'hide_on_screen' => '',
+));
+
+endif;
+
+function my_post_exists($title, $content = '', $date = '') {
+    global $wpdb;
+
+    $post_title = wp_unslash( sanitize_post_field( 'post_title', $title, 0, 'db' ) );
+    $post_content = wp_unslash( sanitize_post_field( 'post_content', $content, 0, 'db' ) );
+    $post_date = wp_unslash( sanitize_post_field( 'post_date', $date, 0, 'db' ) );
+
+    $query = "SELECT ID FROM $wpdb->posts WHERE 1=1";
+    $args = array();
+
+    if ( !empty ( $date ) ) {
+        $query .= ' AND post_date = %s';
+        $args[] = $post_date;
+    }
+
+    if ( !empty ( $title ) ) {
+        $query .= ' AND post_title = %s';
+        $args[] = $post_title;
+    }
+
+    if ( !empty ( $content ) ) {
+        $query .= 'AND post_content = %s';
+        $args[] = $post_content;
+    }
+
+    if ( !empty ( $args ) )
+        return (int) $wpdb->get_var( $wpdb->prepare($query, $args) );
+
+    return 0;
+}
+
+function import_books() {
+  $bbr_file = get_template_directory(). '/inc/brown_baby_reads_data.json';
+  if (!file_exists($bbr_file)) {
+    return 0;
+  }
+  $books_json = file_get_contents($bbr_file);
+
+  // Parse books JSON
+  // JSON must be valid: keys + values need DOUBLE quotes
+  $books = json_decode($books_json, true);
+  // echo var_dump($books);
+  // echo count($books);
+
+  foreach ($books as $book) {
+    $id = my_post_exists($book['title']);
+    if (!$id) {
+      $post = array(
+        'post_content'   => $book['description'],
+        'post_title'     => $book['title'],
+        'post_status'    => 'publish',
+        'post_type'      => 'custom_book'
+      );
+
+      $id = wp_insert_post($post, true);
+
+      // Need to call this for each custom field
+      // Grad the keys from custom fields in our functions file
+      $date = date_create($book['publish_date']);
+      $pub_date = $date ? date_format($date, 'Ymd') : '';
+
+      update_field('field_555aae80f1f77', $book['age_group'],  $id);
+      update_field('field_555aaefcf1f78', $book['bbr_estore_link'], $id);
+      update_field('field_555aaf09f1f79', $book['biography_person'], $id);
+      update_field('field_555aaf3bf1f7a', $book['booklists'], $id);
+      update_field('field_555aaf43f1f7b', $book['dra'], $id);
+      update_field('field_555aaf4bf1f7c', $book['google_book_preview'], $id);
+      update_field('field_555aaf54f1f7d', $book['guided_reading_level'], $id);
+      update_field('field_555aaf5cf1f7e', $book['illustrator'], $id);
+      update_field('field_555aaf65f1f7f', $book['interest_level'], $id);
+      update_field('field_555aaf6ef1f80', $book['lexile'], $id);
+      update_field('field_555aaf76f1f81', $book['out_of_print'], $id);
+      update_field('field_555aaf81f1f82', $book['pages'], $id);
+      update_field('field_555aaf96f1f83', $book['parent_publisher'], $id);
+      update_field('field_555aaf9df1f84', $book['picture'], $id);
+      update_field('field_555aafaff1f85', $pub_date, $id);
+      update_field('field_555aafcdf1f86', $book['publisher'], $id);
+      update_field('field_555aafd5f1f87', $book['reading_grade_level'], $id);
+      update_field('field_555aafddf1f88', $book['reading_room'], $id);
+      update_field('field_555aafe1f1f89', $book['series'], $id);
+      update_post_meta($id, 'old_id', $book['id']);
+
+      // Add author
+      if ($book['author']) {
+        $term = term_exists($book['author'], 'authors');
+        if ($term == 0 || $term == null) {
+          $term = wp_insert_term($book['author'], 'authors');
+        }
+        wp_set_object_terms($id, (int) $term['term_id'], 'authors');
+      }
+
+      // Add type
+      if ($book['type']) {
+        $term = term_exists($book['type'], 'types');
+        if ($term == 0 || $term == null) {
+          $term = wp_insert_term($book['type'], 'types');
+        }
+        wp_set_object_terms($id, (int) $term['term_id'], 'types');
+      }
+
+      // Add keywords
+      if ($book['keywords']) {
+        foreach ($book['keywords'] as $keyword) {
+          $term = term_exists($keyword, 'keywords');
+          if ($term == 0 || $term == null) {
+            $term = wp_insert_term($keyword, 'keywords');
+          }
+          wp_set_object_terms($id, (int) $term['term_id'], 'keywords', true);
+        }
+      }
+
+      // Add links
+      if ($book['curriculums']) {
+        foreach ($book['curriculums'] as $link) {
+          $term = term_exists($link, 'links');
+          if ($term == 0 || $term == null) {
+            $term = wp_insert_term($link, 'links');
+          }
+          wp_set_object_terms($id, (int) $term['term_id'], 'links', true);
+        }
+      }
+    } else {
+      // The book title was found in the database, so we can use $id to update it
+      // Add author
+      // if ($book['author']) {
+      //   $term = term_exists($book['author'], 'authors');
+      //   if ($term == 0 || $term == null) {
+      //     $term = wp_insert_term($book['author'], 'authors');
+      //   }
+      //   wp_set_object_terms($id, (int) $term['term_id'], 'authors');
+      // }
+
+      // // Add type
+      // if ($book['type']) {
+      //   $term = term_exists($book['type'], 'types');
+      //   if ($term == 0 || $term == null) {
+      //     $term = wp_insert_term($book['type'], 'types');
+      //   }
+      //   wp_set_object_terms($id, (int) $term['term_id'], 'types');
+      // }
+
+      // // Add keywords
+      // if ($book['keywords']) {
+      //   foreach ($book['keywords'] as $keyword) {
+      //     $term = term_exists($keyword, 'keywords');
+      //     if ($term == 0 || $term == null) {
+      //       $term = wp_insert_term($keyword, 'keywords');
+      //     }
+      //     wp_set_object_terms($id, (int) $term['term_id'], 'keywords', true);
+      //   }
+      // }
+
+      // // Add links
+      // if ($book['curriculums']) {
+      //   foreach ($book['curriculums'] as $link) {
+      //     $term = term_exists($link, 'links');
+      //     if ($term == 0 || $term == null) {
+      //       $term = wp_insert_term($link, 'links');
+      //     }
+      //     wp_set_object_terms($id, (int) $term['term_id'], 'links', true);
+      //   }
+      // }
+    }
+  }
+}
+
+// add_action('init', 'import_books');
