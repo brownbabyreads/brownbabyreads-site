@@ -229,6 +229,7 @@ function the_breadcrumb() {
     // Get the query & post information
   global $post,$wp_query;
   $category = get_the_category();
+  $post_type = get_post_type_object(get_post_type());
 
   // Build the breadcrums
   echo '<div class="notice-bar"><div class="container"><ol id="' . $id . '" class="' . $class . '">';
@@ -242,9 +243,14 @@ function the_breadcrumb() {
     if ( is_single() ) {
 
       // Single post (Only display the first category)
-      echo '<li class="item-cat item-cat-' . $category[0]->term_id . ' item-cat-' . $category[0]->category_nicename . '"><a class="bread-cat bread-cat-' . $category[0]->term_id . ' bread-cat-' . $category[0]->category_nicename . '" href="' . get_category_link($category[0]->term_id ) . '" title="' . $category[0]->cat_name . '">' . $category[0]->cat_name . '</a></li>';
+      if (get_post_type() == 'custom_book') {
+        echo '<li class="item-' . $post_type->name . ' item-cat-' . $post_type->name . '"><a class="bread-' . $post_type->label . '" href="' . get_post_type_archive_link($post_type->name) . '" title="' . $post_type->label . '">' . $post_type->label . '</a></li>';
+      } else {
+        echo '<li class="item-cat item-cat-' . $category[0]->term_id . ' item-cat-' . $category[0]->category_nicename . '"><a class="bread-cat bread-cat-' . $category[0]->term_id . ' bread-cat-' . $category[0]->category_nicename . '" href="' . get_category_link($category[0]->term_id ) . '" title="' . $category[0]->cat_name . '">' . $category[0]->cat_name . '</a></li>';
+      }
       echo '<li class="item-current active item-' . $post->ID . '"><strong class="bread-current bread-' . $post->ID . '" title="' . get_the_title() . '">' . get_the_title() . '</strong></li>';
-
+    } elseif (is_post_type_archive()) {
+      echo '<li class="item-' . $post_type->name . ' item-cat-' . $post_type->name . '"><strong class="bread-current bread-' . $post_type->label . '" href="' . get_post_type_archive_link($post_type->name) . '" title="' . $post_type->label . '">' . $post_type->label . '</strong></li>';
     } else if ( is_category() ) {
 
     // Category page
@@ -291,7 +297,6 @@ function the_breadcrumb() {
 
     // Display the tag name
     echo '<li class="item-current item-tag-' . $terms[0]->term_id . ' item-tag-' . $terms[0]->slug . '"><strong class="bread-current bread-tag-' . $terms[0]->term_id . ' bread-tag-' . $terms[0]->slug . '">' . $terms[0]->name . '</strong></li>';
-
   } elseif ( is_day() ) {
 
     // Day archive
@@ -423,8 +428,8 @@ function custom_books() {
         'label'               => 'custom_book',
         'description'         => 'A book',
         'labels'              => $labels,
-        'supports'            => array( 'title', 'editor', 'revisions', 'thumbnail', ),
-        'taxonomies'          => array( 'authors', 'keywords', 'links', 'types' ),
+        'supports'            => array( 'title', 'editor', 'thumbnail', ),
+        'taxonomies'          => array( 'authors', 'keywords', 'links', 'types', 'age_groups' ),
         'hierarchical'        => false,
         'public'              => true,
         'show_ui'             => true,
@@ -442,7 +447,7 @@ function custom_books() {
         ),
     );
     register_post_type( 'custom_book', $args );
-    // flush_rewrite_rules();
+    flush_rewrite_rules();
 }
 
 // Hook into the 'init' action
@@ -557,6 +562,7 @@ function book_links() {
         'show_tagcloud'              => false,
     );
     register_taxonomy( 'links', array( 'custom_book' ), $args );
+    register_taxonomy_for_object_type('links', 'custom_book');
 
 }
 
@@ -596,12 +602,54 @@ function book_types() {
         'show_tagcloud'              => false,
     );
     register_taxonomy( 'types', array( 'custom_book' ), $args );
+    register_taxonomy_for_object_type('types', 'custom_book');
 
 }
 
 // Hook into the 'init' action
 add_action( 'init', 'book_types', 0 );
 
+// Register Custom Taxonomy
+function book_ages() {
+
+    $labels = array(
+        'name'                       => _x( 'Age Groups', 'Taxonomy General Name', 'text_domain' ),
+        'singular_name'              => _x( 'Age Group', 'Taxonomy Singular Name', 'text_domain' ),
+        'menu_name'                  => __( 'Age Groups', 'text_domain' ),
+        'all_items'                  => __( 'All Age Groups', 'text_domain' ),
+        'parent_item'                => __( 'Parent Age Group', 'text_domain' ),
+        'parent_item_colon'          => __( 'Parent Age Group:', 'text_domain' ),
+        'new_item_name'              => __( 'New Item Age Group', 'text_domain' ),
+        'add_new_item'               => __( 'Add New Age Group', 'text_domain' ),
+        'edit_item'                  => __( 'Edit Age Group', 'text_domain' ),
+        'update_item'                => __( 'Update Age Group', 'text_domain' ),
+        'view_item'                  => __( 'View Age Groups', 'text_domain' ),
+        'separate_items_with_commas' => __( 'Separate items with commas', 'text_domain' ),
+        'add_or_remove_items'        => __( 'Add or remove Age Groups', 'text_domain' ),
+        'choose_from_most_used'      => __( 'Choose from the most used', 'text_domain' ),
+        'popular_items'              => __( 'Popular Age Groups', 'text_domain' ),
+        'search_items'               => __( 'Search Age Groups', 'text_domain' ),
+        'not_found'                  => __( 'Not Found', 'text_domain' ),
+    );
+    $args = array(
+        'labels'                     => $labels,
+        'hierarchical'               => false,
+        'public'                     => true,
+        'show_ui'                    => true,
+        'show_admin_column'          => true,
+        'show_in_nav_menus'          => true,
+        'show_tagcloud'              => false,
+        'rewrite' => array(
+          'slug' => 'ages'
+        ),
+    );
+    register_taxonomy( 'age_groups', array( 'custom_book' ), $args );
+    register_taxonomy_for_object_type('age_groups', 'custom_book');
+
+}
+
+// Hook into the 'init' action
+add_action( 'init', 'book_ages', 0 );
 
 if( function_exists('acf_add_local_field_group') ):
 
