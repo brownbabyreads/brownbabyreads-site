@@ -243,7 +243,7 @@ function the_breadcrumb() {
     if ( is_single() ) {
 
       // Single post (Only display the first category)
-      if (get_post_type() == 'custom_book') {
+      if (get_post_type() != 'post') {
         echo '<li class="item-' . $post_type->name . ' item-cat-' . $post_type->name . '"><a class="bread-' . $post_type->label . '" href="' . get_post_type_archive_link($post_type->name) . '" title="' . $post_type->label . '">' . $post_type->label . '</a></li>';
       } else {
         echo '<li class="item-cat item-cat-' . $category[0]->term_id . ' item-cat-' . $category[0]->category_nicename . '"><a class="bread-cat bread-cat-' . $category[0]->term_id . ' bread-cat-' . $category[0]->category_nicename . '" href="' . get_category_link($category[0]->term_id ) . '" title="' . $category[0]->cat_name . '">' . $category[0]->cat_name . '</a></li>';
@@ -1289,7 +1289,7 @@ if( function_exists('acf_add_local_field_group') ):
         'name' => 'academic_journal',
         'type' => 'true_false',
         'instructions' => '',
-        'required' => 1,
+        'required' => 0,
         'conditional_logic' => 0,
         'wrapper' => array (
           'width' => '',

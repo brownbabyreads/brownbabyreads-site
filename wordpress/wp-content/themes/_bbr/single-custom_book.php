@@ -11,7 +11,7 @@ the_post(); ?>
 
     <div class="col-md-3">
       <div class="spacer-20"></div>
-      <img src="http://overnight-website.s3.amazonaws.com/wp-uploads<?php the_field('picture'); ?>" />
+      <img src="http://overnight-website.s3.amazonaws.com/wp-uploads<?php echo get_field('picture') ?: '/2015/05/book.png' ; ?>" />
       <div class="spacer-20"></div>
       <?php if ( get_field('google_book_preview') ) : ?>
       <p><a href="<?php the_field('google_book_preview'); ?>">Google Book Preview</a></p>
@@ -48,7 +48,7 @@ the_post(); ?>
             <td><?php echo $pages; ?></td>
           </tr>
           <?php endif; ?>
-          <?php if ($age_group): ?>
+          <?php if (!empty($age_group) && !is_wp_error($age_group)): ?>
           <tr>
             <td><strong>Age Group:</strong></td>
             <td><?php echo get_the_term_list($post->ID, 'age_groups', '', ', '); ?> </td>

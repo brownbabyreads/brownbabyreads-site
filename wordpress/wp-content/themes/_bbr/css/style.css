@@ -2416,6 +2416,7 @@ ul.slot-exhibitions li h5{
 .single-post-header{
 	margin-bottom:20px;
 }
+.single-custom_article .post-title,
 .single-custom_book .post-title {
   margin-bottom: 0;
 }
