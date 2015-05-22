@@ -32,7 +32,7 @@ get_header(); ?>
         <?php while ( have_posts() ) : the_post(); ?>
         <li class="col-md-4 col-sm-4 grid-item format-standard accrue-homestead">
           <a class="media-box grid-featured-img" href="<?php the_permalink(); ?>" style="display:block;">
-            <span style="width:100%;height:225px;background:url('<?php echo get_field('picture')['url'] ?: 'http://overnight-website.s3.amazonaws.com/wp-uploads/2015/05/book.png' ; ?>') top center / cover;display:inline-block;vertical-align:bottom;"></span>
+            <span style="width:100%;height:225px;background:url('http://overnight-website.s3.amazonaws.com/wp-uploads<?php echo get_field('picture') ?: '/2015/05/book.png' ; ?>') top center / cover;display:inline-block;vertical-align:bottom;"></span>
           </a>
           <div class="grid-item-content">
             <?php /* note: these inline styles keep the entire layout from falling apart */ ?>

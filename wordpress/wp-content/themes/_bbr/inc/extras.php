@@ -1229,6 +1229,70 @@ function import_books() {
 
 // add_action('init', 'import_books');
 
+function import_articles() {
+  $bbr_file = get_template_directory(). '/inc/articles.json';
+  if (!file_exists($bbr_file)) {
+    return 0;
+  }
+  $articles_json = file_get_contents($bbr_file);
+
+  // Parse books JSON
+  // JSON must be valid: keys + values need DOUBLE quotes
+  $articles = json_decode($articles_json, true);
+  // echo var_dump($articles);
+  // echo count($articles);
+
+  foreach ($articles as $article) {
+    $id = my_post_exists($article['title']);
+    if (!$id) {
+      $post = array(
+        'post_content'   => $article['description'],
+        'post_title'     => $article['title'],
+        'post_status'    => 'publish',
+        'post_type'      => 'custom_article'
+      );
+
+      $id = wp_insert_post($post, true);
+
+      // Need to call this for each custom field
+      // Grad the keys from custom fields in our functions file
+
+      update_field('field_555f2ab5b538b', $article['academic_journal'],  $id);
+      update_field('field_555f2ad0b538c', $article['authors'], $id);
+      update_field('field_555f2b24b538d', $article['publisher_journal'], $id);
+      update_field('field_555f2b3db538e', $article['volume_page'], $id);
+      update_field('field_555f2b49b538f', $article['year'], $id);
+      update_field('field_555f2b65b5390', $article['article_linkarticle_link'], $id);
+      update_field('field_555f2b73b5391', $article['summary_link'], $id);
+      update_field('field_555f2b7db5392', $article['subject'], $id);
+      update_field('field_555f2b8bb5393', $article['picture'], $id);
+      update_post_meta($id, 'old_id', $article['id']);
+
+      // // Add author
+      // if ($article['author']) {
+      //   $term = term_exists($article['author'], 'authors');
+      //   if ($term == 0 || $term == null) {
+      //     $term = wp_insert_term($article['author'], 'authors');
+      //   }
+      //   wp_set_object_terms($id, (int) $term['term_id'], 'authors');
+      // }
+    } else {
+      // The book title was found in the database, so we can use $id to update it
+      // Add author
+      // if ($article['author']) {
+      //   $term = term_exists($article['author'], 'authors');
+      //   if ($term == 0 || $term == null) {
+      //     $term = wp_insert_term($article['author'], 'authors');
+      //   }
+      //   wp_set_object_terms($id, (int) $term['term_id'], 'authors');
+      // }
+      // update_field('field_555f2b8bb5393', $article['picture'], $id);
+    }
+  }
+}
+
+// add_action('init', 'import_articles');
+
 // Register Custom Post Type
 function custom_articles() {
 
@@ -1284,9 +1348,11 @@ if( function_exists('acf_add_local_field_group') ):
     'title' => 'Article',
     'fields' => array (
       array (
-        'key' => 'field_555f2ab5b538b',
+        'key' => 'field_555f2ab5b538b
+academic_journal',
         'label' => 'Academic Journal',
-        'name' => 'academic_journal',
+        'name' => 'field_555f2ab5b538b
+academic_journal',
         'type' => 'true_false',
         'instructions' => '',
         'required' => 0,
@@ -1452,7 +1518,7 @@ if( function_exists('acf_add_local_field_group') ):
         'key' => 'field_555f2b8bb5393',
         'label' => 'Picture',
         'name' => 'picture',
-        'type' => 'image',
+        'type' => 'text',
         'instructions' => '',
         'required' => 0,
         'conditional_logic' => 0,
@@ -1461,16 +1527,13 @@ if( function_exists('acf_add_local_field_group') ):
           'class' => '',
           'id' => '',
         ),
-        'return_format' => 'array',
-        'preview_size' => 'medium',
-        'library' => 'all',
-        'min_width' => '',
-        'min_height' => '',
-        'min_size' => '',
-        'max_width' => '',
-        'max_height' => '',
-        'max_size' => '',
-        'mime_types' => '',
+        'default_value' => '',
+        'placeholder' => '',
+        'prepend' => '',
+        'append' => '',
+        'maxlength' => '',
+        'readonly' => 0,
+        'disabled' => 0,
       ),
     ),
     'location' => array (

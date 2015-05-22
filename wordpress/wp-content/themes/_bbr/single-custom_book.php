@@ -30,7 +30,7 @@ the_post(); ?>
         <?php
           $biography_person     = get_field('biography_person');
           $pages                = get_field('pages');
-          $age_group            = get_terms('grad_levels');
+          $age_group            = get_terms('age_groups');
           $guided_reading_level = get_field('guided_reading_level');
           $series               = get_field('series');
           $publish_date         = get_field('publish_date');
