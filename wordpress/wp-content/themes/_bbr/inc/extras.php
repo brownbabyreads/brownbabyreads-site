@@ -442,7 +442,7 @@ function custom_books() {
         ),
     );
     register_post_type( 'custom_book', $args );
-    // flush_rewrite_rules();
+    flush_rewrite_rules();
 }
 
 // Hook into the 'init' action
@@ -1137,6 +1137,45 @@ function import_books() {
       }
     } else {
       // The book title was found in the database, so we can use $id to update it
+      // Add author
+      // if ($book['author']) {
+      //   $term = term_exists($book['author'], 'authors');
+      //   if ($term == 0 || $term == null) {
+      //     $term = wp_insert_term($book['author'], 'authors');
+      //   }
+      //   wp_set_object_terms($id, (int) $term['term_id'], 'authors');
+      // }
+
+      // // Add type
+      // if ($book['type']) {
+      //   $term = term_exists($book['type'], 'types');
+      //   if ($term == 0 || $term == null) {
+      //     $term = wp_insert_term($book['type'], 'types');
+      //   }
+      //   wp_set_object_terms($id, (int) $term['term_id'], 'types');
+      // }
+
+      // // Add keywords
+      // if ($book['keywords']) {
+      //   foreach ($book['keywords'] as $keyword) {
+      //     $term = term_exists($keyword, 'keywords');
+      //     if ($term == 0 || $term == null) {
+      //       $term = wp_insert_term($keyword, 'keywords');
+      //     }
+      //     wp_set_object_terms($id, (int) $term['term_id'], 'keywords', true);
+      //   }
+      // }
+
+      // // Add links
+      // if ($book['curriculums']) {
+      //   foreach ($book['curriculums'] as $link) {
+      //     $term = term_exists($link, 'links');
+      //     if ($term == 0 || $term == null) {
+      //       $term = wp_insert_term($link, 'links');
+      //     }
+      //     wp_set_object_terms($id, (int) $term['term_id'], 'links', true);
+      //   }
+      // }
     }
   }
 }

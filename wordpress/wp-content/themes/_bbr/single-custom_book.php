@@ -21,37 +21,57 @@ the_post(); ?>
     <div class="col-md-6">
       <h1 class="post-title"><?php the_title(); ?></h1>
       <div class="post-content">
-        <strong>by <?php the_terms($post->ID, 'authors'); if ( get_field('illustrator') ) : ?>, <?php the_field('illustrator'); ?> (Illustrator)<?php endif; ?></strong>
+        <strong><?php if (has_term('', 'authors')): ?>by <?php the_terms($post->ID, 'authors'); if ( get_field('illustrator') ) : ?>, <?php the_field('illustrator'); ?> (Illustrator)<?php endif; endif; ?></strong>
         <h3 class="overview-title">Overview</h3>
         <p><?php the_content(); ?></p>
       </div>
       <div class="spacer-20"></div>
       <table class="table table-striped">
+        <?php
+          $biography_person     = get_field('biography_person');
+          $pages                = get_field('pages');
+          $age_group            = get_field('age_group');
+          $guided_reading_level = get_field('guided_reading_level');
+          $series               = get_field('series');
+          $publish_date         = get_field('publish_date');
+        ?>
         <tbody>
+          <?php if ($biography_person): ?>
           <tr>
             <td><strong>Biography Person:</strong></td>
-            <td><?php the_field('biography_person'); ?></td>
+            <td><?php echo $biography_person; ?></td>
           </tr>
+          <?php endif; ?>
+          <?php if ($pages): ?>
           <tr>
             <td><strong>Page Count:</strong></td>
-            <td><?php the_field('pages'); ?></td>
+            <td><?php echo $pages; ?></td>
           </tr>
+          <?php endif; ?>
+          <?php if ($age_group): ?>
           <tr>
             <td><strong>Age Group:</strong></td>
-            <td><?php the_field('age_group'); ?></td>
+            <td><?php echo $age_group; ?></td>
           </tr>
+          <?php endif; ?>
+          <?php if ($guided_reading_level): ?>
           <tr>
             <td><strong>Reading Level:</strong></td>
-            <td><?php the_field('guided_reading_level'); ?></td>
+            <td><?php echo $guided_reading_level; ?></td>
           </tr>
+          <?php endif; ?>
+          <?php if ($series): ?>
           <tr>
             <td><strong>Series:</strong></td>
-            <td><?php the_field('series'); ?></td>
+            <td><?php echo $series; ?></td>
           </tr>
+          <?php endif; ?>
+          <?php if ($publish_date): ?>
           <tr>
             <td><strong>Publish Date:</strong></td>
-            <td><?php the_field('publish_date'); ?></td>
+            <td><?php echo $publish_date; ?></td>
           </tr>
+          <?php endif; ?>
         </tbody>
       </table>
     </div>
