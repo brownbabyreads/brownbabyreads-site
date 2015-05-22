@@ -60,6 +60,10 @@ the_post(); ?>
       <div class="widget sidebar-widget widget_next_exhibitions box-style1">
         <a class="btn btn-primary btn-lg" href="<?php the_field('bbr_estore_link'); ?>">$ Purchase Book</a>
       </div>
+      <?php else : ?>
+      <div class="widget sidebar-widget widget_next_exhibitions box-style1">
+        <p>This book is not currently available in our store.</p>
+      </div>
       <?php endif; ?>
     </div>
   </div>
