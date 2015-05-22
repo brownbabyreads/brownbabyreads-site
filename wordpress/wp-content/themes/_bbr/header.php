@@ -173,6 +173,12 @@ global $_bbr_admin;
           </div>
         </div>
       </div>
+    <?php } else if ( is_post_type_archive() ) { ?>
+      <div class="page-header parallax">
+        <div><div>
+          <span> <?php post_type_archive_title(); ?></span>
+        </div></div>
+      </div>
     <?php } else if ( is_archive()|| is_category() ) { ?>
       <div class="page-header parallax">
         <div><div>
