@@ -447,7 +447,7 @@ function custom_books() {
         ),
     );
     register_post_type( 'custom_book', $args );
-    flush_rewrite_rules();
+    // flush_rewrite_rules();
 }
 
 // Hook into the 'init' action
