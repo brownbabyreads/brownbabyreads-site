@@ -11,7 +11,7 @@ the_post(); ?>
 
     <div class="col-md-3">
       <div class="spacer-20"></div>
-      <img src="<?php echo get_field('picture')['url'] ?: 'http://overnight-website.s3.amazonaws.com/wp-uploads/2015/05/book.png' ; ?>" />
+      <img src="http://overnight-website.s3.amazonaws.com/wp-uploads<?php echo get_field('picture') ?: '/2015/05/book.png' ; ?>" />
       <div class="spacer-20"></div>
       <?php if ( get_field('google_book_preview') ) : ?>
       <p><a href="<?php the_field('google_book_preview'); ?>">Google Book Preview</a></p>
@@ -69,8 +69,8 @@ the_post(); ?>
           <?php endif; ?>
           <?php if ($summary_link): ?>
           <tr>
-            <td><strong>Summary Link:</strong></td>
-            <td><?php echo $summary_link; ?></td>
+            <td><a href="<?php echo $summary_link; ?>"><strong>Read a summary</strong></a></td>
+            <td></td>
           </tr>
           <?php endif; ?>
           <?php if ($subject): ?>
