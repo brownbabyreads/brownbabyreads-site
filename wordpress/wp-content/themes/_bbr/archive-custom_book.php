@@ -7,12 +7,23 @@ get_header(); ?>
     <div class="row">
 
       <div class="col-md-3 sidebar right-sidebar">
-        <!-- TODO: figure out what is supposed to go over here, maybe nothing? -->
-        <!--<div class="widget sidebar-widget box-style1">
-          <h3 class="widget-title">Top categories</h3>
+        <div class="widget sidebar-widget box-style1">
+          <h3 class="widget-title">Age Groups</h3>
           <ul class="top-categories-list">
+            <?php
+            $args = array(
+              'orderby' => 'count',
+              'order'   => 'DESC'
+            );
+            $terms = get_terms('age_groups', $args);
+            if (!empty($terms) && !is_wp_error($terms)){
+               foreach ($terms as $term) {
+                 echo '<li><a href="' . get_term_link( $term ) . '" title="' . sprintf('View all post filed under %s', $term->name ) . '">' . $term->name . '</a></li>';
+               }
+             }
+             ?>
           </ul>
-        </div> -->
+        </div>
         <div class="widget sidebar-widget box-style1">
           <h3 class="widget-title">Categories</h3>
           <ul class="categories-list">
@@ -20,7 +31,7 @@ get_header(); ?>
             $args = array(
               'orderby' => 'count',
               'order'   => 'DESC',
-              'number'  => 48,
+              'number'  => 32,
             );
             $terms = get_terms('keywords', $args);
             if (!empty($terms) && !is_wp_error($terms)){

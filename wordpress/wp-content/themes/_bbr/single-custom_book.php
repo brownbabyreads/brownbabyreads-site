@@ -30,7 +30,7 @@ the_post(); ?>
         <?php
           $biography_person     = get_field('biography_person');
           $pages                = get_field('pages');
-          $age_group            = get_field('age_group');
+          $age_group            = get_terms('grad_levels');
           $guided_reading_level = get_field('guided_reading_level');
           $series               = get_field('series');
           $publish_date         = get_field('publish_date');
@@ -51,7 +51,7 @@ the_post(); ?>
           <?php if ($age_group): ?>
           <tr>
             <td><strong>Age Group:</strong></td>
-            <td><?php echo $age_group; ?></td>
+            <td><?php echo get_the_term_list($post->ID, 'age_groups', '', ', '); ?> </td>
           </tr>
           <?php endif; ?>
           <?php if ($guided_reading_level): ?>
