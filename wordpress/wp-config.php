@@ -25,7 +25,7 @@ define('WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST'] . '/wordpress');
 define('UPLOADS', 'wp-uploads');
 
 // ** MySQL settings - You can get this info from your web host ** //
-$url = parse_url(getenv('DATABASE_URL') ? getenv('DATABASE_URL') : 'mysql://b13413500555e5:a850b7b2@us-cdbr-iron-east-02.cleardb.net/heroku_8aa24dfc4d687e6?reconnect=true');
+$url = parse_url($_SERVER['DATABASE_URL'] ? $_SERVER['DATABASE_URL'] : 'mysql://b13413500555e5:a850b7b2@us-cdbr-iron-east-02.cleardb.net/heroku_8aa24dfc4d687e6?reconnect=true');
 // $url = parse_url(getenv('DATABASE_URL') ? getenv('DATABASE_URL') : 'mysql://wordpress:wordpress@localhost/wordpress');
 
 /** The name of the database for WordPress */
@@ -38,7 +38,11 @@ define('DB_USER', $url['user']);
 define('DB_PASSWORD', $url['pass']);
 
 /** MySQL hostname */
-define('DB_HOST', $url['host']);
+if ($url['port'] != NULL) {
+  define('DB_HOST', $url['host'] . ':' . $url['port']);
+} else {
+  define('DB_HOST', $url['host']);
+}
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
